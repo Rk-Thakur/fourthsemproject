@@ -37,8 +37,8 @@
     </div>
   </div>
   <!-- header -->
-  <header class="text-gray-600 body-font bg-black ">
-    <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center text-bold bg-black">
+  <header class="text-black-600 body-font-black  bg-black   " id="header">
+    <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center text-bold bg-black ">
       <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-red-500 rounded-full" viewBox="0 0 24 24">
           <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
@@ -46,17 +46,17 @@
         <span class="ml-3 text-xl text-3xl text-bold text-white">A.S.T GYM KHANA </span>
       </a>
       <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center text-2xl text-white ">
-        <a class="mr-5 hover:text-red-600" href="#home">Home</a>
-        <a class="mr-5 hover:text-red-600" href="#gallery">Gallery</a>
-        <a class="mr-5 hover:text-red-600" href="#team">Trainee</a>
-        <a class="mr-5 hover:text-red-600" href="#price">Pricing</a>
-        <a class="mr-5 hover:text-red-600"href="#blog">Blog</a>
-        <a class="mr-5 hover:text-red-600" href="#contact">Contact</a>
+        <a class="mr-5 hover:text-red-600 smoothScroll" href="#home">Home</a>
+        <a class="mr-5 hover:text-red-600 smoothScroll" href="#gallery">Gallery</a>
+        <a class="mr-5 hover:text-red-600 smoothScroll" href="#team">Trainee</a>
+        <a class="mr-5 hover:text-red-600 smoothScroll" href="#price">Pricing</a>
+        <a class="mr-5 hover:text-red-600 smoothScroll"href="#blog">Blog</a>
+        <a class="mr-5 hover:text-red-600 smoothScroll" href="#contact">Contact</a>
 
       </nav>
       
 
-      <a href="#contact" class="inline-flex text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded text-lg ">Become a member!</a>
+      <a href="register.html" class="inline-flex text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded text-lg  ">Become a member!</a>
     </div>
   </header>
 
@@ -66,24 +66,20 @@
     <div
       class="absolute top-0 w-full h-full bg-top bg-cover"
       style="
-        /* background-image: url('https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2134&q=80'); */
-        background-image: url('images/video.mp4');
-
-      "
-    >
+        background-image: url('images/video.mp4');">
       <span
         id="blackOverlay"
         class="w-full h-full absolute opacity-75 bg-black"
       ></span>
     </div>
-    <div class="container relative mx-auto" data-aos="fade-in">
+    <div class="container relative mx-auto" >
       <div class="items-center flex flex-wrap">
         <div class="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
           <div>
-            <h1 class="text-white font-semibold text-5xl">
+            <h1 class="text-white font-semibold text-5xl animate__animated animate__fadeInUp animate__delay-1s" >
               Feel The <span class="text-red-500">Power</span>
             </h1>
-            <p class="mt-4 text-lg text-gray-300 font-medium">
+            <p class="mt-4 text-lg text-gray-300 font-medium animate__animated animate__fadeInUp animate__delay-1s">
               Welcome to The A.S.T GYM KHANA. We are a fitness and training
               center that focuses on pushing you to your absolute limit.
               Connect with  us to get started today!!
@@ -93,8 +89,8 @@
               class="bg-transparent hover:bg-orange-500 text-orange-500 font-semibold hover:text-white p-4 border border-orange-500 hover:border-transparent rounded inline-block mt-5 cursor-pointer"
               >Download Brochure</a
             > -->
-            <div class="flex justify-center">
-              <a href="#contact" class="inline-flex text-white bg-red-500 border-0 py-2 px-6  hover:bg-red-600 rounded text-lg  font-semibold  p-4 border border-orange-500  rounded inline-block mt-5 ">Become a member!</a>
+            <div class="flex justify-center ">
+              <a href="#contact" class="inline-flex text-white bg-red-500 border-0 py-2 px-6  hover:bg-red-600 rounded text-lg  font-semibold  p-4 border border-orange-500  rounded inline-block mt-5 animate__animated animate__fadeInUp animate__delay-1s">Become a member!</a>
             </div>
           </div>
         </div>
@@ -106,7 +102,7 @@
 
 
 <!-- gallery -->
-<section class="text-gray-600 body-font bg-gray-300 " id="gallery">
+<section class="text-gray-600 body-font bg-gray-300  " id="gallery">
   <div class="container px-5 py-24 mx-auto">
     <div class="flex flex-col text-center w-full mb-20">
       <h1 class="text-3xl font-medium title-font mb-4 text-gray-900 tracking-widest">GAL<button class="py-1 px-4 bg-red-500 text-white focus:outline-none">LERY</button></h1>
@@ -114,7 +110,7 @@
     <div class="flex flex-wrap -m-4">
       <div class="lg:w-1/3 sm:w-1/2 p-4">
         <div class="flex relative">
-          <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="1.jpg">
+          <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center animate__animated animate__slideInRight cursor-pointer" src="1.jpg">
           <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-gray-100 opacity-0 hover:opacity-50">
             <h2 class="tracking-widest text-sm title-font font-medium text-red-500 mb-1">THE SUBTITLE</h2>
             <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Shooting Stars</h1>
@@ -124,7 +120,7 @@
       </div>
       <div class="lg:w-1/3 sm:w-1/2 p-4">
         <div class="flex relative">
-          <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="3.jpg">
+          <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center animate__animated animate__slideInRight cursor-pointer" src="3.jpg">
           <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-gray-100 opacity-0 hover:opacity-50">
             <h2 class="tracking-widest text-sm title-font font-medium text-red-500 mb-1">THE SUBTITLE</h2>
             <h1 class="title-font text-lg font-medium text-gray-900 mb-3">The Catalyzer</h1>
@@ -134,7 +130,7 @@
       </div>
       <div class="lg:w-1/3 sm:w-1/2 p-4">
         <div class="flex relative">
-          <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="2.jpg">
+          <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center animate__animated animate__slideInRight cursor-pointer" src="2.jpg">
           <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-gray-100 opacity-0 hover:opacity-50">
             <h2 class="tracking-widest text-sm title-font font-medium text-red-500 mb-1">THE SUBTITLE</h2>
             <h1 class="title-font text-lg font-medium text-gray-900 mb-3">The 400 Blows</h1>
@@ -144,7 +140,7 @@
       </div>
       <div class="lg:w-1/3 sm:w-1/2 p-4">
         <div class="flex relative">
-          <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="1.jpg">
+          <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center animate__animated animate__slideInRight cursor-pointer" src="1.jpg">
           <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-gray-100 opacity-0 hover:opacity-50">
             <h2 class="tracking-widest text-sm title-font font-medium text-red-500 mb-1">THE SUBTITLE</h2>
             <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Neptune</h1>
@@ -154,7 +150,7 @@
       </div>
       <div class="lg:w-1/3 sm:w-1/2 p-4">
         <div class="flex relative">
-          <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="2.jpg">
+          <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center animate__animated animate__slideInRight cursor-pointer" src="2.jpg">
           <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-gray-100 opacity-0 hover:opacity-50">
             <h2 class="tracking-widest text-sm title-font font-medium text-red-500 mb-1">THE SUBTITLE</h2>
             <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Holden Caulfield</h1>
@@ -164,7 +160,7 @@
       </div>
       <div class="lg:w-1/3 sm:w-1/2 p-4">
         <div class="flex relative">
-          <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="3.jpg">
+          <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center animate__animated animate__slideInRight cursor-pointer" src="3.jpg">
           <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-gray-100 opacity-0 hover:opacity-50">
             <h2 class="tracking-widest text-sm title-font font-medium text-red-500 mb-1">THE SUBTITLE</h2>
             <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Alper Kamu</h1>
@@ -698,8 +694,7 @@
         <p class="mt-2 text-sm text-gray-500 text-center text-bold">We are a fitness and training
           center that focuses on pushing you to your absolute limit.
           Connect with  us to get started today!!</p> <br>
-        <a href="#contact" class="inline-flex text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded text-lg">Become a member!</a>
-
+        <a href="#contact" class="inline-flex text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded text-lg">Be Member!</a>
       </div>
       <div class="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
         <div class="lg:w-1/4 md:w-1/2 w-full px-4">
@@ -772,7 +767,6 @@
         </div>
       </div>
     </div>
-
   </footer>
 </body>
 

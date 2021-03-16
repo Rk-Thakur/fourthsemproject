@@ -10,6 +10,7 @@
 rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
 />
+
 </head>
 <div class="bg-white-200  " id="home" >
     <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row ">
@@ -36,18 +37,17 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
   <header class="text-black-600 body-font-black  bg-black   " id="header">
     <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center text-bold bg-black ">
       <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-red-500 rounded-full" viewBox="0 0 24 24">
-          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
-        </svg>
+        <img src="logo.JPG" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-12 h-12 text-white p-2  rounded-full" viewBox="0 0 24 24">
+
         <span class="ml-3 text-xl text-3xl text-bold text-white">A.S.T GYM KHANA </span>
       </a>
       <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center text-2xl text-white ">
-        <a class="mr-5 hover:text-red-600 smoothScroll" href="index.html">Home</a>
-        <a class="mr-5 hover:text-red-600 smoothScroll" href="index.html">Gallery</a>
-        <a class="mr-5 hover:text-red-600 smoothScroll" href="index.html">Trainee</a>
-        <a class="mr-5 hover:text-red-600 smoothScroll" href="index.html">Pricing</a>
-        <a class="mr-5 hover:text-red-600 smoothScroll"href="index.html">Blog</a>
-        <a class="mr-5 hover:text-red-600 smoothScroll" href="index.html">Contact</a>
+        <a class="mr-5 hover:text-red-600 " href="index.html">Home</a>
+        <a class="mr-5 hover:text-red-600 " href="index.html">Gallery</a>
+        <a class="mr-5 hover:text-red-600 " href="index.html">Trainee</a>
+        <a class="mr-5 hover:text-red-600 " href="index.html">Pricing</a>
+        <a class="mr-5 hover:text-red-600 "href="index.html">Blog</a>
+        <a class="mr-5 hover:text-red-600 " href="index.html">Contact</a>
 
       </nav>
       
@@ -56,17 +56,26 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     </div>
   </header>
   <!-- Registration Form -->
-  <section class="text-gray-600 body-font relative bg-gray-100">
+  <section class="text-gray-600 body-font relative">
     <div class="container px-5 py-24 mx-auto">
-      <div class="flex flex-col text-center w-full mb-12">
-        <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Registration</h1>
-        <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Start Your Journey with Us!!</p>
-      </div>
+      
       <div class="lg:w-1/2 md:w-2/3 mx-auto">
         <div class="flex flex-wrap -m-2">
           <div class="p-2 w-1/2">
             <div class="relative">
               <label for="name" class="leading-7 text-sm text-gray-600">Name</label>
+              <input type="text" id="name" name="name" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+            </div>
+          </div>
+          <div class="p-2 w-1/2">
+            <div class="relative">
+              <label for="email" class="leading-7 text-sm text-gray-600">Address</label>
+              <input type="email" id="email" name="email" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+            </div>
+          </div>
+          <div class="p-2 w-1/2">
+            <div class="relative">
+              <label for="name" class="leading-7 text-sm text-gray-600">Contact</label>
               <input type="text" id="name" name="name" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
             </div>
           </div>
@@ -83,9 +92,9 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
             </div>
           </div>
           <div class="p-2 w-full">
-            <button class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Button</button>
+            <button class="flex mx-auto text-white bg-red-500 border-0 py-2 px-8 focus:outline-none hover:bg-red-600 rounded text-lg">Button</button>
           </div>
-          
+
         </div>
       </div>
     </div>

@@ -73,12 +73,12 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
         <span class="ml-3 text-xl text-3xl text-bold text-white">A.S.T GYM KHANA </span>
       </a>
       <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center text-2xl text-white ">
-        <a class="mr-5 hover:text-red-600 " href="index.html">Home</a>
-        <a class="mr-5 hover:text-red-600 " href="index.html">Gallery</a>
-        <a class="mr-5 hover:text-red-600 " href="index.html">Trainee</a>
-        <a class="mr-5 hover:text-red-600 " href="index.html">Pricing</a>
-        <a class="mr-5 hover:text-red-600 "href="index.html">Blog</a>
-        <a class="mr-5 hover:text-red-600 " href="index.html">Contact</a>
+        <a class="mr-5 hover:text-red-600 " href="index.php">Home</a>
+        <a class="mr-5 hover:text-red-600 " href="index.php">Gallery</a>
+        <a class="mr-5 hover:text-red-600 " href="index.php">Trainee</a>
+        <a class="mr-5 hover:text-red-600 " href="index.php">Pricing</a>
+        <a class="mr-5 hover:text-red-600 "href="index.php">Blog</a>
+        <a class="mr-5 hover:text-red-600 " href="index.php">Contact</a>
 
       </nav>
       
@@ -133,10 +133,10 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
             <div class="p-2 w-1/2">
               <div class="relative">
                 <label for="message" class="leading-7 text-sm text-gray-600">Package</label> <br>
-                <input type="radio" name="package" value="Starter" id=""> Starter   <br>
-                <input type="radio" name="package" value="Basic" id=""> Basic   <br>
-                <input type="radio" name="package" value="Pro" id=""> Pro   <br>
-                <input type="radio" name="package" value="Unlimited" id=""> Unlimited   <br>
+                <input type="radio" name="package" value="Starter" id=""> Starter ($9)   <br>
+                <input type="radio" name="package" value="Basic" id=""> Basic ($27)  <br>
+                <input type="radio" name="package" value="Pro" id=""> Pro ($74)  <br>
+                <input type="radio" name="package" value="Unlimited" id=""> Unlimited ($140)  <br>
                 
               </div> 
             </div>

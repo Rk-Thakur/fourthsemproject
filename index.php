@@ -94,7 +94,7 @@ if(!isset($_SESSION['uname'])){
               >Download Brochure</a
             > -->
             <div class="flex justify-center ">
-              <a href="#contact" class="inline-flex text-white bg-red-500 border-0 py-2 px-6  hover:bg-red-600 rounded text-lg  font-semibold  p-4 border border-orange-500  rounded inline-block mt-5 animate__animated animate__fadeInUp animate__delay-1s">Become a member!</a>
+              <a href="register.php" class="inline-flex text-white bg-red-500 border-0 py-2 px-6  hover:bg-red-600 rounded text-lg  font-semibold  p-4 border border-orange-500  rounded inline-block mt-5 animate__animated animate__fadeInUp animate__delay-1s">Become a member!</a>
             </div>
           </div>
         </div>
@@ -127,7 +127,7 @@ include("sucess.php");
     <div class="container px-5 py-24 mx-auto">
       <div class="flex flex-col text-center w-full mb-20">
         <h1 class="sm:text-4xl text-3xl font-medium title-font mb-2 text-gray-900">Pricing<button class="py-1 px-4 bg-red-500 text-white focus:outline-none">Monthly</button></h1>
-        <p class="lg:w-2/3 mx-auto leading-relaxed text-base text-gray-500">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical.</p>
+        <p class="lg:w-2/3 mx-auto leading-relaxed text-base text-gray-500">Get Your Dream Shape In Just</p>
       </div>
       <div class="flex flex-wrap -m-4">
         <div class="p-4 xl:w-1/4 md:w-1/2 w-full">
@@ -326,7 +326,7 @@ include("sucess.php");
   <!-- adverstise -->
   <section class="text-gray-600 body-font bg-black">
     <div class="container mx-auto flex px-5 py-24 items-center justify-center flex-col bg-cover bg-gray-400 opacity-75" style="
-    background-image: url('images/video.mp4');">
+    background-image: url('images/2.jpg');">
       <div class="text-center lg:w-2/3 w-full">
         <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-white-900 text-white">DON’T THINK, BEGIN TODAY!
         </h1>
@@ -360,7 +360,7 @@ include("sucess.php");
         <p class="mt-2 text-sm text-gray-500 text-center text-bold">We are a fitness and training
           center that focuses on pushing you to your absolute limit.
           Connect with  us to get started today!!</p> <br>
-        <a href="#contact" class="inline-flex text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded text-lg">Be Member!</a>
+        <a href="register.php" class="inline-flex text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded text-lg">Be Member!</a>
       </div>
       <div class="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
         <div class="lg:w-1/4 md:w-1/2 w-full px-4">

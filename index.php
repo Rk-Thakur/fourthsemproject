@@ -171,7 +171,7 @@ include("sucess.php");
               </span>20 Zumba Classes
             </p>  
             
-            <a href="register.html" class="flex-wrap items-center mt-auto text-white bg-gray-400 border-0 py-2 px-4 w-full focus:outline-none hover:bg-gray-500 rounded">Get IT!</a>
+            <a href="register.php" class="flex-wrap items-center mt-auto text-white bg-gray-400 border-0 py-2 px-4 w-full focus:outline-none hover:bg-gray-500 rounded">Get IT!</a>
 
           </div>
         </div>
@@ -218,7 +218,7 @@ include("sucess.php");
                 </svg>
               </span>20 Zumba Classes
             </p>
-            <a href="register.html" class="flex-wrap items-center mt-auto text-white bg-gray-400 border-0 py-2 px-4 w-full focus:outline-none hover:bg-gray-500 rounded">Get IT!</a>
+            <a href="register.php" class="flex-wrap items-center mt-auto text-white bg-gray-400 border-0 py-2 px-4 w-full focus:outline-none hover:bg-gray-500 rounded">Get IT!</a>
 
           </div>
         </div>
@@ -266,7 +266,7 @@ include("sucess.php");
               </span>15 Cardio Classes
             </p>
             
-            <a href="register.html" class="flex items-center mt-auto text-white bg-red-500 border-0 py-2 px-4 w-full focus:outline-none hover:bg-red-600 rounded">Get IT!</a>
+            <a href="register.php" class="flex items-center mt-auto text-white bg-red-500 border-0 py-2 px-4 w-full focus:outline-none hover:bg-red-600 rounded">Get IT!</a>
 
           </div>
         </div>
@@ -312,7 +312,7 @@ include("sucess.php");
                 </svg>
               </span>Mixtape chillwave tumeric
             </p>
-              <a href="register.html" class="flex-wrap items-center mt-auto text-white bg-gray-400 border-0 py-2 px-4 w-full focus:outline-none hover:bg-gray-500 rounded">Get IT!</a>
+              <a href="register.php" class="flex-wrap items-center mt-auto text-white bg-gray-400 border-0 py-2 px-4 w-full focus:outline-none hover:bg-gray-500 rounded">Get IT!</a>
               
             </div>
         </div>
@@ -325,8 +325,9 @@ include("sucess.php");
 
   <!-- adverstise -->
   <section class="text-gray-600 body-font bg-black">
-    <div class="container mx-auto flex px-5 py-24 items-center justify-center flex-col bg-cover bg-gray-400 opacity-75" style="
-    background-image: url('images/2.jpg');">
+    <div class="container mx-auto flex px-5 py-24 items-center justify-center flex-col bg-black bg-gray-400 opacity-75" 
+    //style="background-image: url('images/2.jpg');"
+    >
       <div class="text-center lg:w-2/3 w-full">
         <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-white-900 text-white">DON’T THINK, BEGIN TODAY!
         </h1>

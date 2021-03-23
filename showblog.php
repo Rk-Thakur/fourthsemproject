@@ -59,43 +59,14 @@
   </header>
 
 <!-- blog -->
-<section class="text-gray-600 body-font">
 
-
-    <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
-    <?php
-    include('admin/config.php');
-    $query="SELECT * FROM blog ORDER BY id desc LIMIT 1";
-    $result=mysqli_query($conn,$query);
-    if(mysqli_num_rows($result)>0)
-    {
-        while($row=mysqli_fetch_array($result))
-    {
-    ?>
-      <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
-        <?php echo '<img src="admin/uploads/'. $row["file"].'" alt="hero" class="object-cover object-center rounded">'; ?>
-
-      </div>
-      <div class="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
-        <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900"><?php echo $row["topic"]; ?></h1>
-        <p class="mb-8 leading-relaxed"> <?php echo $row["description"]; ?>
-        </p>
-      </div>
-      <?php 
-    }
-    }               
-    ?>
-    </div>
-</section>
 
 
 
 <?php
                   include_once('admin/config.php');
                   $id=$_REQUEST['id'];
-                  echo $id;
                   $sql="SELECT * FROM blog where id=$id LIMIT 1";
-                  echo $sql;
                   $result=mysqli_query($conn,$sql);
                         if($result)
                         {
@@ -111,7 +82,6 @@
     <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
       
       <?php echo '<img src="admin/uploads/'. $row["file"].'" alt="hero" class="object-cover object-center rounded">'; ?>
-      <?php echo $row['file'] ?>
     
     </div>
     <div class="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
@@ -121,7 +91,7 @@
       
     </div>
   </div>
-</section>4
+</section>
 
 
     

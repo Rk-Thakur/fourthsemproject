@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Mar 23, 2021 at 03:05 PM
+-- Generation Time: Mar 23, 2021 at 03:35 PM
 -- Server version: 10.4.13-MariaDB
 -- PHP Version: 7.4.8
 
@@ -75,15 +75,17 @@ CREATE TABLE `gallery` (
   `file` varchar(1000) NOT NULL,
   `topic` varchar(30) NOT NULL,
   `name` varchar(30) NOT NULL,
-  `description` varchar(100) NOT NULL
+  `description` varchar(100) NOT NULL,
+  `bywhom` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `gallery`
 --
 
-INSERT INTO `gallery` (`id`, `file`, `topic`, `name`, `description`) VALUES
-(1, 'fullsizeoutput_14f.jpeg', 'modeling', 'mausam rai', 'standing in front of the tree');
+INSERT INTO `gallery` (`id`, `file`, `topic`, `name`, `description`, `bywhom`) VALUES
+(3, 'fullsizeoutput_16d.jpeg', 'EVNET ON MENTAL HEALTH', 'fasd asdfasdfasdas', 'dxncmvaphsdmlhjcxnahd;fa', 'ram'),
+(4, 'fullsizeoutput_14f.jpeg', 'nhjh', 'nji', 'nji', 'ranjan');
 
 -- --------------------------------------------------------
 
@@ -145,16 +147,16 @@ CREATE TABLE `trainer` (
   `file` varchar(1000) NOT NULL,
   `name` varchar(30) NOT NULL,
   `specialist` varchar(30) NOT NULL,
-  `description` varchar(100) NOT NULL
+  `description` varchar(100) NOT NULL,
+  `bywhom` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `trainer`
 --
 
-INSERT INTO `trainer` (`id`, `file`, `name`, `specialist`, `description`) VALUES
-(1, 'fullsizeoutput_178.jpeg', 'ranjanthaur', 'jkajsldj', 'kasjdlfjal'),
-(6, 'fullsizeoutput_14f.jpeg', 'ram', 'diet', 'asdfasf');
+INSERT INTO `trainer` (`id`, `file`, `name`, `specialist`, `description`, `bywhom`) VALUES
+(4, 'fullsizeoutput_170.jpeg', 'Ranjan Thakur', 'Diet Specialist', 'hgjhgjh', 'ranjan');
 
 --
 -- Indexes for dumped tables
@@ -216,7 +218,7 @@ ALTER TABLE `contact`
 -- AUTO_INCREMENT for table `gallery`
 --
 ALTER TABLE `gallery`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `login`
@@ -234,7 +236,7 @@ ALTER TABLE `registration`
 -- AUTO_INCREMENT for table `trainer`
 --
 ALTER TABLE `trainer`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

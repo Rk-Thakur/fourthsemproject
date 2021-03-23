@@ -22,8 +22,7 @@
                 <h1 class="title-font text-lg font-medium text-gray-900 mb-3"><?php echo $row["topic"]; ?></h1>
                 <p class="leading-relaxed mb-3"><?php echo $row["description"]; ?></p>
                 <div class="flex items-center flex-wrap ">
-                    <a href="showblog.php?id=<?php echo $row['id'];?>" class="text-red-500 inline-flex items-center md:mb-2 lg:mb-0">Learn More
-                        
+                    <a href="showblog.php?id=<?php echo $row['id'];?>" class="text-red-500 inline-flex items-center md:mb-2 lg:mb-0" name="submit">Learn More
                     </a>
                 </div>
             </div>

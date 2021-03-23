@@ -35,7 +35,7 @@ if(!isset($_SESSION['uname'])){
         
     </div>
     <div class="main_content">
-        <div class="header">TRAINER/TEAM</div> 
+        <div class="header">TRAINER/TEAM <a href="insertrainer.php"><i class="fas fa-user-plus hover:bg-red-300">(Click To Add Trainer)</i></a></div> 
         <div class="info " >
           <table class="border-separate border border-green-800 container  text-2xl text-center ">
             <thead>

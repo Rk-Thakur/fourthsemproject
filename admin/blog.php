@@ -36,7 +36,7 @@ if(!isset($_SESSION['uname'])){
         
     </div>
     <div class="main_content">
-        <div class="header">BLOG</div> 
+        <div class="header  ">BLOG <a href="insertblog.php"><i class="fas fa-book-medical hover:bg-red-300">(Click To Add Blog )</i></a></div> 
         <div class="info " >
           <table class="border-separate border border-green-800 container  text-2xl text-center ">
             <thead>
@@ -44,7 +44,7 @@ if(!isset($_SESSION['uname'])){
                 <th class="border border-green-600 ">Id</th>
                 <th class="border border-green-600 ">Image</th>
                 <th class="border border-green-600 ">Topics</th>
-                <th class="border border-green-600 m-top   ">Description</th>
+                <th class="border border-green-600 ">Description</th>
                 <th class="border border-green-600 ">By WHOM?</th>
                 <th colspan="2"  class="border border-green-600 ">ACTION</th>
 
@@ -67,7 +67,7 @@ if(!isset($_SESSION['uname'])){
                 <td class="border border-green-600 "><?php echo '<img src="uploads/'. $row["file"].'"height= "100" width="100" alt=" ">'; ?></td>
                 <td class="border border-green-600 "><?php echo $row["topic"]; ?></td>
                 <td class="border border-green-600 "><?php echo $row["description"]; ?></td>
-                <td class="border border-green-600 "><?php  echo $_SESSION['uname'] ?></td>
+                <td class="border border-green-600 "><?php   echo $row["bywhom"]; ?></td>
                 <td  class="border border-green-600 text-center"><a href="editblog.php?id=<?php echo $row["id"]; ?>"><i class="fas fa-edit"></i></a></td>
                 <td  class="border border-green-600 text-center"><a href="deleteblog.php?id=<?php echo $row["id"]; ?>"><i class="fas fa-trash"></i></a></td>
                     

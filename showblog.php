@@ -91,47 +91,40 @@
 
 
 <?php
-                  include_once  ('config.php');
+                  include_once('admin/config.php');
                   $id=$_REQUEST['id'];
-                  $sql="SELECT * FROM blog where id='$id'";
+                  echo $id;
+                  $sql="SELECT * FROM blog where id=$id LIMIT 1";
+                  echo $sql;
                   $result=mysqli_query($conn,$sql);
                         if($result)
                         {
                             $row=mysqli_fetch_assoc($result);
+                            
 
                         }
                         ?>
-                        <?php
-                        if(isset($_POST['new']))
-                        {
-                       $id=$_REQUEST['id'];
-                         $image=$_FILES["file"]["name"];
-                        $topic=$_REQUEST['topic'];
-                        $description=$_REQUEST['description'];
                         
-                       if($result){
-                        header("Location: blog.php");//redirect to view.php after successfully updated record
-                         }
-                        else{
-                           echo"Record not Updated".mysqli_error($conn);
-                          }
-                          }else{
-                        ?>
 
-        <div>
-        <form align="center" name="form" method="post" action="" enctype="multipart/form-data">
-        <input type="hidden" name="new" value="1"/>
-        <input name="id" type="hidden" value="<?php echo $row['id'];?>" />
-        <p><input type="file" name="file"  required value="<?php echo$row['file'];?>" /></p>
-        <p><input type="text" name="topic"  required value="<?php echo$row['topic'];?>" /></p>
-        <p><input type="text" name="description"  required value="<?php echo $row['description'];?>" /></p>
-            <p><input type="submit" name="submit" value=" Update Blog"></p>
-    </form>
+<section class="text-gray-600 body-font">
+  <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+    <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
+      
+      <?php echo '<img src="admin/uploads/'. $row["file"].'" alt="hero" class="object-cover object-center rounded">'; ?>
+      <?php echo $row['file'] ?>
+    
     </div>
+    <div class="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
+      <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900"><?php echo $row['topic'] ?>
+      </h1>
+      <p class="mb-8 leading-relaxed"><?php echo $row['description'] ?></p>
+      
+    </div>
+  </div>
+</section>4
 
-    <?php } ?>
 
-
+    
 
 
 

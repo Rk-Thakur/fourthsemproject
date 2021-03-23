@@ -1,5 +1,10 @@
 <?php
-
+session_start();
+if(!isset($_SESSION['uname'])){
+    header('location:login.php');
+}
+?>
+<?php
 include_once('config.php');
 if(isset($_POST['submit']))
 {
@@ -11,12 +16,13 @@ if(isset($_POST['submit']))
 
 $topic=$_POST['topic'];
 $description=$_POST['description'];
-$sql="INSERT into blog(file,topic,description) values('$file','$topic','$description')";
+$whom = $_SESSION['uname'];
+$sql="INSERT into blog(file,topic,description,bywhom) values('$file','$topic','$description','$whom')";
 $result=mysqli_query($conn,$sql);
 if($result)
 {
-    echo"Data inserted";
-    // header("Location: news.php");
+    // echo"Data inserted";
+    header("Location: blog.php");
 }
 else{
     echo"Data not inserted".mysqli_error($conn);
@@ -43,6 +49,7 @@ else{
     <input type="text" name="topic">
     Descrption:
     <textarea name="description" type="text" id="" cols="10" rows="10"></textarea>
+    
     <input type="submit" name="submit" Value="submit">
     </form>
 </body>

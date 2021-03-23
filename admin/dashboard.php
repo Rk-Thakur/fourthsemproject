@@ -27,6 +27,7 @@ if(!isset($_SESSION['uname'])){
         <ul>
             <li><a href="dashboard.php"><i class="fas fa-home"></i>Home</a></li>
             <li><a href="trainer.php"><i class="fas fa-user"></i>Trainer</a></li>
+            <li><a href="member.php"><i class="fas fa-user"></i>Member</a></li>
             <li><a href="gallery.php"><i class="fas fa-project-diagram"></i>Gallery</a></li>
             <li><a href="blog.php"><i class="fas fa-blog"></i>Blogs</a></li>
             <li><a href="contact.php"><i class="fas fa-address-book"></i>Contact</a></li>
@@ -80,8 +81,57 @@ if(!isset($_SESSION['uname'])){
           </table>
         </div>
 
+        <!-- member -->
+        <div class="header text-5xl text-black text-center">MEMBERS </div> 
+        <div class="info " >
+          <table class="border-separate border border-green-800 container  text-2xl text-center ">
+            <thead>
+            <tr>
+                <th class="border border-green-600 ">Id</th>
+                <th class="border border-green-600 ">Name</th>
+                <th class="border border-green-600 ">Address</th>
+                <th class="border border-green-600 ">Contact</th>
+                <th class="border border-green-600 ">Email</th>
+                <th class="border border-green-600 ">Trainer</th>
+                <th class="border border-green-600 ">Package</th>
+                <th  class="border border-green-600 ">Payment</th>
+
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+              <?php
+                  include_once("config.php");
+                  // create a query
+                  //$sql="SELECT first,last,email,course,level,status FROM record";
+                  $sql="SELECT * FROM registration ORDER BY id desc";
+                  //execute query
+                  $result=mysqli_query($conn,$sql);
+                    $count=1;
+                  if($result){                 
+                  while($row=mysqli_fetch_assoc($result)){?>
+                    <td class="border border-green-600 "><?php echo $count; ?></td>
+                <td class="border border-green-600 "><?php echo $row["name"]; ?></td>
+                <td class="border border-green-600 "><?php echo $row["address"]; ?></td>
+                <td class="border border-green-600 "><?php echo $row["contact"]; ?></td>
+                <td class="border border-green-600 "><?php echo $row["email"]; ?></td>
+                <td class="border border-green-600 "><?php echo $row["trainer"]; ?></td>
+                <td class="border border-green-600 "><?php echo $row["package"]; ?></td>
+                <td class="border border-green-600 "><?php echo $row["payment"]; ?></td>
+                    </tr>
+                    <?php $count++;?>
+                    <?php
+                    }
+                  }
+                  ?>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+
         <!-- blog -->
-        <div class="header text-5xl text-black text-center">BLOG</div> 
+        <div class="header text-5xl text-black text-center">BLOG <a href="insertblog.php"><i class="fas fa-book-medical hover:bg-red-300"></i></a></div> 
         <div class="info " >
           <table class="border-separate border border-green-800 container  text-2xl text-center ">
             <thead>
@@ -111,7 +161,7 @@ if(!isset($_SESSION['uname'])){
                     <td class="border border-green-600 "><?php echo $row["topic"]; ?></td>
                     <td class="border border-green-600 "><?php echo $row["description"]; ?></td>
 
-                <td class="border border-green-600 "><?php  echo $_SESSION['uname'] ?></td>
+                <td class="border border-green-600 "><?php  echo $row['bywhom'] ?></td>
                     </tr>
                     <?php $count++;?>
                     <?php
@@ -124,8 +174,8 @@ if(!isset($_SESSION['uname'])){
         </div>
 
 
-
-        <div class="header text-5xl text-black text-center">GALLERY</div> 
+        <!-- Gallery -->
+        <div class="header text-5xl text-black text-center">GALLERY <a href="insertgallery.php"><i class="far fa-images bg-red hover:bg-red-200"></i></a></div> 
         <div class="info " >
           <table class="border-separate border border-green-800 container  text-2xl text-center ">
             <thead>
@@ -169,9 +219,9 @@ if(!isset($_SESSION['uname'])){
           </table>
         </div>
 
+                  <!-- Trainer -->
 
-
-        <div class="header text-5xl text-black text-center">TRAINER</div> 
+        <div class="header text-5xl text-black text-center">TRAINER <a href="insertrainer.php"><i class="fas fa-user-plus hover:bg-red-300"></i></a></div> 
         <div class="info " >
           <table class="border-separate border border-green-800 container  text-2xl text-center ">
             <thead>
@@ -214,6 +264,8 @@ if(!isset($_SESSION['uname'])){
             </tbody>
           </table>
         </div>
+
+        
     </div>
 
 

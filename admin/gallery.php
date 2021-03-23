@@ -36,7 +36,7 @@ if(!isset($_SESSION['uname'])){
         
     </div>
     <div class="main_content">
-        <div class="header">GALLERY</div> 
+        <div class="header">GALLERY <a href="insertgallery.php"><i class="far fa-images bg-red hover:bg-red-200">(Click To Add Photo)</i></a></div> 
         <div class="info " >
           <table class="border-separate border border-green-800 container  text-2xl text-center ">
             <thead>

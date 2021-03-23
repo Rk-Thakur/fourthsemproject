@@ -15,8 +15,8 @@ $sql="INSERT into trainer(file,name,specialist,description) values('$file','$nam
 $result=mysqli_query($conn,$sql);
 if($result)
 {
-    echo"Data inserted";
-    // header("Location: news.php");
+    // echo"Data inserted";
+    header("Location: trainer.php");
 }
 else{
     echo"Data not inserted".mysqli_error($conn);

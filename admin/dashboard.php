@@ -25,16 +25,13 @@ if(!isset($_SESSION['uname'])){
     
         <h2 class="text-2xl text-bold">A.S.T GYM KHANA</h2>
         <ul>
-            <li><a href="dashboard.php"><i class="fas fa-home"></i>Home</a></li>
+        <li><a href="dashboard.php"><i class="fas fa-home"></i>Home</a></li>
             <li><a href="trainer.php"><i class="fas fa-user"></i>Trainer</a></li>
-            <li><a href="member.php"><i class="fas fa-user"></i>Member</a></li>
             <li><a href="gallery.php"><i class="fas fa-project-diagram"></i>Gallery</a></li>
             <li><a href="blog.php"><i class="fas fa-blog"></i>Blogs</a></li>
             <li><a href="contact.php"><i class="fas fa-address-book"></i>Contact</a></li>
             <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
             <li><a href="logout.php"><i class="fal fa-sign-out"></i>Logout</a></li>
-            
-
           </ul> 
         
     </div>
@@ -207,7 +204,7 @@ if(!isset($_SESSION['uname'])){
                     <td class="border border-green-600 "><?php echo $row["name"]; ?></td>
                     <td class="border border-green-600 "><?php echo $row["description"]; ?></td>
 
-                <td class="border border-green-600 "><?php  echo $_SESSION['uname'] ?></td>
+                <td class="border border-green-600 "><?php  echo $row["bywhom"] ?></td>
                     </tr>
                     <?php $count++;?>
                     <?php
@@ -253,7 +250,7 @@ if(!isset($_SESSION['uname'])){
                     <td class="border border-green-600 "><?php echo $row["specialist"]; ?></td>
                     <td class="border border-green-600 "><?php echo $row["description"]; ?></td>
 
-                <td class="border border-green-600 "><?php  echo $_SESSION['uname'] ?></td>
+                <td class="border border-green-600 "><?php  echo $row["bywhom"] ?></td>
                     </tr>
                     <?php $count++;?>
                     <?php

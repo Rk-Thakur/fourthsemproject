@@ -1,5 +1,10 @@
 <?php
-
+session_start();
+if(!isset($_SESSION['uname'])){
+    header('location:login.php');
+}
+?>
+<?php
 include_once('config.php');
 if(isset($_POST['submit']))
 {
@@ -11,12 +16,13 @@ if(isset($_POST['submit']))
     $topic=$_POST['topic'];
     $name=$_POST['name'];
 $description=$_POST['description'];
-$sql="INSERT into gallery(file,topic,name,description) values('$file','$topic','$name','$description')";
+$whom = $_SESSION['uname'];
+$sql="INSERT into gallery(file,topic,name,description,bywhom) values('$file','$topic','$name','$description','$whom')";
 $result=mysqli_query($conn,$sql);
 if($result)
 {
-    echo"Data inserted";
-    // header("Location: news.php");
+    // echo"Data inserted";
+    header("Location: gallery.php");
 }
 else{
     echo"Data not inserted".mysqli_error($conn);

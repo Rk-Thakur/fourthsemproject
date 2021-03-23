@@ -1,5 +1,10 @@
 <?php
-
+session_start();
+if(!isset($_SESSION['uname'])){
+    header('location:login.php');
+}
+?>
+<?php
 include_once('config.php');
 if(isset($_POST['submit']))
 {
@@ -11,7 +16,8 @@ if(isset($_POST['submit']))
     $name=$_POST['name'];
     $specialist = $_POST['specialist'];
 $description=$_POST['description'];
-$sql="INSERT into trainer(file,name,specialist,description) values('$file','$name','$specialist','$description')";
+$whom = $_SESSION['uname'];
+$sql="INSERT into trainer(file,name,specialist,description,bywhom) values('$file','$name','$specialist','$description','$whom')";
 $result=mysqli_query($conn,$sql);
 if($result)
 {

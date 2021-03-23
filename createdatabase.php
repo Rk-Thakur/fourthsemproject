@@ -22,26 +22,28 @@ $conn =  mysqli_connect("localhost","root","","fourthproject");
 //     file varchar(1000) NOT NULL,
 //     topic varchar(30) NOT NULL,
 //     name varchar(30) NOT NULL,
-//     description varchar(100) NOT NULL
+//     description varchar(100) NOT NULL,
+//     bywhom varchar(100) NOT NULL
 // )";
 //trainer table
-// $sql = "CREATE table trainer(
-//     id int NOT NULL AUTO_INCREMENT  PRIMARY KEY,
-//     file varchar(1000) NOT NULL,
-//     name varchar(30) NOT NULL,
-//     specialist varchar(30) NOT NULL,
-//     description varchar(100) NOT NULL
-// )";
-$sql = "CREATE table registration(
+$sql = "CREATE table trainer(
     id int NOT NULL AUTO_INCREMENT  PRIMARY KEY,
-    name varchar(100) NOT NULL,
-    address varchar(100) NOT NULL,
-    contact int(10) NOT NULL,
-    email varchar(100) NOT NULL,
-    trainer varchar(20) NOT NULL,
-    package varchar(20) NOT NULL,
-    payment varchar(20) NOT NULL
+    file varchar(1000) NOT NULL,
+    name varchar(30) NOT NULL,
+    specialist varchar(30) NOT NULL,
+    description varchar(100) NOT NULL,
+    bywhom varchar(100) NOT NULL
 )";
+// $sql = "CREATE table registration(
+//     id int NOT NULL AUTO_INCREMENT  PRIMARY KEY,
+//     name varchar(100) NOT NULL,
+//     address varchar(100) NOT NULL,
+//     contact int(10) NOT NULL,
+//     email varchar(100) NOT NULL,
+//     trainer varchar(20) NOT NULL,
+//     package varchar(20) NOT NULL,
+//     payment varchar(20) NOT NULL
+// )";
 
 
 

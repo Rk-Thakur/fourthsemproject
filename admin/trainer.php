@@ -68,7 +68,7 @@ if(!isset($_SESSION['uname'])){
                 <td class="border border-green-600 "><?php echo $row["name"]; ?></td>
                 <td class="border border-green-600 "><?php echo $row["specialist"]; ?></td>
                 <td class="border border-green-600 "><?php echo $row["description"]; ?></td>
-                <td class="border border-green-600 "><?php  echo $_SESSION['uname'] ?></td>
+                <td class="border border-green-600 "><?php  echo $row["bywhom"]; ?></td>
                 <td  class="border border-green-600 text-center"><a href="editrainer.php?id=<?php echo $row["id"]; ?>"><i class="fas fa-edit"></i></a></td>
                 <td  class="border border-green-600 text-center"><a href="deletetrainer.php?id=<?php echo $row["id"]; ?>"><i class="fas fa-trash"></i></a></td>
                     

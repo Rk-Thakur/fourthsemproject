@@ -44,12 +44,12 @@
         <span class="ml-3 text-xl text-3xl text-bold text-white">A.S.T GYM KHANA </span>
       </a>
       <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center text-2xl text-white ">
-        <a class="mr-5 hover:text-red-600 smoothScroll" href="index.html">Home</a>
-        <a class="mr-5 hover:text-red-600 smoothScroll" href="index.html">Gallery</a>
-        <a class="mr-5 hover:text-red-600 smoothScroll" href="index.html">Trainee</a>
-        <a class="mr-5 hover:text-red-600 smoothScroll" href="index.html">Pricing</a>
-        <a class="mr-5 hover:text-red-600 smoothScroll" href="index.html">Blog</a>
-        <a class="mr-5 hover:text-red-600 smoothScroll" href="index.html">Contact</a>
+        <a class="mr-5 hover:text-red-600 " href="index.php#home">Home</a>
+        <a class="mr-5 hover:text-red-600 " href="index.php#gallery">Gallery</a>
+        <a class="mr-5 hover:text-red-600 " href="index.php#team">Trainee</a>
+        <a class="mr-5 hover:text-red-600 " href="index.php#price">Pricing</a>
+        <a class="mr-5 hover:text-red-600 "href="index.php#blog">Blog</a>
+        <a class="mr-5 hover:text-red-600 " href="index.php#contact">Contact</a>
 
       </nav>
       
@@ -59,10 +59,6 @@
   </header>
 
 <!-- blog -->
-
-
-
-
 <?php
                   include_once('admin/config.php');
                   $id=$_REQUEST['id'];
@@ -79,7 +75,7 @@
 
 <section class="text-gray-600 body-font">
   <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
-    <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
+    <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0 " >
       
       <?php echo '<img src="admin/uploads/'. $row["file"].'" alt="hero" class="object-cover object-center rounded">'; ?>
     
@@ -92,66 +88,6 @@
     </div>
   </div>
 </section>
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 </body>
 </html>

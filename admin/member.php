@@ -51,7 +51,7 @@ if(!isset($_SESSION['uname'])){
                 <th  class="border border-green-600 ">Action</th>
 
               </tr>
-            </thead>
+            </thead>  
             <tbody>
               <tr>
             <?php

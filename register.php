@@ -22,7 +22,7 @@ if(isset($_POST['submit'])){
     // echo "data not  inserted into table".mysqli_error($conn);
   }
 
-}
+} 
 
 
 ?>

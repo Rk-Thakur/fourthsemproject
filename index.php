@@ -333,7 +333,7 @@ include("sucess.php");
         </h1>
         <p class="mb-8 leading-relaxed text-white"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur incidun</p>
         <div class="flex justify-center">
-          <a href="#contact" class="inline-flex text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded text-lg">Become a member!</a>
+          <a href="register.php" class="inline-flex text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded text-lg">Become a member!</a>
         </div>
       </div>
     </div>

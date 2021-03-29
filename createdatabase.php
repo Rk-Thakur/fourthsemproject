@@ -13,7 +13,7 @@ $conn =  mysqli_connect("localhost","root","","fourthproject");
 //         id int NOT NULL AUTO_INCREMENT  PRIMARY KEY,
 //         file varchar(1000) NOT NULL,
 //         topic varchar(100) NOT NULL,
-//         description varchar(10000) NOT NULL,
+//         description longtext NOT NULL,
 //         bywhom varchar(100) NOT NULL
 //     )";
     //gallery table
@@ -26,24 +26,45 @@ $conn =  mysqli_connect("localhost","root","","fourthproject");
 //     bywhom varchar(100) NOT NULL
 // )";
 //trainer table
-$sql = "CREATE table trainer(
-    id int NOT NULL AUTO_INCREMENT  PRIMARY KEY,
-    file varchar(1000) NOT NULL,
-    name varchar(30) NOT NULL,
-    specialist varchar(30) NOT NULL,
-    description varchar(100) NOT NULL,
-    bywhom varchar(100) NOT NULL
-)";
-// $sql = "CREATE table registration(
+// $sql = "CREATE table trainer(
 //     id int NOT NULL AUTO_INCREMENT  PRIMARY KEY,
-//     name varchar(100) NOT NULL,
-//     address varchar(100) NOT NULL,
-//     contact int(10) NOT NULL,
-//     email varchar(100) NOT NULL,
-//     trainer varchar(20) NOT NULL,
-//     package varchar(20) NOT NULL,
-//     payment varchar(20) NOT NULL
+//     file varchar(1000) NOT NULL,
+//     name varchar(30) NOT NULL,
+//     specialist varchar(30) NOT NULL,
+//     description varchar(100) NOT NULL,
+//     bywhom varchar(100) NOT NULL
 // )";
+$sql = "CREATE table registration(
+    id int NOT NULL AUTO_INCREMENT  PRIMARY KEY,
+    name varchar(100) NOT NULL,
+    address varchar(100) NOT NULL,
+    contact int(10) NOT NULL,
+    email varchar(100) NOT NULL,
+    trainer varchar(20) NOT NULL,
+    package varchar(20) NOT NULL,
+    payment varchar(20) NOT NULL
+)";
+
+
+
+
+//OPTIONAL FOR THE PAYMENTS
+// $sql = "CREATE TABLE payment(
+//         payment_id int NOT NULL PRIMARY KEY,
+//         member_name varchar(100) NOT NULL,
+//         total int (20) NOT NULL,
+//         Due int (20) NOT NULL,
+//         FOREIGN KEY (member_name) REFERENCES registration(name)
+// )";
+// CREATE TABLE `payment` (
+//     `payment_id` int NOT NULL,
+//     `total` int NOT NULL,
+//     `Due` int NOT NULL,
+//     `id` int,
+//     PRIMARY KEY (payment_id),
+//     FOREIGN KEY (id) REFERENCES registration(id)
+// );
+
 
 
 

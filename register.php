@@ -144,7 +144,7 @@ if(isset($_POST['submit'])){
               <select name="payment" id="">
                 
                 <option value="" class="border border-indigo-100">Select Option!!</option>
-                <option value="Cash on Delivery">Cash On Delivery</option>
+                <option value="Cash on Hand">Cash On Hand</option>
                 <option value="Online Transaction">Online Payment</option>
               </select>
             </div>

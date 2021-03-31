@@ -4,7 +4,7 @@ if(isset($_POST['submit'])){
 
   $file = $_FILES["file"]["name"];
   $temp_name = $_FILES["file"]["tmp_name"];
-  $path= "uploads/".$file;
+  $path= "admin/uploads/".$file;
 
   $name=$_POST['name'];
   $address=$_POST['address'];

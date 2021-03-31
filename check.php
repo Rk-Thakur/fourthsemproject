@@ -1,41 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <style>
-    table{border-collapse:collapse}
-th,td{padding:10px}
-.popup{display:none;position:absolute;background:#ccc;border-radius:6px;padding:8px;}
-  </style>
-</head>
-<body>
-<table border="1">
-<tr>
-  <th>Name</th>
-  <th>Age</th>
-</tr>
-<tr>
-  <td>Aryan</td>
-  <td>26</td>
-</tr>
-<tr>
-  <td>Dia</td>
-  <td>22</td>
-</tr>
-</table>
-<script>
-  $(document).ready(function () {
-    $(document).on('mouseover', 'th,td', function () {
-        var offset = $(this).offset();
-        var html = '<div class="popup">' + $(this).text() + '</div>';
-        $('.popup').remove();
-        $(html).insertBefore('table');
-        $('.popup').css({ 'top': offset.top, 'left': offset.left }).fadeIn();
-    });
-});
-</script>
+<html>
+<style>
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  left: 50%;
+  bottom: 100%;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  margin-left: -60px;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+</style>
+<body style="text-align:center;">
+
+<p>Move the mouse over the text below:</p>
+
+<div class="tooltip">Hover over me
+<?php
+                  include_once('admin/config.php');
+                  $id=$_REQUEST['id'];
+                  $sql="SELECT * FROM payments where id=$id ";
+                  $result=mysqli_query($conn,$sql);
+                        if($result)
+                        {
+                            $row=mysqli_fetch_assoc($result);
+                            
+
+                        }
+                        ?>
+  <span class="tooltiptext"><?php echo $row['total'] ?></span>
+</div>
+
+<p>Note that the position of the tooltip text isn't very good. Go back to the tutorial and continue reading on how to position the tooltip in a desirable way.</p>
+
 </body>
 </html>
+

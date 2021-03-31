@@ -16,8 +16,9 @@ if(isset($_POST['submit']))
 
 $topic=$_POST['topic'];
 $description=$_POST['description'];
+$summary=$_POST['summary'];
 $whom = $_SESSION['uname'];
-$sql="INSERT into blog(file,topic,description,bywhom) values('$file','$topic','$description','$whom')";
+$sql="INSERT into blog(file,topic,summary,description,bywhom) values('$file','$topic','$summary','$description','$whom')";
 $result=mysqli_query($conn,$sql);
 if($result)
 {
@@ -47,6 +48,8 @@ else{
         <input type="file" name="file"  >
     Topic:
     <input type="text" name="topic">
+    Summary:
+    <input type="text" name="summary">
     Descrption:
     <textarea name="description" type="text" id="" cols="10" rows="10"></textarea>
     

@@ -12,6 +12,7 @@ if(!isset($_SESSION['uname'])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    
     <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
 
   <link rel="stylesheet" href="style.css">
@@ -30,6 +31,7 @@ if(!isset($_SESSION['uname'])){
             <li><a href="blog.php"><i class="fas fa-blog"></i>Blogs</a></li>
             <li><a href="contact.php"><i class="fas fa-address-book"></i>Contact</a></li>
             <li><a href="member.php"><i class="fas fa-user"></i>Member</a></li>
+            <li><a href="payment.php"><i class="fas fa-flag"></i>Payment</a></li>
             <br><br><br><br><br><br><br><br><br><br>
             <li><a href="logout.php"><i class="fal fa-sign-out"></i>Logout</a></li>
           </ul> 
@@ -41,7 +43,8 @@ if(!isset($_SESSION['uname'])){
           <table class="border-separate border border-green-800 container  text-2xl text-center ">
             <thead>
               <tr>
-                <th class="border border-green-600 ">Id</th>
+                <th class="border border-green-600 ">S.N.</th>
+                <th class="border border-green-600 ">Trainer_Id</th>
                 <th class="border border-green-600 ">Image</th>
                 <th class="border border-green-600 ">Name</th>
                 <th class="border border-green-600 ">Specialist</th>
@@ -65,6 +68,7 @@ if(!isset($_SESSION['uname'])){
                   while($row=mysqli_fetch_assoc($result)){?>
                   <tr>
                 <td class="border border-green-600 "><?php echo $count; ?></td>
+                <td class="border border-green-600 "><?php echo $row['id']; ?></td>
                 <td class="border border-green-600 "><?php echo '<img src="uploads/'. $row["file"].'"height= "100" width="100" alt=" ">'; ?></td>
                 <td class="border border-green-600 "><?php echo $row["name"]; ?></td>
                 <td class="border border-green-600 "><?php echo $row["specialist"]; ?></td>

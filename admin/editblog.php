@@ -16,8 +16,9 @@
                        $id=$_REQUEST['id'];
                          $image=$_FILES["file"]["name"];
                         $topic=$_REQUEST['topic'];
+                        $summary= $_REQUEST['summary'];
                         $description=$_REQUEST['description'];
-                        $update="UPDATE blog set file='$image' ,topic='$topic',description='$description' where id='$id' ";
+                        $update="UPDATE blog set file='$image' ,topic='$topic',summary= '$summary',description='$description' where id='$id' ";
                         $result=mysqli_query($conn,$update);
                        if($result){
                         header("Location: blog.php");//redirect to view.php after successfully updated record
@@ -34,6 +35,7 @@
         <input name="id" type="hidden" value="<?php echo $row['id'];?>" />
         <p><input type="file" name="file"  required value="<?php echo$row['file'];?>" /></p>
         <p><input type="text" name="topic"  required value="<?php echo$row['topic'];?>" /></p>
+        <p><input type="text" name="summary"  required value="<?php echo$row['summary'];?>" /></p>
         <p><input type="text" name="description"  required value="<?php echo $row['description'];?>" /></p>
             <p><input type="submit" name="submit" value=" Update Blog"></p>
     </form>

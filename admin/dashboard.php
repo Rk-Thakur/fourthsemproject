@@ -31,10 +31,10 @@ if(!isset($_SESSION['uname'])){
             <li><a href="blog.php"><i class="fas fa-blog"></i>Blogs</a></li>
             <li><a href="contact.php"><i class="fas fa-address-book"></i>Contact</a></li>
             <li><a href="member.php"><i class="fas fa-user"></i>Member</a></li>
-
+            <li><a href="payment.php"><i class="fas fa-flag"></i>Payment</a></li>
             <br><br><br><br><br><br><br><br><br><br>
             <li><a href="logout.php"><i class="fal fa-sign-out"></i>Logout</a></li>
-          </ul> 
+          </ul>  
         
     </div>
     
@@ -45,11 +45,11 @@ if(!isset($_SESSION['uname'])){
         <div class="info " >
           <table class="border-separate border border-green-800 container  text-2xl text-center ">
             <thead>
-              <tr>
-                <th class="border border-green-600 ">ID</th>
+              <tr class="border border-green-600 bg-red-300">
+                <th class="border border-green-600 ">S.N</th>
                 <th class="border border-green-600 ">Name</th>
                 <th class="border border-green-600 ">Email</th>
-                <th class="border border-green-600">Message</th>
+                <th class="border border-green-600 ">Message</th>
               </tr>
             </thead>
             <tbody>
@@ -64,11 +64,11 @@ if(!isset($_SESSION['uname'])){
                     $count=1;
                   if($result){                 
                   while($row=mysqli_fetch_assoc($result)){?>
-                    <tr>
-                    <td class="border border-green-600 " align="center" ><?php echo $count; ?></td>
-                  <td class="border border-green-600" align="center" ><?php echo $row["name"]; ?></td>
-                  <td class="border border-green-600" align="center" ><?php echo $row["email"]; ?></td>
-                  <td class="border border-green-600" align="center" ><?php echo $row["message"]; ?></td>
+                    <tr >
+                    <td  align="center"class="border border-green-600 " ><?php echo $count; ?></td>
+                  <td  align="center" class="border border-green-600 "><?php echo $row["name"]; ?></td>
+                  <td  align="center" class="border border-green-600 " ><?php echo $row["email"]; ?></td>
+                  <td  align="center" class="border border-green-600 " ><?php echo $row["message"]; ?></td>
                     </tr>
                     <?php $count++;?>
                     <?php
@@ -85,13 +85,14 @@ if(!isset($_SESSION['uname'])){
         <div class="info " >
           <table class="border-separate border border-green-800 container  text-2xl text-center ">
             <thead>
-            <tr>
-                <th class="border border-green-600 ">Id</th>
+            <tr class="border border-green-600 bg-red-300 ">
+                <th class="border border-green-600 ">S.N</th>
+                <th class="border border-green-600 ">Image</th>
                 <th class="border border-green-600 ">Name</th>
                 <th class="border border-green-600 ">Address</th>
                 <th class="border border-green-600 ">Contact</th>
                 <th class="border border-green-600 ">Email</th>
-                <th class="border border-green-600 ">Trainer</th>
+                <th class="border border-green-600 " >Trainer</th>
                 <th class="border border-green-600 ">Package</th>
                 <th  class="border border-green-600 ">Payment</th>
 
@@ -110,13 +111,14 @@ if(!isset($_SESSION['uname'])){
                   if($result){                 
                   while($row=mysqli_fetch_assoc($result)){?>
                     <td class="border border-green-600 "><?php echo $count; ?></td>
-                <td class="border border-green-600 "><?php echo $row["name"]; ?></td>
-                <td class="border border-green-600 "><?php echo $row["address"]; ?></td>
-                <td class="border border-green-600 "><?php echo $row["contact"]; ?></td>
-                <td class="border border-green-600 "><?php echo $row["email"]; ?></td>
-                <td class="border border-green-600 "><?php echo $row["trainer"]; ?></td>
-                <td class="border border-green-600 "><?php echo $row["package"]; ?></td>
-                <td class="border border-green-600 "><?php echo $row["payment"]; ?></td>
+                    <td class="border border-green-600 "><?php echo '<img src="uploads/'. $row["file"].'"height= "100" width="100" alt=" ">'; ?></td>
+                    <td class="border border-green-600 "><?php echo $row["name"]; ?></td>
+                    <td class="border border-green-600 "><?php echo $row["address"]; ?></td>
+                    <td class="border border-green-600 "><?php echo $row["contact"]; ?></td>
+                    <td class="border border-green-600 "><?php echo $row["email"]; ?></td>
+                    <td class="border border-green-600 "><?php echo $row["trainer"]; ?></td>
+                    <td class="border border-green-600 "><?php echo $row["package"]; ?></td>
+                    <td class="border border-green-600 "><?php echo $row["payment"]; ?></td>
                     </tr>
                     <?php $count++;?>
                     <?php
@@ -134,12 +136,12 @@ if(!isset($_SESSION['uname'])){
         <div class="info " >
           <table class="border-separate border border-green-800 container  text-2xl text-center ">
             <thead>
-              <tr>
+              <tr class="border border-green-600 bg-red-300">
                 <th class="border border-green-600 ">ID</th>
                 <th class="border border-green-600 ">Image</th>
                 <th class="border border-green-600 ">Topic </th>
-                <th class="border border-green-600">Description</th>
-                <th class="border border-green-600">By WHOM?</th>
+                <th class="border border-green-600 ">Description</th>
+                <th class="border border-green-600 ">By WHOM?</th>
               </tr>
             </thead>
             <tbody>
@@ -155,7 +157,7 @@ if(!isset($_SESSION['uname'])){
                   if($result){                 
                   while($row=mysqli_fetch_assoc($result)){?>
                     <tr>
-                    <td class="border border-green-600 item-center " align="center" ><?php echo $count; ?></td>
+                    <td  align="center" ><?php echo $count; ?></td>
                     <td class="border border-green-600 "><?php echo '<img src="uploads/'. $row["file"].'"height= "100" width="100" alt=" ">'; ?></td>
                     <td class="border border-green-600 "><?php echo $row["topic"]; ?></td>
                     <td class="border border-green-600 "><?php echo $row["description"]; ?></td>
@@ -178,13 +180,13 @@ if(!isset($_SESSION['uname'])){
         <div class="info " >
           <table class="border-separate border border-green-800 container  text-2xl text-center ">
             <thead>
-              <tr>
+              <tr class="border border-green-600 bg-red-300">
                 <th class="border border-green-600 ">ID</th>
                 <th class="border border-green-600 ">Image</th>
                 <th class="border border-green-600 ">Title </th>
-                <th class="border border-green-600">Name</th>
-                <th class="border border-green-600">Description</th>
-                <th class="border border-green-600">By WHOM?</th>
+                <th class="border border-green-600 ">Name</th>
+                <th class="border border-green-600 ">Description</th>
+                <th class="border border-green-600 ">By WHOM?</th>
               </tr>
             </thead>
             <tbody>
@@ -200,13 +202,13 @@ if(!isset($_SESSION['uname'])){
                   if($result){                 
                   while($row=mysqli_fetch_assoc($result)){?>
                     <tr>
-                    <td class="border border-green-600 " align="center" ><?php echo $count; ?></td>
+                    <td  align="center" ><?php echo $count; ?></td>
                     <td class="border border-green-600 "><?php echo '<img src="uploads/'. $row["file"].'"height= "100" width="100" alt=" ">'; ?></td>
                     <td class="border border-green-600 "><?php echo $row["topic"]; ?></td>
                     <td class="border border-green-600 "><?php echo $row["name"]; ?></td>
                     <td class="border border-green-600 "><?php echo $row["description"]; ?></td>
 
-                <td class="border border-green-600 "><?php  echo $row["bywhom"] ?></td>
+                <td class="border border-green-600 " ><?php  echo $row["bywhom"] ?></td>
                     </tr>
                     <?php $count++;?>
                     <?php
@@ -224,13 +226,13 @@ if(!isset($_SESSION['uname'])){
         <div class="info " >
           <table class="border-separate border border-green-800 container  text-2xl text-center ">
             <thead>
-              <tr>
-                <th class="border border-green-600 ">ID</th>
+              <tr class="border border-green-600 bg-red-300">
+                <th class="border border-green-600 ">S.N</th>
                 <th class="border border-green-600 ">Image</th>
-                <th class="border border-green-600">Name</th>
-                <th class="border border-green-600">Specialist</th>
-                <th class="border border-green-600">Description</th>
-                <th class="border border-green-600">By WHOM?</th>
+                <th class="border border-green-600 ">Name</th>
+                <th class="border border-green-600 ">Specialist</th>
+                <th class="border border-green-600 ">Description</th>
+                <th class="border border-green-600 ">By WHOM?</th>
               </tr>
             </thead>
             <tbody>
@@ -246,13 +248,13 @@ if(!isset($_SESSION['uname'])){
                   if($result){                 
                   while($row=mysqli_fetch_assoc($result)){?>
                     <tr>
-                    <td class="border border-green-600 " align="center" ><?php echo $count; ?></td>
+                    <td  align="center" ><?php echo $count; ?></td>
                     <td class="border border-green-600 "><?php echo '<img src="uploads/'. $row["file"].'"height= "100" width="100" alt=" ">'; ?></td>
                     <td class="border border-green-600 "><?php echo $row["name"]; ?></td>
                     <td class="border border-green-600 "><?php echo $row["specialist"]; ?></td>
                     <td class="border border-green-600 "><?php echo $row["description"]; ?></td>
 
-                <td class="border border-green-600 "><?php  echo $row["bywhom"] ?></td>
+                <td class="border border-green-600 " ><?php  echo $row["bywhom"] ?></td>
                     </tr>
                     <?php $count++;?>
                     <?php

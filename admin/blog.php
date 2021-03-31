@@ -31,8 +31,9 @@ if(!isset($_SESSION['uname'])){
             <li><a href="blog.php"><i class="fas fa-blog"></i>Blogs</a></li>
             <li><a href="contact.php"><i class="fas fa-address-book"></i>Contact</a></li>
             <li><a href="member.php"><i class="fas fa-user"></i>Member</a></li>
+            <li><a href="payment.php"><i class="fas fa-flag"></i>Payment</a></li>
             <br><br><br><br><br><br><br><br><br><br>
-            <li><a href="logout.php"><i class="fal fa-sign-out"></i>Logout</a></li> 
+            <li><a href="logout.php"><i class="fal fa-sign-out"></i>Logout</a></li>
           </ul> 
         
     </div>
@@ -42,9 +43,11 @@ if(!isset($_SESSION['uname'])){
           <table class="border-separate border border-green-800 container  text-2xl text-center ">
             <thead>
               <tr>
-                <th class="border border-green-600 ">Id</th>
+                <th class="border border-green-600 ">S.N.</th>
+                <th class="border border-green-600 ">Blog_Id</th>
                 <th class="border border-green-600 ">Image</th>
                 <th class="border border-green-600 ">Topics</th>
+                <th class="border border-green-600 ">Summary</th>
                 <th class="border border-green-600 ">Description</th>
                 <th class="border border-green-600 ">By WHOM?</th>
                 <th colspan="2"  class="border border-green-600 ">ACTION</th>
@@ -65,8 +68,10 @@ if(!isset($_SESSION['uname'])){
                   while($row=mysqli_fetch_assoc($result)){?>
                   <tr>
                 <td class="border border-green-600 "><?php echo $count; ?></td>
+                <td class="border border-green-600 "><?php echo $row['id']; ?></td>
                 <td class="border border-green-600 "><?php echo '<img src="uploads/'. $row["file"].'"height= "100" width="100" alt=" ">'; ?></td>
                 <td class="border border-green-600 "><?php echo $row["topic"]; ?></td>
+                <td class="border border-green-600 "><?php echo $row["summary"]; ?></td>
                 <td class="border border-green-600 "><?php echo $row["description"]; ?></td>
                 <td class="border border-green-600 "><?php   echo $row["bywhom"]; ?></td>
                 <td  class="border border-green-600 text-center"><a href="editblog.php?id=<?php echo $row["id"]; ?>"><i class="fas fa-edit"></i></a></td>

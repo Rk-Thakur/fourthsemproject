@@ -18,6 +18,7 @@ if(!isset($_SESSION['uname'])){
   rel="stylesheet"
   href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
 />
+
 </head>
 
 <body>
@@ -70,7 +71,8 @@ if(!isset($_SESSION['uname'])){
   <div class="relative pt-16 pb-32 flex content-center items-center justify-center " style="min-height: 95vh">
     <div
       class="absolute top-0 w-full h-full bg-top bg-cover"
-      style="background-image: url('images/1.jpg');">
+      style="background-image: url('images/1.jpg');
+      ">
       <span
         id="blackOverlay"
         class="w-full h-full absolute opacity-75 bg-black"
@@ -361,11 +363,10 @@ include("sucess.php");
         <p class="mt-2 text-sm text-gray-500 text-center text-bold">We are a fitness and training
           center that focuses on pushing you to your absolute limit.
           Connect with  us to get started today!!</p> <br>
-        <a href="register.php" class="inline-flex text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded text-lg">Be Member!</a>
       </div>
       <div class="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
         <div class="lg:w-1/4 md:w-1/2 w-full px-4">
-          <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h2>
+          <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">STARTER</h2>
           <nav class="list-none mb-10">
             <li>
               <a class="text-gray-600 hover:text-gray-800">Cardio</a>
@@ -382,7 +383,7 @@ include("sucess.php");
           </nav>
         </div>
         <div class="lg:w-1/4 md:w-1/2 w-full px-4">
-          <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h2>
+          <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">BASIC</h2>
           <nav class="list-none mb-10">
             <li>
               <a class="text-gray-600 hover:text-gray-800">Cardio</a>
@@ -399,7 +400,7 @@ include("sucess.php");
           </nav>
         </div>
         <div class="lg:w-1/4 md:w-1/2 w-full px-4">
-          <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h2>
+          <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">PRO</h2>
           <nav class="list-none mb-10">
             <li>
               <a class="text-gray-600 hover:text-gray-800">Cardio</a>
@@ -416,7 +417,7 @@ include("sucess.php");
           </nav>
         </div>
         <div class="lg:w-1/4 md:w-1/2 w-full px-4">
-          <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h2>
+          <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">UNLIMITED</h2>
           <nav class="list-none mb-10">
             <li>
               <a class="text-gray-600 hover:text-gray-800">Cardio</a>

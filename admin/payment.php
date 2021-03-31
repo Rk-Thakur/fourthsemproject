@@ -1,4 +1,3 @@
-
 <?php
 session_start();
 if(!isset($_SESSION['uname'])){
@@ -38,30 +37,27 @@ if(!isset($_SESSION['uname'])){
         
     </div>
     <div class="main_content">
-        <div class="header">GALLERY <a href="insertgallery.php"><i class="far fa-images bg-red hover:bg-red-200">(Click To Add Photo)</i></a></div> 
+        <div class="header">Payment Details <a href="insertpayment.php"><i class="fas fa-flag"></i></a> </div> 
         <div class="info " >
           <table class="border-separate border border-green-800 container  text-2xl text-center ">
             <thead>
               <tr>
-                <th class="border border-green-600 ">S.N</th>
-                <th class="border border-green-600 ">Gallery_ID</th>
-
-                <th class="border border-green-600 ">Image</th>
-                <th class="border border-green-600 ">Title</th>
-                <th class="border border-green-600 ">Name</th>
-                <th class="border border-green-600 m-top">Description</th>
-                <th class="border border-green-600 ">By WHOM?</th>
-                <th colspan="2" class="border border-green-600 " >ACTION</th>
+                <th class="border border-green-600 ">S.N.</th>
+                <th class="border border-green-600 ">Member_Id</th>
+                <th class="border border-green-600 ">Date</th>
+                <th class="border border-green-600 ">Total</th>
+                <th class="border border-green-600 ">Due</th>
+                <th  class="border border-green-600 ">Action</th>
 
               </tr>
-            </thead>
+            </thead>  
             <tbody>
               <tr>
             <?php
                   include_once("config.php");
                   // create a query
                   //$sql="SELECT first,last,email,course,level,status FROM record";
-                  $sql="SELECT * FROM gallery ORDER BY id desc";
+                  $sql="SELECT * FROM payments ORDER BY id desc";
                   //execute query
                   $result=mysqli_query($conn,$sql);
                     $count=1;
@@ -69,15 +65,14 @@ if(!isset($_SESSION['uname'])){
                   while($row=mysqli_fetch_assoc($result)){?>
                   <tr>
                 <td class="border border-green-600 "><?php echo $count; ?></td>
-                <td class="border border-green-600 "><?php echo $row['id']; ?></td>
-                <td class="border border-green-600 "><?php echo '<img src="uploads/'. $row["file"].'"height= "100" width="100" alt=" ">'; ?></td>
-                <td class="border border-green-600 "><?php echo $row["topic"]; ?></td>
-                <td class="border border-green-600 "><?php echo $row["name"]; ?></td>
-                <td class="border border-green-600 "><?php echo $row["description"]; ?></td>
-
-                <td class="border border-green-600 "><?php  echo $row['bywhom'] ?></td>
-                <td  class="border border-green-600 text-center"><a href="editgallery.php?id=<?php echo $row["id"]; ?>"><i class="fas fa-edit"></i></a></td>
-            <td  class="border border-green-600 text-center"><a href="deletegallery.php?id=<?php echo $row["id"]; ?>"><i class="fas fa-trash"></i></a></td>
+                <td class="border border-green-600 ">
+                <a href="member.php"><?php echo $row['id']; echo " (Click)"; ?></a>
+                </td>
+                <td class="border border-green-600 "><?php echo $row["paymentDate"]; ?></td>
+                <td class="border border-green-600 "><?php echo $row["amount"]; ?></td>
+                <td class="border border-green-600 "><?php echo $row["due"]; ?></td>
+                
+                <td  class="border border-green-600 text-center"><a href="deletepayment.php?id=<?php echo $row["id"]; ?>"><i class="fas fa-trash"></i></a></td>
                     
                 </tr>
                 <?php $count++;?>
@@ -88,8 +83,13 @@ if(!isset($_SESSION['uname'])){
                   </tr>
             </tbody>
           </table>
+          
         </div>
+        
     </div>
+    
 </div>
+
+
 </body>
 </html>

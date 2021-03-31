@@ -1,29 +1,36 @@
-<?php
-include("admin/config.php");
+<?php 
+include_once('admin/config.php');
 if(isset($_POST['submit'])){
-  $name = $_POST['name'];
-  $address= $_POST['address'];
+
+  $file = $_FILES["file"]["name"];
+  $temp_name = $_FILES["file"]["tmp_name"];
+  $path= "uploads/".$file;
+
+  $name=$_POST['name'];
+  $address=$_POST['address'];
   $contact = $_POST['contact'];
   $email = $_POST['email'];
   $trainer = $_POST['trainer'];
-  $package= $_POST['package'];
-  $payment= $_POST['payment'];
-  if(empty($trainer) || empty($package) || empty($payment)){
+  $package = $_POST['package'];
+  $payment = $_POST['payment'];
+
+  if(empty($name) || empty($address) || empty($contact) ||empty($email) || empty($trainer) || empty($package) || empty($payment)){
     // echo '<script type="text/javascript">';
     // echo ' alert("Please Select The Values")';  //not showing an alert box.
     // echo '</script>';   
     header("Location: register.php");
-  }
-  $sql =  "INSERT INTO registration(name,address,contact,email,trainer,package,payment) Values('$name','$address','$contact','$email','$trainer','$package','$payment')";
+    }
+
+
+
+  $sql = "INSERT INTO registration(file,name,address,contact,email,trainer,package,payment) Values('$file','$name','$address','$contact','$email','$trainer','$package','$payment')";
   $result = mysqli_query($conn,$sql);
   if($result){
-    // echo 'data inserted into table';
+    //echo "data inserted";
   }else{
-    // echo "data not  inserted into table".mysqli_error($conn);
+    //echo "data not inserted".mysqli_error($conn);
   }
-
 }
-
 
 ?>
 
@@ -39,8 +46,8 @@ if(isset($_POST['submit'])){
 
 </head> 
 <body>
-  <!-- socialmedia -->
-  <div class="bg-white-200  " id="home" >
+<!-- socialmedia -->
+<div class="bg-white-200  " id="home" >
     <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row ">
       <span class="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start ">
         <a href="https://www.facebook.com" class="text-gray-500 hover:text-blue-600" >
@@ -60,9 +67,9 @@ if(isset($_POST['submit'])){
           </svg>
         </a>
     </div>
-  </div>
-  <!-- header -->
-  <header class="text-black-600 body-font-black  bg-black   " id="header">
+</div>
+<!-- header -->
+<header class="text-black-600 body-font-black  bg-black   " id="header">
     <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center text-bold bg-black ">
       <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
         <img src="images/logo.JPG" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-12 h-12 text-white p-2  rounded-full" viewBox="0 0 24 24">
@@ -82,16 +89,17 @@ if(isset($_POST['submit'])){
 
       <a href="register.php" class="inline-flex text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded text-lg  ">Member!!</a>
     </div>
-  </header>
-  <!-- Registration Form -->
-  <section class="text-gray-600 body-font relative">
-    <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
+</header>
+<!-- Registration Form -->
+<section class="text-gray-600 body-font relative">
+    <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="POST" enctype="multipart/form-data">
     <div class="container px-5 py-24 mx-auto">
       <div class="flex flex-col text-center w-full mb-12">
         <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Thanks For Choosing Us!!!!</h1>
       </div>
       <div class="lg:w-1/2 md:w-2/3 mx-auto">
         <div class="flex flex-wrap -m-2">
+          
           <div class="p-2 w-1/2">
             <div class="relative">
               <label for="name" class="leading-7 text-sm text-gray-600">Name</label>
@@ -118,7 +126,7 @@ if(isset($_POST['submit'])){
           </div>
           <div class="p-2 w-1/2">
               <div class="relative">
-                <label for="message" class="leading-7 text-sm text-gray-600">Trainer</label> <br>
+                <label for="trainer" class="leading-7 text-sm text-gray-600">Trainer</label> <br>
                 <input type="radio" name="trainer"  value="Ranjan" id=""> Ranjan Kumar Thakur   <br>
                 <input type="radio" name="trainer"  value="Arush" id=""> Arush Joshi   <br>
                 <input type="radio" name="trainer"  value="Tejash" id=""> Tejash Shrestha   <br>
@@ -129,7 +137,7 @@ if(isset($_POST['submit'])){
 
             <div class="p-2 w-1/2">
               <div class="relative">
-                <label for="message" class="leading-7 text-sm text-gray-600">Package</label> <br>
+                <label for="package" class="leading-7 text-sm text-gray-600">Package</label> <br>
                 <input type="radio" name="package" value="Starter" id=""> Starter ($9)   <br>
                 <input type="radio" name="package" value="Basic" id=""> Basic ($27)  <br>
                 <input type="radio" name="package" value="Pro" id=""> Pro ($74)  <br>
@@ -149,10 +157,15 @@ if(isset($_POST['submit'])){
               </select>
             </div>
           </div>
-            
           
+          <div class="p-2 w-1/2">
+            <div class="relative">
+              <label for="file" class="leading-7 text-sm text-gray-600">Image</label>
+              <input type="file"  name="file" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+            </div>
+          </div>
           <div class="p-2 w-full">
-            <input type="submit"  value="Register"name="submit" class="flex mx-auto text-white bg-red-500 border-0 py-2 px-8 focus:outline-none hover:bg-red-600 rounded text-lg"> 
+            <input type="submit"  value="Register" name="submit" class="flex mx-auto text-white bg-red-500 border-0 py-2 px-8 focus:outline-none hover:bg-red-600 rounded text-lg"> 
           </div>
 
         </div>
@@ -164,3 +177,6 @@ if(isset($_POST['submit'])){
     
 </body>
 </html>
+
+
+

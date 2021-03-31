@@ -62,8 +62,19 @@
           <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="text-red-500 w-12 h-12 mb-3 inline-block" viewBox="0 0 24 24">
             <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
           </svg>
-          <h2 class="title-font font-medium text-3xl text-white-900">4</h2>
-          <p class="leading-relaxed">Award</p>
+          <?php
+          include_once("admin/config.php");
+          $sql = "SELECT COUNT(id) AS total FROM blog";
+            $result = mysqli_query($conn,$sql);
+            if($result){
+                while($row = mysqli_fetch_array($result)){
+          ?>
+          <h2 class="title-font font-medium text-3xl text-white-900"><?php echo $row['total'];?>
+            <?php
+            }
+        }
+          ?></h2>
+          <p class="leading-relaxed">Article</p>
         </div>
       </div>
     </div>

@@ -13,6 +13,7 @@ if(isset($_POST['submit']))
     $path="uploads/".$file;
 
     move_uploaded_file($temp_name,$path);
+    
     $name=$_POST['name'];
     $specialist = $_POST['specialist'];
 $description=$_POST['description'];

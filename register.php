@@ -6,6 +6,8 @@ if(isset($_POST['submit'])){
   $temp_name = $_FILES["file"]["tmp_name"];
   $path= "admin/uploads/".$file;
 
+  move_uploaded_file($temp_name,$path);
+
   $name=$_POST['name'];
   $address=$_POST['address'];
   $contact = $_POST['contact'];

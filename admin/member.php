@@ -30,10 +30,11 @@ if(!isset($_SESSION['uname'])){
             <li><a href="blog.php"><i class="fas fa-blog"></i>Blogs</a></li>
             <li><a href="contact.php"><i class="fas fa-address-book"></i>Contact</a></li>
             <li><a href="member.php"><i class="fas fa-user"></i>Member</a></li>
+            <li><a href="workout.php"><i class="fas fa-user"></i>Workout</a></li>
             <li><a href="payment.php"><i class="fas fa-flag"></i>Payment</a></li>
-            <br><br><br><br><br><br><br><br><br><br>
+            <br><br><br><br><br><br><br><br>
             <li><a href="logout.php"><i class="fal fa-sign-out"></i>Logout</a></li>
-          </ul>  
+          </ul>    
         
     </div>
     <div class="main_content">

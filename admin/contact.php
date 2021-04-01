@@ -24,16 +24,17 @@ if(!isset($_SESSION['uname'])){
     
         <h2 class="text-2xl text-bold">A.S.T GYM KHANA</h2>
         <ul>
-            <li><a href="dashboard.php"><i class="fas fa-home"></i>Home</a></li>
+        <li><a href="dashboard.php"><i class="fas fa-home"></i>Home</a></li>
             <li><a href="trainer.php"><i class="fas fa-user"></i>Trainer</a></li>
             <li><a href="gallery.php"><i class="fas fa-project-diagram"></i>Gallery</a></li>
             <li><a href="blog.php"><i class="fas fa-blog"></i>Blogs</a></li>
             <li><a href="contact.php"><i class="fas fa-address-book"></i>Contact</a></li>
             <li><a href="member.php"><i class="fas fa-user"></i>Member</a></li>
-            <li><a href="payment.php"><i class="fas fa-user"></i>Payment</a></li>
-            <br><br><br><br><br><br><br><br><br><br>
+            <li><a href="workout.php"><i class="fas fa-user"></i>Workout</a></li>
+            <li><a href="payment.php"><i class="fas fa-flag"></i>Payment</a></li>
+            <br><br><br><br><br><br><br><br>
             <li><a href="logout.php"><i class="fal fa-sign-out"></i>Logout</a></li>
-          </ul> 
+          </ul>   
         
     </div>
     <div class="main_content">

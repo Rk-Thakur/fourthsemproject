@@ -30,14 +30,15 @@ if(!isset($_SESSION['uname'])){
             <li><a href="blog.php"><i class="fas fa-blog"></i>Blogs</a></li>
             <li><a href="contact.php"><i class="fas fa-address-book"></i>Contact</a></li>
             <li><a href="member.php"><i class="fas fa-user"></i>Member</a></li>
+            <li><a href="workout.php"><i class="fas fa-user"></i>Workout</a></li>
             <li><a href="payment.php"><i class="fas fa-flag"></i>Payment</a></li>
-            <br><br><br><br><br><br><br><br><br><br>
+            <br><br><br><br><br><br><br><br>
             <li><a href="logout.php"><i class="fal fa-sign-out"></i>Logout</a></li>
-          </ul>  
+          </ul>    
         
     </div>
     <div class="main_content">
-        <div class="header">Payment Details <a href="insertpayment.php"><i class="fas fa-flag"></i></a> </div> 
+        <div class="header">Payment Details(3 Months) <a href="insertpayment.php"><i class="fas fa-flag"></i></a> </div> 
         <div class="info " >
           <table class="border-separate border border-green-800 container  text-2xl text-center ">
             <thead>
@@ -45,7 +46,7 @@ if(!isset($_SESSION['uname'])){
                 <th class="border border-green-600 ">S.N.</th>
                 <th class="border border-green-600 ">Member_Id</th>
                 <th class="border border-green-600 ">Date</th>
-                <th class="border border-green-600 ">Total</th>
+                <th class="border border-green-600 ">Amount</th>
                 <th class="border border-green-600 ">Due</th>
                 <th  class="border border-green-600 ">Action</th>
 
@@ -81,6 +82,7 @@ if(!isset($_SESSION['uname'])){
                   }
                   ?>
                   </tr>
+                  
             </tbody>
           </table>
           

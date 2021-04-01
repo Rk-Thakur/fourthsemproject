@@ -50,6 +50,7 @@
         <a class="mr-5 hover:text-red-600 " href="index.php#price">Pricing</a>
         <a class="mr-5 hover:text-red-600 "href="index.php#blog">Blog</a>
         <a class="mr-5 hover:text-red-600 " href="index.php#contact">Contact</a>
+        <a class="mr-5 hover:text-red-600 " href="workout.php">Workout</a>
 
       </nav>
       
@@ -83,7 +84,7 @@
     <div class="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
       <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900"><?php echo $row['topic'] ?>
       </h1>
-      <p class="mb-8 leading-relaxed"><?php echo $row['description'] ?></p>
+      <p class="mb-8 leading-relaxed"><?php echo $row['description'];?> </p>
       
     </div>
   </div>

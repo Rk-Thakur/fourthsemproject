@@ -36,7 +36,7 @@
         <p><input type="file" name="file"  required value="<?php echo$row['file'];?>" /></p>
         <p><input type="text" name="topic"  required value="<?php echo$row['topic'];?>" /></p>
         <p><input type="text" name="summary"  required value="<?php echo$row['summary'];?>" /></p>
-        <p><input type="text" name="description"  required value="<?php echo $row['description'];?>" /></p>
+        <p> <input type="text" name="description"  required value="<?php echo $row['description'];?>"  /></p>
             <p><input type="submit" name="submit" value=" Update Blog"></p>
     </form>
     </div>

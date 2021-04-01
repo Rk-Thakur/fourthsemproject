@@ -1,6 +1,6 @@
 
 <section class="text-gray-600 body-font bg-gray-300  " id="gallery">
-<div class="container px-5 py-24 mx-auto">
+  <div class="container px-5 py-24 mx-auto">
     <div class="flex flex-col text-center w-full mb-20">
       <h1 class="text-3xl font-medium title-font mb-4 text-gray-900 tracking-widest">GAL<button class="py-1 px-4 bg-red-500 text-white focus:outline-none">LERY</button></h1>
       <p class="lg:w-2/3 mx-auto leading-relaxed text-base  ">Client Transformation</p>

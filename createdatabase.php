@@ -9,14 +9,14 @@ $conn =  mysqli_connect("localhost","root","","fourthproject");
 //     )";
 
 //blog table
-$sql = "CREATE table blog(
-        id int NOT NULL AUTO_INCREMENT  PRIMARY KEY,
-        file varchar(1000) NOT NULL,
-        topic varchar(100) NOT NULL,
-        summary varchar(100) NOT NULL,
-        description longtext NOT NULL,
-        bywhom varchar(100) NOT NULL
-    )";
+// $sql = "CREATE table blog(
+//         id int NOT NULL AUTO_INCREMENT  PRIMARY KEY,
+//         file varchar(1000) NOT NULL,
+//         topic varchar(100) NOT NULL,
+//         summary varchar(100) NOT NULL,
+//         description longtext NOT NULL,
+//         bywhom varchar(100) NOT NULL
+//     )";
     //gallery table
 // $sql = "CREATE table gallery(
 //     id int NOT NULL AUTO_INCREMENT  PRIMARY KEY,
@@ -68,7 +68,14 @@ $sql = "CREATE table blog(
 //     FOREIGN KEY (id) REFERENCES registration(id)
 // )";
 
-
+$sql = "CREATE table workout(
+    id int NOT NULL AUTO_INCREMENT  PRIMARY KEY,
+    file varchar(1000) NOT NULL,
+    workout varchar(30) NOT NULL,
+    name varchar(30) NOT NULL,
+    howtodo varchar(100) NOT NULL,
+    bywhom varchar(100) NOT NULL
+)";
 
 
 

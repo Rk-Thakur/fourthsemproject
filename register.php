@@ -78,13 +78,14 @@ if(isset($_POST['submit'])){
 
         <span class="ml-3 text-xl text-3xl text-bold text-white">A.S.T GYM KHANA </span>
       </a>
-      <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center text-2xl text-white ">
+      <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center text-xl text-white ">
         <a class="mr-5 hover:text-red-600 " href="index.php#home">Home</a>
         <a class="mr-5 hover:text-red-600 " href="index.php#gallery">Gallery</a>
         <a class="mr-5 hover:text-red-600 " href="index.php#team">Trainee</a>
         <a class="mr-5 hover:text-red-600 " href="index.php#price">Pricing</a>
         <a class="mr-5 hover:text-red-600 "href="index.php#blog">Blog</a>
         <a class="mr-5 hover:text-red-600 " href="index.php#contact">Contact</a>
+        <a class="mr-5 hover:text-red-600 " href="workout.php">Workout</a>
 
       </nav>
       

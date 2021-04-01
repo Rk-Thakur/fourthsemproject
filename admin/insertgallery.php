@@ -13,6 +13,7 @@ if(isset($_POST['submit']))
     $path="uploads/".$file;
 
     move_uploaded_file($temp_name,$path);
+    
     $topic=$_POST['topic'];
     $name=$_POST['name'];
 $description=$_POST['description'];
@@ -50,7 +51,7 @@ else{
     name:
     <input type="text" name="name">
     Descrption:
-    <textarea name="description" type="text" id="" cols="10" rows="10"></textarea>
+    <textarea name="description" type="text" ></textarea>
     <input type="submit" name="submit" Value="submit">
     </form>
 </body>

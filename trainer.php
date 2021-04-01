@@ -9,7 +9,7 @@
       <div class="flex flex-wrap -m-4">
       <?php
     include('admin/config.php');
-    $query="SELECT * FROM trainer ORDER BY id asc LIMIT 4";
+    $query="SELECT * FROM trainer ORDER BY id desc LIMIT 4";
     $result=mysqli_query($conn,$query);
     if(mysqli_num_rows($result)>0)
     {

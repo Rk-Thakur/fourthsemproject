@@ -47,11 +47,11 @@ else{
     Select image to upload:
         <input type="file" name="file"  >
     Topic:
-    <input type="text" name="topic">
+    <input type="text" name="topic" placeholder="Choose the Title">
     Summary:
-    <input type="text" name="summary">
+    <input type="text" name="summary" placeholder="Short Summary of the image">
     Descrption:
-    <textarea name="description" type="text" id="" cols="10" rows="10"></textarea>
+    <textarea name="description" type="text" id="" cols="10" rows="10" placeholder="Describe Image"></textarea>
     
     <input type="submit" name="submit" Value="submit">
     </form>

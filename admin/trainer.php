@@ -42,7 +42,7 @@ if(!isset($_SESSION['uname'])){
         <div class="info " >
           <table class="border-separate border border-green-800 container  text-2xl text-center ">
             <thead>
-              <tr>
+              <tr class="border border-green-500 text-white bg-gray-900">
                 <th class="border border-green-600 ">S.N.</th>
                 <th class="border border-green-600 ">Trainer_Id</th>
                 <th class="border border-green-600 ">Image</th>

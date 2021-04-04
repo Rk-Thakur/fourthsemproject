@@ -37,18 +37,17 @@ if(!isset($_SESSION['uname'])){
         
     </div>
     <div class="main_content">
-        <div class="header">Payment Details <a href="insertpayment.php"><i class="fas fa-flag"></i></a> </div> 
+        <div class="header">Payment Details <a href="insertpayment.php"><i class="fas fa-flag"></i>(Add Payment Details)</a> </div> 
         <div class="info " >
           <table class="border-separate border border-green-800 container  text-2xl text-center ">
             <thead>
-              <tr>
+              <tr class="border border-green-500 text-white bg-gray-900">
                 <th class="border border-green-600 ">S.N.</th>
                 <th class="border border-green-600 ">Member_Id</th>
                 <th class="border border-green-600 ">Date</th>
                 <th class="border border-green-600 ">Total</th>
                 <th class="border border-green-600 ">Due</th>
                 <th  class="border border-green-600 ">Action</th>
-
               </tr>
             </thead>  
             <tbody>
@@ -63,7 +62,7 @@ if(!isset($_SESSION['uname'])){
                     $count=1;
                   if($result){                 
                   while($row=mysqli_fetch_assoc($result)){?>
-                  <tr>
+                  <tr class="border border-green-500 text-white bg-gray-600">
                 <td class="border border-green-600 "><?php echo $count; ?></td>
                 <td class="border border-green-600 ">
                 <a href="member.php"><?php echo $row['id']; echo " (Click)"; ?></a>
@@ -72,7 +71,7 @@ if(!isset($_SESSION['uname'])){
                 <td class="border border-green-600 "><?php echo $row["amount"]; ?></td>
                 <td class="border border-green-600 "><?php echo $row["due"]; ?></td>
                 
-                <td  class="border border-green-600 text-center"><a href="deletepayment.php?id=<?php echo $row["id"]; ?>"><i class="fas fa-trash"></i></a></td>
+                <td  class="border border-green-500    "><a href="deletepayment.php?id=<?php echo $row["id"]; ?>"><i class="fas fa-trash"></i></a></td>
                     
                 </tr>
                 <?php $count++;?>
@@ -81,6 +80,34 @@ if(!isset($_SESSION['uname'])){
                   }
                   ?>
                   </tr>
+                  <tr>
+            <?php
+                  include_once("config.php");
+                  // create a query
+                  //$sql="SELECT first,last,email,course,level,status FROM record";
+                  $sql="SELECT amount,due FROM payments ";
+                  $price = 0;
+                  $price_due = 0;
+                  $result=mysqli_query($conn,$sql);
+                  if($result){                 
+                  while($row=mysqli_fetch_assoc($result)){
+                    $price += $row['amount'];
+                    $price_due += $row['due'];
+                  }
+                }
+                    ?>
+                  <tr>
+                <td class=" border-green-600 " colspan="3">
+                Total
+                </td>
+                <td class="border border-green-500 text-white bg-gray-900"><?php echo"$price"  ?></td>
+                <td class="border border-green-500 text-white bg-gray-900"><?php  echo "$price_due" ?></td>
+                
+                    
+                </tr>
+                    
+                  </tr>
+                  
             </tbody>
           </table>
           

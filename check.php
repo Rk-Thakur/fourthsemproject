@@ -33,19 +33,8 @@
 <p>Move the mouse over the text below:</p>
 
 <div class="tooltip">Hover over me
-<?php
-                  include_once('admin/config.php');
-                  $id=$_REQUEST['id'];
-                  $sql="SELECT * FROM payments where id=$id ";
-                  $result=mysqli_query($conn,$sql);
-                        if($result)
-                        {
-                            $row=mysqli_fetch_assoc($result);
-                            
 
-                        }
-                        ?>
-  <span class="tooltiptext"><?php echo $row['total'] ?></span>
+  <span class="tooltiptext">ranjan</span>
 </div>
 
 <p>Note that the position of the tooltip text isn't very good. Go back to the tutorial and continue reading on how to position the tooltip in a desirable way.</p>

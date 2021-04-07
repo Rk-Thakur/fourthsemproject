@@ -45,9 +45,9 @@ if(!isset($_SESSION['uname'])){
     </div>
   </div>
   <!-- header -->
-  <header class="text-black-600 body-font-black  bg-black   " id="header">
+<header class="text-black-600 body-font-black  bg-black   " id="header">
     <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center text-bold bg-black ">
-      <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+      <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0" href="index.php">
               <img src="images/logo.JPG" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-12 h-12 text-white p-2  rounded-full" viewBox="0 0 24 24">
         <span class="ml-3 text-xl text-3xl text-bold text-white">A.S.T GYM KHANA </span>
       </a>
@@ -58,13 +58,10 @@ if(!isset($_SESSION['uname'])){
         <a class="mr-5 hover:text-red-600 smoothScroll" href="#price">Pricing</a>
         <a class="mr-5 hover:text-red-600 smoothScroll"href="#blog">Blog</a>
         <a class="mr-5 hover:text-red-600 smoothScroll" href="#contact">Contact</a>
-
       </nav>
-      
-
       <a href="register.php" class="inline-flex text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded text-lg  ">Member!</a>
     </div>
-  </header>
+</header>
 
 <!-- hero -->
 
@@ -326,9 +323,8 @@ include("sucess.php");
 
 
   <!-- adverstise -->
-  <section class="text-gray-600 body-font bg-black">
+<section class="text-gray-600 body-font bg-black">
     <div class="container mx-auto flex px-5 py-24 items-center justify-center flex-col bg-black bg-gray-400 opacity-75" 
-    //style="background-image: url('images/2.jpg');"
     >
       <div class="text-center lg:w-2/3 w-full">
         <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-white-900 text-white">DON’T THINK, BEGIN TODAY!
@@ -339,7 +335,7 @@ include("sucess.php");
         </div>
       </div>
     </div>
-  </section>
+</section>
 
 
   <!-- blog -->

@@ -15,41 +15,89 @@ if(!isset($_SESSION['uname'])){
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
 
-  <link rel="stylesheet" href="style.css">
+  <style>
+    body{background:white!important;}
+    #image {
+            width: 150px;
+            height: 150px;
+            overflow: hidden;
+            margin: 0 auto;
+        }
+      
+        #image img {
+            width: 100%;
+            transition: 0.5s all ease-in-out;
+        }
+      
+        #image:hover img {
+            transform: scale(1.5);
+        }
+</style>
 </head>
 
 <body>
 
-<div class="wrapper">
-    <div class="sidebar">
     
-        <h2 class="text-2xl text-bold">A.S.T GYM KHANA</h2>
-        <ul>
-        <li><a href="dashboard.php"><i class="fas fa-home"></i>Home</a></li>
-            <li><a href="trainer.php"><i class="fas fa-user"></i>Trainer</a></li>
-            <li><a href="gallery.php"><i class="fas fa-project-diagram"></i>Gallery</a></li>
-            <li><a href="blog.php"><i class="fas fa-blog"></i>Blogs</a></li>
-            <li><a href="contact.php"><i class="fas fa-address-book"></i>Contact</a></li>
-            <li><a href="member.php"><i class="fas fa-user"></i>Member</a></li>
-            <li><a href="payment.php"><i class="fas fa-flag"></i>Payment</a></li>
-            <br><br><br><br><br><br><br><br><br><br>
-            <li><a href="logout.php"><i class="fal fa-sign-out"></i>Logout</a></li>
-          </ul>  
-        
-    </div>
-    
-    <div class="main_content text-red">
-    <div class="header text-3xl text-black bg-grey-200">Welcome, <?php  echo $_SESSION['uname'] ?></div> 
 
-        <div class="header text-5xl text-black text-center">CONTACT</div> 
-        <div class="info " >
-          <table class="border-separate border border-green-800 container  text-2xl text-center ">
+
+<header class="text-black-600 body-font-black  bg-black   " id="header">
+    <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center text-bold bg-black ">
+        <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0" href="dashboard.php">
+                <img src="images/logo.JPG" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-12 h-12 text-white p-2  rounded-full" viewBox="0 0 24 24">
+        <span class="ml-3   text-white">A.S.T GYM KHANA </span>
+        </a>
+        <nav class="md:ml-auto flex flex-wrap items-center  justify-center  text-white ">
+        <a class="mr-5 hover:text-red-600 smoothScroll" href="dashboard.php"> Home</a>
+        <a class="mr-5 hover:text-red-600 smoothScroll" href="trainer.php">Trainer</a>
+        <a class="mr-5 hover:text-red-600 smoothScroll" href="gallery.php">Gallery</a>
+        <a class="mr-5 hover:text-red-600 smoothScroll" href="blog.php">Blogs</a>
+        <a class="mr-5 hover:text-red-600 smoothScroll"href="contact.php">Contact</a>
+        <a class="mr-5 hover:text-red-600 smoothScroll"href="member.php">Member</a>
+        <a class="mr-5 hover:text-red-600 smoothScroll" href="payment.php">Payment</a>
+        <a class="mr-5 hover:text-red-600 smoothScroll" href="client.php">Client</a>
+        <a class="mr-5 hover:text-red-600 smoothScroll" href="logout.php"><i class="fas fa-sign-out-alt"></i></a>
+        </nav>
+    </div>
+</header>
+
+
+
+
+    
+<!-- welcome -->
+    <div class="info">  
+      <p class=" px-10 py-10 text-center font-bold m-5 text-2xl">Welcome, <?php  echo $_SESSION['uname'] ?> </p>
+      <section class="w-20 h-20 mx-auto flex">
+
+      <?php
+                  include_once("config.php");
+                  $sql="SELECT file FROM trainer WHERE name ='{$_SESSION['uname']}'";
+                  $result=mysqli_query($conn,$sql);
+                    $count=1;
+                  if($result){                 
+                  while($row=mysqli_fetch_assoc($result)){?>
+              <?php echo '<img src="uploads/'. $row["file"].'"height= "150" class="rounded-full" width="150" alt=" ">'; ?>
+
+                    <?php
+
+                  }
+                }
+                ?> 
+        </section>  
+    </div>
+
+<!-- contact -->
+    <div class="info " >
+
+            <p class=" text-center font-bold m-5">Contact</p>
+
+        <table class="rounded-lg m-5 w-5/6 mx-auto bg-gray-200 text-gray-800">
             <thead>
-              <tr class="border border-green-600 bg-red-300">
-                <th class="border border-green-600 ">S.N</th>
-                <th class="border border-green-600 ">Name</th>
-                <th class="border border-green-600 ">Email</th>
-                <th class="border border-green-600 ">Message</th>
+            <tr class="text-left border-b-4 border-gray-900">
+                <th class="px-4 py-3 text-center">S.N</th>
+                <th class="px-4 py-3 text-center">Name</th>
+                <th class="px-4 py-3 text-center">Email</th>
+                <th class="px-4 py-3 text-center">Message</th>
               </tr>
             </thead>
             <tbody>
@@ -65,10 +113,12 @@ if(!isset($_SESSION['uname'])){
                   if($result){                 
                   while($row=mysqli_fetch_assoc($result)){?>
                     <tr >
-                    <td  align="center"class="border border-green-600 " ><?php echo $count; ?></td>
-                  <td  align="center" class="border border-green-600 "><?php echo $row["name"]; ?></td>
-                  <td  align="center" class="border border-green-600 " ><?php echo $row["email"]; ?></td>
-                  <td  align="center" class="border border-green-600 " ><?php echo $row["message"]; ?></td>
+                    <td class="px-4 py-3 text-center"><?php echo $count; ?></td>
+                    <td class="px-4 py-3 text-center"><?php echo $row["name"]; ?></td>
+                    <td class="px-4 py-3 text-center"><?php echo $row["email"]; ?></td>
+                    <td class="px-4 py-3 text-center"><?php echo $row["message"]; ?></td>
+
+                    
                     </tr>
                     <?php $count++;?>
                     <?php
@@ -78,47 +128,50 @@ if(!isset($_SESSION['uname'])){
               </tr>
             </tbody>
           </table>
-        </div>
+    </div>
 
         <!-- member -->
-        <div class="header text-5xl text-black text-center">MEMBERS </div> 
-        <div class="info " >
-          <table class="border-separate border border-green-800 container  text-2xl text-center ">
-            <thead>
-            <tr class="border border-green-600 bg-red-300 ">
-                <th class="border border-green-600 ">S.N</th>
-                <th class="border border-green-600 ">Image</th>
-                <th class="border border-green-600 ">Name</th>
-                <th class="border border-green-600 ">Address</th>
-                <th class="border border-green-600 ">Contact</th>
-                <th class="border border-green-600 ">Email</th>
-                <th class="border border-green-600 " >Trainer</th>
-                <th class="border border-green-600 ">Package</th>
-                <th  class="border border-green-600 ">Payment</th>
+    <div class="info " >
+            <p class=" text-center font-bold m-5">Members</p>
 
-              </tr>
+        <table class="rounded-lg m-5 w-5/6 mx-auto bg-gray-200 text-gray-800">
+            <thead>
+            <tr class="text-left border-b-4 border-gray-900">
+            <th class="px-4 py-3 text-center">S.N</th>
+            <th class="px-4 py-3 text-center">Image</th>
+            <th class="px-4 py-3 text-center">Name</th>
+            <th class="px-4 py-3 text-center">Address</th>
+            <th class="px-4 py-3 text-center">Contact</th>
+            <th class="px-4 py-3 text-center">Email</th>
+            <th class="px-4 py-3 text-center">Trainer</th>
+            <th class="px-4 py-3 text-center">Package</th>
+            <th class="px-4 py-3 text-center">Payment</th>
+            </tr>
             </thead>
             <tbody>
-              <tr>
-              <?php
-                  include_once("config.php");
+                <tr>
+                <?php
+                    include_once("config.php");
                   // create a query
                   //$sql="SELECT first,last,email,course,level,status FROM record";
                   $sql="SELECT * FROM registration ORDER BY id desc";
                   //execute query
-                  $result=mysqli_query($conn,$sql);
+                    $result=mysqli_query($conn,$sql);
                     $count=1;
-                  if($result){                 
-                  while($row=mysqli_fetch_assoc($result)){?>
-                    <td class="border border-green-600 "><?php echo $count; ?></td>
-                    <td class="border border-green-600 "><?php echo '<img src="uploads/'. $row["file"].'"height= "100" width="100" alt=" ">'; ?></td>
-                    <td class="border border-green-600 "><?php echo $row["name"]; ?></td>
-                    <td class="border border-green-600 "><?php echo $row["address"]; ?></td>
-                    <td class="border border-green-600 "><?php echo $row["contact"]; ?></td>
-                    <td class="border border-green-600 "><?php echo $row["email"]; ?></td>
-                    <td class="border border-green-600 "><?php echo $row["trainer"]; ?></td>
-                    <td class="border border-green-600 "><?php echo $row["package"]; ?></td>
-                    <td class="border border-green-600 "><?php echo $row["payment"]; ?></td>
+                if($result){                 
+                while($row=mysqli_fetch_assoc($result)){?>
+                    <tr>
+                    <td  class="px-4 py-3 text-center"><?php echo $count; ?></td>
+                    <td  class="px-4 py-3 text-center" id="image"><?php echo '<img src="uploads/'. $row["file"].'"height= "150" width="150" alt=" ">'; ?></td>
+                    <td  class="px-4 py-3 text-center"><?php echo $row["name"]; ?></td>
+                    <td  class="px-4 py-3 text-center"><?php echo $row["address"]; ?></td>
+                    <td  class="px-4 py-3 text-center"><?php echo $row["contact"]; ?></td>
+                    <td  class="px-4 py-3 text-center"><?php echo $row["email"]; ?></td>
+                    <td  class="px-4 py-3 text-center"><?php echo $row["trainer"]; ?></td>
+                    <td  class="px-4 py-3 text-center"><?php echo $row["package"]; ?></td>
+                    <td  class="px-4 py-3 text-center"><?php echo $row["payment"]; ?></td>
+
+                    
                     </tr>
                     <?php $count++;?>
                     <?php
@@ -128,20 +181,22 @@ if(!isset($_SESSION['uname'])){
               </tr>
             </tbody>
           </table>
-        </div>
+    </div>
 
 
         <!-- blog -->
-        <div class="header text-5xl text-black text-center">BLOG <a href="insertblog.php"><i class="fas fa-book-medical hover:bg-red-300"></i></a></div> 
-        <div class="info " >
-          <table class="border-separate border border-green-800 container  text-2xl text-center ">
+    <div class="info " >
+        <p class=" text-center font-bold m-5">Blog <a href="insertblog.php"><i class="fas fa-book-medical hover:bg-indigo-300"></i></a></p>
+
+        <table class="rounded-lg m-5 w-5/6 mx-auto bg-gray-200 text-gray-800">
             <thead>
-              <tr class="border border-green-600 bg-red-300">
-                <th class="border border-green-600 ">ID</th>
-                <th class="border border-green-600 ">Image</th>
-                <th class="border border-green-600 ">Topic </th>
-                <th class="border border-green-600 ">Description</th>
-                <th class="border border-green-600 ">By WHOM?</th>
+              <tr class="text-left border-b-4 border-gray-900">
+                <th class="px-4 py-3 text-center ">S.N</th>
+                <th class="px-4 py-3 text-center ">Image</th>
+                <th class="px-4 py-3 text-center ">Topic</th>
+                <th class="px-4 py-3 text-center ">Description</th>
+                <th class="px-4 py-3 text-center ">By WHOM?</th>
+                
               </tr>
             </thead>
             <tbody>
@@ -157,12 +212,11 @@ if(!isset($_SESSION['uname'])){
                   if($result){                 
                   while($row=mysqli_fetch_assoc($result)){?>
                     <tr>
-                    <td  align="center" ><?php echo $count; ?></td>
-                    <td class="border border-green-600 "><?php echo '<img src="uploads/'. $row["file"].'"height= "100" width="100" alt=" ">'; ?></td>
-                    <td class="border border-green-600 "><?php echo $row["topic"]; ?></td>
-                    <td class="border border-green-600 "><?php echo $row["description"]; ?></td>
-
-                <td class="border border-green-600 "><?php  echo $row['bywhom'] ?></td>
+                    <td  class="px-4 py-3 text-center " ><?php echo $count; ?></td>
+                    <td class="px-4 py-3 text-center " id="image"><?php echo '<img src="uploads/'. $row["file"].'"height= "150" width="150" alt=" ">'; ?></td>
+                    <td class="px-4 py-3 text-center "><?php echo $row["topic"]; ?></td>
+                    <td class="px-4 py-3 text-center "><?php echo $row["description"]; ?></td>
+                    <td class="px-4 py-3 text-center "><?php  echo $row['bywhom'] ?></td>
                     </tr>
                     <?php $count++;?>
                     <?php
@@ -172,21 +226,22 @@ if(!isset($_SESSION['uname'])){
               </tr>
             </tbody>
           </table>
-        </div>
+    </div>
 
 
         <!-- Gallery -->
-        <div class="header text-5xl text-black text-center">GALLERY <a href="insertgallery.php"><i class="far fa-images bg-red hover:bg-red-200"></i></a></div> 
-        <div class="info " >
-          <table class="border-separate border border-green-800 container  text-2xl text-center ">
+    <div class="info " >
+        <p class=" text-center font-bold m-5">Gallery<a href="insertgallery.php"><i class="far fa-images bg-red hover:bg-indigo-200"></i></a></p>
+
+        <table class="rounded-lg m-5 w-5/6 mx-auto bg-gray-200 text-gray-800">
             <thead>
-              <tr class="border border-green-600 bg-red-300">
-                <th class="border border-green-600 ">ID</th>
-                <th class="border border-green-600 ">Image</th>
-                <th class="border border-green-600 ">Title </th>
-                <th class="border border-green-600 ">Name</th>
-                <th class="border border-green-600 ">Description</th>
-                <th class="border border-green-600 ">By WHOM?</th>
+            <tr class="text-left border-b-4 border-gray-900">
+                <th class="px-4 py-3 text-center">S.N</th>
+                <th class="px-4 py-3 text-center">Image</th>
+                <th class="px-4 py-3 text-center">Title </th>
+                <th class="px-4 py-3 text-center">Name</th>
+                <th class="px-4 py-3 text-center">Description</th>
+                <th class="px-4 py-3 text-center">By WHOM?</th>
               </tr>
             </thead>
             <tbody>
@@ -202,13 +257,12 @@ if(!isset($_SESSION['uname'])){
                   if($result){                 
                   while($row=mysqli_fetch_assoc($result)){?>
                     <tr>
-                    <td  align="center" ><?php echo $count; ?></td>
-                    <td class="border border-green-600 "><?php echo '<img src="uploads/'. $row["file"].'"height= "100" width="100" alt=" ">'; ?></td>
-                    <td class="border border-green-600 "><?php echo $row["topic"]; ?></td>
-                    <td class="border border-green-600 "><?php echo $row["name"]; ?></td>
-                    <td class="border border-green-600 "><?php echo $row["description"]; ?></td>
-
-                <td class="border border-green-600 " ><?php  echo $row["bywhom"] ?></td>
+                    <td  class="px-4 py-3 text-center" ><?php echo $count; ?></td>
+                    <td class="px-4 py-3 text-center" id="image"><?php echo '<img src="uploads/'. $row["file"].'"height= "150" width="150" alt=" ">'; ?></td>
+                    <td class="px-4 py-3 text-center"><?php echo $row["topic"]; ?></td>
+                    <td class="px-4 py-3 text-center"><?php echo $row["name"]; ?></td>
+                    <td class="px-4 py-3 text-center"><?php echo $row["description"]; ?></td>
+                    <td class="px-4 py-3 text-center" ><?php  echo $row["bywhom"] ?></td>
                     </tr>
                     <?php $count++;?>
                     <?php
@@ -218,21 +272,22 @@ if(!isset($_SESSION['uname'])){
               </tr>
             </tbody>
           </table>
-        </div>
+    </div>
 
                   <!-- Trainer -->
 
-        <div class="header text-5xl text-black text-center">TRAINER <a href="insertrainer.php"><i class="fas fa-user-plus hover:bg-red-300"></i></a></div> 
-        <div class="info " >
-          <table class="border-separate border border-green-800 container  text-2xl text-center ">
+    <div class="info " >
+        <p class=" text-center font-bold m-5">Trainer <a href="insertrainer.php"><i class="fas fa-user-plus hover:bg-indigo-300"></i></a></p>
+
+        <table class="rounded-lg m-5 w-5/6 mx-auto bg-gray-200 text-gray-800">
             <thead>
-              <tr class="border border-green-600 bg-red-300">
-                <th class="border border-green-600 ">S.N</th>
-                <th class="border border-green-600 ">Image</th>
-                <th class="border border-green-600 ">Name</th>
-                <th class="border border-green-600 ">Specialist</th>
-                <th class="border border-green-600 ">Description</th>
-                <th class="border border-green-600 ">By WHOM?</th>
+            <tr class="text-left border-b-4 border-gray-900">
+                <th class="px-4 py-3 text-center">S.N</th>
+                <th class="px-4 py-3 text-center">Image</th>
+                <th class="px-4 py-3 text-center">Name</th>
+                <th class="px-4 py-3 text-center">Specialist</th>
+                <th class="px-4 py-3 text-center">Description</th>
+                <th class="px-4 py-3 text-center">By WHOM?</th>
               </tr>
             </thead>
             <tbody>
@@ -248,13 +303,12 @@ if(!isset($_SESSION['uname'])){
                   if($result){                 
                   while($row=mysqli_fetch_assoc($result)){?>
                     <tr>
-                    <td  align="center" ><?php echo $count; ?></td>
-                    <td class="border border-green-600 "><?php echo '<img src="uploads/'. $row["file"].'"height= "100" width="100" alt=" ">'; ?></td>
-                    <td class="border border-green-600 "><?php echo $row["name"]; ?></td>
-                    <td class="border border-green-600 "><?php echo $row["specialist"]; ?></td>
-                    <td class="border border-green-600 "><?php echo $row["description"]; ?></td>
-
-                <td class="border border-green-600 " ><?php  echo $row["bywhom"] ?></td>
+                    <td  class="px-4 py-3 text-center" ><?php echo $count; ?></td>
+                    <td class="px-4 py-3 text-center" id="image"><?php echo '<img src="uploads/'. $row["file"].'"height= "150" width="150" alt=" ">'; ?></td>
+                    <td class="px-4 py-3 text-center"><?php echo $row["name"]; ?></td>
+                    <td class="px-4 py-3 text-center"><?php echo $row["specialist"]; ?></td>
+                    <td class="px-4 py-3 text-center"><?php echo $row["description"]; ?></td>
+                    <td class="px-4 py-3 text-center" ><?php  echo $row["bywhom"] ?></td>
                     </tr>
                     <?php $count++;?>
                     <?php
@@ -271,6 +325,5 @@ if(!isset($_SESSION['uname'])){
 
 
     
-</div>
 </body>
 </html>

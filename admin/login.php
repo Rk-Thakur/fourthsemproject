@@ -12,9 +12,7 @@ if(isset($_POST['submit'])){
     if(mysqli_num_rows($result)==1){
         session_start();
         $_SESSION['uname'] = $username;
-        if(isset($_POST['remember'])){
-            setcookie('username' ,$username,time()+24*60*60);
-        }
+        
         header("Location: dashboard.php");
         
     }else{
@@ -35,7 +33,24 @@ if(isset($_POST['submit'])){
 
 </head>
 <body>
+<div class="flex items-center h-screen w-full bg-gray-400">
+  <div class="w-full bg-white rounded  p-8 m-4 md:max-w-sm md:mx-auto">
+
+  <div class="w-full  p-4 ">
+  <section class="w-20 h-20 mx-auto ">
+
+  <img src="images/logo.JPG" height= "200" class="rounded-full" width="200" alt=" ">
+
+        </section>
 <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method ="post">
+<h1 class=" text-xl font-bold">Sign in to your account</h1>
+      <div>
+        <span class="text-gray-600  text-sm">
+          Don't have an account?
+        </span>
+        
+        <a href="registerid.php" class="text-gray-700 text-sm font-semibold">Register</a>
+      </div>
 <div class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 flex flex-col">
     <div class="mb-4">
       <label class="block text-grey-darker text-sm font-bold mb-2" for="username">
@@ -53,7 +68,6 @@ if(isset($_POST['submit'])){
         Password
       </label>
       <input class="shadow appearance-none border border-red rounded w-full py-2 px-3 text-grey-darker mb-3" id="password" type="password" placeholder="******************" name="password">
-            <p class="text-red text-xs italic">Please choose a password.</p>
 
     </div>
     <?php
@@ -61,10 +75,10 @@ if(isset($_POST['submit'])){
         echo $errPassword;
     }
     ?>
+
     <div class="flex items-center justify-between">
       
-      <input type="submit" name="submit" class="bg-black hover:bg-red-dark text-white font-bold py-2 px-4 rounded" value="Sign In ">
-      <a href="registerid.php" class="bg-black hover:bg-red-dark text-white font-bold py-2 px-4 rounded"> Register</a>
+      <input type="submit" name="submit" class="bg-black  text-white font-bold py-2 px-4 rounded" value="Sign In " >
     </div>
 </div>
 </form>

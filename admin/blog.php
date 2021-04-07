@@ -14,43 +14,61 @@ if(!isset($_SESSION['uname'])){
     <title>Dashboard</title>
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+    <style>
+    body{background:white!important;}
 
-  <link rel="stylesheet" href="style.css">
+    #image {
+            width: 150px;
+            height: 150px;
+            overflow: hidden;
+            margin: 0 auto;
+        }
+      
+        #image img {
+            width: 100%;
+            transition: 0.5s all ease-in-out;
+        }
+      
+        #image:hover img {
+            transform: scale(1.5);
+        }
+</style>
 </head>
 
 <body>
 
-<div class="wrapper">
-    <div class="sidebar">
-    
-        <h2 class="text-2xl text-bold">A.S.T GYM KHANA</h2>
-        <ul>
-        <li><a href="dashboard.php"><i class="fas fa-home"></i>Home</a></li>
-            <li><a href="trainer.php"><i class="fas fa-user"></i>Trainer</a></li>
-            <li><a href="gallery.php"><i class="fas fa-project-diagram"></i>Gallery</a></li>
-            <li><a href="blog.php"><i class="fas fa-blog"></i>Blogs</a></li>
-            <li><a href="contact.php"><i class="fas fa-address-book"></i>Contact</a></li>
-            <li><a href="member.php"><i class="fas fa-user"></i>Member</a></li>
-            <li><a href="payment.php"><i class="fas fa-flag"></i>Payment</a></li>
-            <br><br><br><br><br><br><br><br><br><br>
-            <li><a href="logout.php"><i class="fal fa-sign-out"></i>Logout</a></li>
-          </ul> 
-        
+<header class="text-black-600 body-font-black  bg-black   " id="header">
+    <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center text-bold bg-black ">
+        <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0" href="dashboard.php">
+                <img src="images/logo.JPG" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-12 h-12 text-white p-2  rounded-full" viewBox="0 0 24 24">
+        <span class="ml-3   text-white">A.S.T GYM KHANA </span>
+        </a>
+        <nav class="md:ml-auto flex flex-wrap items-center  justify-center  text-white ">
+        <a class="mr-5 hover:text-red-600 smoothScroll" href="dashboard.php"> Home</a>
+        <a class="mr-5 hover:text-red-600 smoothScroll" href="trainer.php">Trainer</a>
+        <a class="mr-5 hover:text-red-600 smoothScroll" href="gallery.php">Gallery</a>
+        <a class="mr-5 hover:text-red-600 smoothScroll" href="blog.php">Blogs</a>
+        <a class="mr-5 hover:text-red-600 smoothScroll"href="contact.php">Contact</a>
+        <a class="mr-5 hover:text-red-600 smoothScroll"href="member.php">Member</a>
+        <a class="mr-5 hover:text-red-600 smoothScroll" href="payment.php">Payment</a>
+        <a class="mr-5 hover:text-red-600 smoothScroll" href="client.php">Client</a>
+        <a class="mr-5 hover:text-red-600 smoothScroll" href="logout.php"><i class="fas fa-sign-out-alt"></i></a>
+        </nav>
     </div>
-    <div class="main_content">
-        <div class="header  ">BLOG <a href="insertblog.php"><i class="fas fa-book-medical hover:bg-red-300">(Click To Add Blog )</i></a></div> 
+</header>
+
         <div class="info " >
-          <table class="border-separate border border-green-800 container  text-2xl text-center ">
+          <p class="text-5xl text-center font-bold m-5">Blog <a href="insertblog.php"><i class="fas fa-book-medical hover:bg-indigo-300"></i></a></p>
+          <table class="rounded-lg m-5 w-5/6 mx-auto bg-gray-200 text-gray-800">
             <thead>
-              <tr>
-                <th class="border border-green-600 ">S.N.</th>
-                <th class="border border-green-600 ">Blog_Id</th>
-                <th class="border border-green-600 ">Image</th>
-                <th class="border border-green-600 ">Topics</th>
-                <th class="border border-green-600 ">Summary</th>
-                <th class="border border-green-600 ">Description</th>
-                <th class="border border-green-600 ">By WHOM?</th>
-                <th colspan="2"  class="border border-green-600 ">ACTION</th>
+            <tr class="text-left border-b-4 border-gray-900">
+                <th class="px-4 py-3 text-center ">S.N.</th>
+                <th class="px-4 py-3 text-center ">Image</th>
+                <th class="px-4 py-3 text-center ">Topics</th>
+                <th class="px-4 py-3 text-center ">Summary</th>
+                <th class="px-4 py-3 text-center ">Description</th>
+                <th class="px-4 py-3 text-center ">By WHOM?</th>
+                <th colspan="2"  class="px-4 py-3 text-center ">ACTION</th>
 
               </tr>
             </thead>
@@ -67,15 +85,14 @@ if(!isset($_SESSION['uname'])){
                   if($result){                 
                   while($row=mysqli_fetch_assoc($result)){?>
                   <tr>
-                <td class="border border-green-600 "><?php echo $count; ?></td>
-                <td class="border border-green-600 "><?php echo $row['id']; ?></td>
-                <td class="border border-green-600 "><?php echo '<img src="uploads/'. $row["file"].'"height= "100" width="100" alt=" ">'; ?></td>
-                <td class="border border-green-600 "><?php echo $row["topic"]; ?></td>
-                <td class="border border-green-600 "><?php echo $row["summary"]; ?></td>
-                <td class="border border-green-600 "><?php echo $row["description"]; ?></td>
-                <td class="border border-green-600 "><?php   echo $row["bywhom"]; ?></td>
-                <td  class="border border-green-600 text-center"><a href="editblog.php?id=<?php echo $row["id"]; ?>"><i class="fas fa-edit"></i></a></td>
-                <td  class="border border-green-600 text-center"><a href="deleteblog.php?id=<?php echo $row["id"]; ?>"><i class="fas fa-trash"></i></a></td>
+                <td class="px-4 py-3 text-center "><?php echo $count; ?></td>
+                <td class="px-4 py-3 text-center " id="image"><?php echo '<img src="uploads/'. $row["file"].'"height= "100" width="100" alt=" ">'; ?></td>
+                <td class="px-4 py-3 text-center "><?php echo $row["topic"]; ?></td>
+                <td class="px-4 py-3 text-center "><?php echo $row["summary"]; ?></td>
+                <td class="px-4 py-3 text-center "><?php echo $row["description"]; ?></td>
+                <td class="px-4 py-3 text-center "><?php   echo $row["bywhom"]; ?></td>
+                <td  class="px-4 py-3 text-center "><a href="editblog.php?id=<?php echo $row["id"]; ?>"><i class="fas fa-edit"></i></a></td>
+                <td  class="px-4 py-3 text-center "><a href="deleteblog.php?id=<?php echo $row["id"]; ?>"><i class="fas fa-trash"></i></a></td>
                     
                 </tr>
                 <?php $count++;?>

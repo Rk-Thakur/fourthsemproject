@@ -14,41 +14,44 @@ if(!isset($_SESSION['uname'])){
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
 
-  <link rel="stylesheet" href="style.css">
+    <style>
+        body{background:white!important;}
+    </style>
 </head>
 
 <body>
 
-<div class="wrapper">
-    <div class="sidebar">
-    
-        <h2 class="text-2xl text-bold">A.S.T GYM KHANA</h2>
-        <ul>
-            <li><a href="dashboard.php"><i class="fas fa-home"></i>Home</a></li>
-            <li><a href="trainer.php"><i class="fas fa-user"></i>Trainer</a></li>
-            <li><a href="gallery.php"><i class="fas fa-project-diagram"></i>Gallery</a></li>
-            <li><a href="blog.php"><i class="fas fa-blog"></i>Blogs</a></li>
-            <li><a href="contact.php"><i class="fas fa-address-book"></i>Contact</a></li>
-            <li><a href="member.php"><i class="fas fa-user"></i>Member</a></li>
-            <li><a href="payment.php"><i class="fas fa-user"></i>Payment</a></li>
-            <br><br><br><br><br><br><br><br><br><br>
-            <li><a href="logout.php"><i class="fal fa-sign-out"></i>Logout</a></li>
-          </ul> 
-        
+<header class="text-black-600 body-font-black  bg-black   " id="header">
+    <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center text-bold bg-black ">
+        <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0" href="dashboard.php">
+                <img src="images/logo.JPG" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-12 h-12 text-white p-2  rounded-full" viewBox="0 0 24 24">
+        <span class="ml-3   text-white">A.S.T GYM KHANA </span>
+        </a>
+        <nav class="md:ml-auto flex flex-wrap items-center  justify-center  text-white ">
+        <a class="mr-5 hover:text-red-600 smoothScroll" href="dashboard.php"> Home</a>
+        <a class="mr-5 hover:text-red-600 smoothScroll" href="trainer.php">Trainer</a>
+        <a class="mr-5 hover:text-red-600 smoothScroll" href="gallery.php">Gallery</a>
+        <a class="mr-5 hover:text-red-600 smoothScroll" href="blog.php">Blogs</a>
+        <a class="mr-5 hover:text-red-600 smoothScroll"href="contact.php">Contact</a>
+        <a class="mr-5 hover:text-red-600 smoothScroll"href="member.php">Member</a>
+        <a class="mr-5 hover:text-red-600 smoothScroll" href="payment.php">Payment</a>
+        <a class="mr-5 hover:text-red-600 smoothScroll" href="client.php">Client</a>
+        <a class="mr-5 hover:text-red-600 smoothScroll" href="logout.php"><i class="fas fa-sign-out-alt"></i></a>
+        </nav>
     </div>
-    <div class="main_content">
-    <div class="header">CONTACT</div> 
+</header>
         <div class="info " >
-          <table class="border-separate border border-green-800 container  text-2xl text-center ">
-            <thead>
-              <tr>
-                <th class="border border-green-600 ">S.N.</th>
-                <th class="border border-green-600 ">Contact_Id</th>
-                <th class="border border-green-600 ">Name</th>
-                <th class="border border-green-600 ">Email</th>
-                <th class="border border-green-600">Message</th>
-                <th class="border border-green-600">Action</th>
+        <p class="text-5xl text-center font-bold m-5">Contact</p>
 
+        <table class="rounded-lg m-5 w-5/6 mx-auto bg-gray-200 text-gray-800">
+            <thead>
+            <tr class="text-left border-b-4 border-gray-900">
+                <th class="px-4 py-3 text-center">S.N</th>
+                <th class="px-4 py-3 text-center">Contact_Id</th>
+                <th class="px-4 py-3 text-center">Name</th>
+                <th class="px-4 py-3 text-center">Email</th>
+                <th class="px-4 py-3 text-center">Message</th>
+                <th class="px-4 py-3 text-center">Action</th>
 
               </tr>
             </thead>
@@ -65,12 +68,16 @@ if(!isset($_SESSION['uname'])){
                   if($result){                 
                   while($row=mysqli_fetch_assoc($result)){?>
                     <tr>
-                    <td class="border border-green-600 " align="center" ><?php echo $count; ?></td>
-                    <td class="border border-green-600 " align="center" ><?php echo $row['id']; ?></td>
-                 <td class="border border-green-600" align="center" ><?php echo $row["name"]; ?></td>
-                 <td class="border border-green-600" align="center" ><?php echo $row["email"]; ?></td>
-                 <td class="border border-green-600" align="center" ><?php echo $row["message"]; ?></td>
-                <td align="center" class="border border-green-600"><a href="deletecontact.php?id=<?php echo $row["id"]; ?>"><i class="fas fa-trash"></i></a></td>
+                    <td class="px-4 py-3 text-center" align="center" ><?php echo $count; ?></td>
+                    <td class="px-4 py-3 text-center" align="center" ><?php echo $row['id']; ?></td>
+                    <td class="px-4 py-3 text-center" align="center" ><?php echo $row["name"]; ?></td>
+                    
+                    <td class="px-4 py-3 text-center" align="center" >
+                    <a href="sendmail.php?id=<?php echo $row['id'];?>">
+                    <?php echo $row["email"]; ?></td>
+                    </a>
+                    <td class="px-4 py-3 text-center" align="center" ><?php echo $row["message"]; ?></td>
+                    <td class="px-4 py-3 text-center"><a href="deletecontact.php?id=<?php echo $row["id"]; ?>"><i class="fas fa-trash"></i></a></td>
                     </tr>
                     <?php $count++;?>
                     <?php

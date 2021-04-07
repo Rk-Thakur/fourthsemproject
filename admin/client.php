@@ -15,7 +15,7 @@ if(!isset($_SESSION['uname'])){
     <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
 
     <style>
-    body{background:white!important;}
+      body{background:white!important;}
 
     #image {
             width: 150px;
@@ -32,7 +32,7 @@ if(!isset($_SESSION['uname'])){
         #image:hover img {
             transform: scale(1.5);
         }
-</style>
+  </style>
 </head>
 
 <body>
@@ -56,43 +56,55 @@ if(!isset($_SESSION['uname'])){
         </nav>
     </div>
 </header>
-      <div class="info " >
-        <p class="text-5xl text-center font-bold m-5">Trainer <a href="insertrainer.php"><i class="fas fa-user-plus hover:bg-indigo-300"></i></a></p>
 
-        <table class="rounded-lg m-5 w-5/6 mx-auto bg-gray-200 text-gray-800">
+        <div class="info " >
+          <p class="text-5xl text-center font-bold m-5">Clients</p>
+          <table class="rounded-lg m-5 w-5/6 mx-auto bg-gray-200 text-gray-800">
             <thead>
             <tr class="text-left border-b-4 border-gray-900">
-                <th class="px-4 py-3 text-center">S.N</th>
-                <th class="px-4 py-3 text-center">Image</th>
-                <th class="px-4 py-3 text-center">Name</th>
-                <th class="px-4 py-3 text-center">Specialist</th>
-                <th class="px-4 py-3 text-center">Description</th>
-                <th class="px-4 py-3 text-center">By WHOM?</th>
-                <th colspan="2"  class="px-4 py-3 text-center">ACTION</th>
+            <th class="px-4 py-3 text-center">S.N</th>
+            <th class="px-4 py-3 text-center">Member_Id</th>
+            <th class="px-4 py-3 text-center">Image</th>
+            <th class="px-4 py-3 text-center">Name</th>
+            <th class="px-4 py-3 text-center">Address</th>
+            <th class="px-4 py-3 text-center">Contact</th>
+            <th class="px-4 py-3 text-center">Email</th>
+            <th class="px-4 py-3 text-center">Trainer</th>
+            <th class="px-4 py-3 text-center">Package</th>
+            <th class="px-4 py-3 text-center">Payment</th>
+            <th class="px-4 py-3 text-center">Action</th>
 
               </tr>
-            </thead>
+            </thead>  
             <tbody>
               <tr>
             <?php
                   include_once("config.php");
                   // create a query
                   //$sql="SELECT first,last,email,course,level,status FROM record";
-                  $sql="SELECT * FROM trainer ORDER BY id desc";
+                  $sql="SELECT * FROM registration WHERE trainer ='{$_SESSION['uname']}'";
+
                   //execute query
                   $result=mysqli_query($conn,$sql);
                     $count=1;
                   if($result){                 
                   while($row=mysqli_fetch_assoc($result)){?>
                   <tr>
-                  <td  class="px-4 py-3 text-center" ><?php echo $count; ?></td>
-                    <td class="px-4 py-3 text-center" id ="image"><?php echo '<img src="uploads/'. $row["file"].'"height= "150" width="150" alt=" ">'; ?></td>
-                    <td class="px-4 py-3 text-center"><?php echo $row["name"]; ?></td>
-                    <td class="px-4 py-3 text-center"><?php echo $row["specialist"]; ?></td>
-                    <td class="px-4 py-3 text-center"><?php echo $row["description"]; ?></td>
-                    <td class="px-4 py-3 text-center" ><?php  echo $row["bywhom"] ?></td>
-                <td  class="px-4 py-3 text-center"><a href="editrainer.php?id=<?php echo $row["id"]; ?>"><i class="fas fa-edit"></i></a></td>
-                <td  class="px-4 py-3 text-center"><a href="deletetrainer.php?id=<?php echo $row["id"]; ?>"><i class="fas fa-trash"></i></a></td>
+                  <td  class="px-4 py-3 text-center"><?php echo $count; ?></td>
+                  <td  class="px-4 py-3 text-center"><?php echo $row['id']; ?></td>
+                    <td  class="px-4 py-3 text-center" id="image"><?php echo '<img src="uploads/'. $row["file"].'"height= "150" width="150" alt=" ">'; ?></td>
+                    <td  class="px-4 py-3 text-center"><?php echo $row["name"]; ?></td>
+                    <td  class="px-4 py-3 text-center"><?php echo $row["address"]; ?></td>
+                    <td  class="px-4 py-3 text-center"><?php echo $row["contact"]; ?></td>
+
+                    <td  class="px-4 py-3 text-center">
+                    <a href="customer.php?id=<?php echo $row['id'];?>">
+                    <?php echo $row["email"]; ?></a></td>
+                    <td  class="px-4 py-3 text-center"><?php echo $row["trainer"]; ?></td>
+                    <td  class="px-4 py-3 text-center"><?php echo $row["package"]; ?></td>
+                    <td  class="px-4 py-3 text-center"><?php echo $row["payment"]; ?></td>
+
+                <td  class="px-4 py-3 text-center"><a href="deletemember.php?id=<?php echo $row["id"]; ?>"><i class="fas fa-trash"></i></a></td>
                     
                 </tr>
                 <?php $count++;?>

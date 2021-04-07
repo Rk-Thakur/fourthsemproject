@@ -1,44 +1,135 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
+      
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content=
+        "width=device-width, initial-scale=1.0" />
+          
+    <title>
+        How to Zoom an Image on
+        Mouse Hover using CSS?
+    </title>
+      
+    <style>
+        .geeks {
+            width: 300px;
+            height: 300px;
+            overflow: hidden;
+            margin: 0 auto;
+        }
+      
+        .geeks img {
+            width: 100%;
+            transition: 0.5s all ease-in-out;
+        }
+      
+        .geeks:hover img {
+            transform: scale(1.5);
+        }
+    </style>
+</head>
+  
+<body>
+    <div class="geeks">
+        <img src=
+"https://media.geeksforgeeks.org/wp-content/uploads/20200403151026/adblur_gfg.png"
+            alt="Geeks Image" />
+    </div>
+</body>
+  
+</html> -->
+
+
+<!DOCTYPE HTML>  
+<html>
+<head>
 <style>
-.tooltip {
-  position: relative;
-  display: inline-block;
-  border-bottom: 1px dotted black;
-}
-
-.tooltip .tooltiptext {
-  visibility: hidden;
-  width: 120px;
-  background-color: black;
-  color: #fff;
-  left: 50%;
-  bottom: 100%;
-  text-align: center;
-  border-radius: 6px;
-  padding: 5px 0;
-  margin-left: -60px;
-
-  /* Position the tooltip */
-  position: absolute;
-  z-index: 1;
-}
-
-.tooltip:hover .tooltiptext {
-  visibility: visible;
-}
+.error {color: #FF0000;}
 </style>
-<body style="text-align:center;">
+</head>
+<body>  
 
-<p>Move the mouse over the text below:</p>
+<?php
+// define variables and set to empty values
+$nameErr = $emailErr = $genderErr = $websiteErr = "";
+$name = $email = $gender = $comment = $website = "";
 
-<div class="tooltip">Hover over me
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  if (empty($_POST["name"])) {
+    $nameErr = "Name is required";
+  } else {
+    $name = test_input($_POST["name"]);
+  }
+  
+  if (empty($_POST["email"])) {
+    $emailErr = "Email is required";
+  } else {
+    $email = test_input($_POST["email"]);
+  }
+    
+  if (empty($_POST["website"])) {
+    $website = "";
+  } else {
+    $website = test_input($_POST["website"]);
+  }
 
-  <span class="tooltiptext">ranjan</span>
-</div>
+  if (empty($_POST["comment"])) {
+    $comment = "";
+  } else {
+    $comment = test_input($_POST["comment"]);
+  }
 
-<p>Note that the position of the tooltip text isn't very good. Go back to the tutorial and continue reading on how to position the tooltip in a desirable way.</p>
+  if (empty($_POST["gender"])) {
+    $genderErr = "Gender is required";
+  } else {
+    $gender = test_input($_POST["gender"]);
+  }
+}
+
+function test_input($data) {
+  $data = trim($data);
+  $data = stripslashes($data);
+  $data = htmlspecialchars($data);
+  return $data;
+}
+?>
+
+<h2>PHP Form Validation Example</h2>
+<p><span class="error">* required field</span></p>
+<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
+  Name: <input type="text" name="name">
+  <span class="error">* <?php echo $nameErr;?></span>
+  <br><br>
+  E-mail: <input type="text" name="email">
+  <span class="error">* <?php echo $emailErr;?></span>
+  <br><br>
+  Website: <input type="text" name="website">
+  <span class="error"><?php echo $websiteErr;?></span>
+  <br><br>
+  Comment: <textarea name="comment" rows="5" cols="40"></textarea>
+  <br><br>
+  Gender:
+  <input type="radio" name="gender" value="female">Female
+  <input type="radio" name="gender" value="male">Male
+  <input type="radio" name="gender" value="other">Other
+  <span class="error">* <?php echo $genderErr;?></span>
+  <br><br>
+  <input type="submit" name="submit" value="Submit">  
+</form>
+
+<?php
+echo "<h2>Your Input:</h2>";
+echo $name;
+echo "<br>";
+echo $email;
+echo "<br>";
+echo $website;
+echo "<br>";
+echo $comment;
+echo "<br>";
+echo $gender;
+?>
 
 </body>
 </html>
-

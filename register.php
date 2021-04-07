@@ -28,7 +28,7 @@ if(isset($_POST['submit'])){
   $sql = "INSERT INTO registration(file,name,address,contact,email,trainer,package,payment) Values('$file','$name','$address','$contact','$email','$trainer','$package','$payment')";
   $result = mysqli_query($conn,$sql);
   if($result){
-    //echo "data inserted";
+    // echo "data inserted";
   }else{
     //echo "data not inserted".mysqli_error($conn);
   }
@@ -73,7 +73,7 @@ if(isset($_POST['submit'])){
 <!-- header -->
 <header class="text-black-600 body-font-black  bg-black   " id="header">
     <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center text-bold bg-black ">
-      <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+      <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0" href="index.php">
         <img src="images/logo.JPG" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-12 h-12 text-white p-2  rounded-full" viewBox="0 0 24 24">
 
         <span class="ml-3 text-xl text-3xl text-bold text-white">A.S.T GYM KHANA </span>
@@ -129,10 +129,10 @@ if(isset($_POST['submit'])){
           <div class="p-2 w-1/2">
               <div class="relative">
                 <label for="trainer" class="leading-7 text-sm text-gray-600">Trainer</label> <br>
-                <input type="radio" name="trainer"  value="Ranjan" id=""> Ranjan Kumar Thakur   <br>
-                <input type="radio" name="trainer"  value="Arush" id=""> Arush Joshi   <br>
-                <input type="radio" name="trainer"  value="Tejash" id=""> Tejash Shrestha   <br>
-                <input type="radio" name="trainer"  value="Suresh" id=""> Suresh Napit   <br>
+                <input type="radio" name="trainer"  value="Ranjan Thakur" id=""> Ranjan Kumar Thakur   <br>
+                <input type="radio" name="trainer"  value="Arush Joshi" id=""> Arush Joshi   <br>
+                <input type="radio" name="trainer"  value="Tejash Shrestha" id=""> Tejash Shrestha   <br>
+                <input type="radio" name="trainer"  value="Suresh Napit" id=""> Suresh Napit   <br>
                 
               </div> 
             </div>

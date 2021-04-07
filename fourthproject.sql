@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Apr 07, 2021 at 07:13 PM
+-- Generation Time: Apr 07, 2021 at 10:18 PM
 -- Server version: 10.4.13-MariaDB
 -- PHP Version: 7.4.8
 
@@ -41,9 +41,13 @@ CREATE TABLE `blog` (
 --
 
 INSERT INTO `blog` (`id`, `file`, `topic`, `summary`, `description`, `bywhom`) VALUES
-(13, 'fullsizeoutput_152.jpeg', 'EVNET ON MENTAL HEALTH', 'Behalf on the mental healthe wiht fkajsdp bwest coach in World', 'kfaspudn jakusd; fn pausd fpu paus dfnap. uasdf pa sdfa sdfuapsduf x ajdpfua pauspdf a', 'ranjan'),
-(14, 'fullsizeoutput_153.jpeg', 'Event on Mental Health', 'I always wanted to join the gym. Finnaly i am attracted with the environment of AST GYM KHANA.', '      jfkjsd akjdf \r\naksjdf a\r\n kasdfhas\r\n asdjfa;usfnasdfha \r\na;sdfya sdf\r\nasdfya[ sfa dfafhpasep\r\nasdhfapenfa       ', 'ranjan'),
-(18, 'fullsizeoutput_152.jpeg', 'Online Classes ', 'it was great experience learning online classes.', 'it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.      ', 'ram');
+(36, 'fullsizeoutput_152.jpeg', 'kajskd', 'ksdjfkl', 'it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.      ', 'Ranjan Thakur'),
+(37, 'fullsizeoutput_5.jpeg', 'sjfklj', 'ksdjflk', 'it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.      ', 'Ranjan Thakur'),
+(38, 'aerial-photo-of-mountain-surrounded-by-fog-733174.jpg', 'kjdklfj', 'ksjdfkaj', '            it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.                  ', 'Ranjan Thakur'),
+(40, 'fullsizeoutput_152.jpeg', 'kjdf', 'jkdsjfkl', 'it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.      ', 'Tejash Shrestha'),
+(41, 'fullsizeoutput_178.jpeg', 'djf', 'kjdlkfja', 'it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.      ', 'Tejash Shrestha'),
+(42, 'pexels-dreamlens-production-896059.jpg', 'kdjsf', 'kjdfkjs', 'it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.      ', 'Tejash Shrestha'),
+(43, 'fullsizeoutput_8.jpeg', 'kdsjf', 'kjdlkjf', 'it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.it was great experience learning online classes.      ', 'Tejash Shrestha');
 
 -- --------------------------------------------------------
 
@@ -67,7 +71,8 @@ INSERT INTO `contact` (`id`, `name`, `email`, `message`) VALUES
 (18, 'Nitesh Kumar Shah', 'nitesh@gmail.com', 'I want to join AST . Please contact me!!!!'),
 (19, 'ram', 'ram12@gmail.com', 'hello i wanna know more about your gym'),
 (21, 'Sita Ram Sharma', 'sita@gmail.com', 'I wanted to be the part of AST gym Khana'),
-(22, 'Dhiren Thakur', 'd@gmail.com', 'I wanted to join the AST GYM and I want my dream shape. I HOPE u guys will help me.!!!!😎');
+(22, 'Dhiren Thakur', 'd@gmail.com', 'I wanted to join the AST GYM and I want my dream shape. I HOPE u guys will help me.!!!!😎'),
+(24, 'Ranjan Thakur', 'tranjan638@gmail.com', 'I want to join the east fitness center');
 
 -- --------------------------------------------------------
 
@@ -89,13 +94,12 @@ CREATE TABLE `gallery` (
 --
 
 INSERT INTO `gallery` (`id`, `file`, `topic`, `name`, `description`, `bywhom`) VALUES
-(23, 'michael-liao-8Qr1ixi-rMU-unsplash.jpg', 'EVNET ON MENTAL HEALTH', 'sdkjasdkfjklaj', 'ndspafusdnf akjsdf;ka u adjsfpu askdfjpua sdfpausdf pausdf ausdfjapusdf apus dfapus [auspdfa', 'ranjan'),
-(24, 'pexels-murilo-botelho-1865131.jpg', 'aksdjf', 'kdsjflkja', ';jdsfklajksdfjkajsdkjfpu apurenapdsfnpoenmxpf sowenaj\r\najsdkjpasndjanpfa\r\na sdhfpasdf ph\r\nasdfap', 'ranjan'),
-(25, 'farshad-rezvanian-Eelegt4hFNc-unsplash.jpg', 'kjsdfkj', 'djksf;aj', 'ndspafusdnf akjsdf;ka u adjsfpu askdfjpua sdfpausdf pausdf ausdfjapusdf apus dfapus [auspdfa', 'ranjan'),
-(26, 'fullsizeoutput_5.jpeg', 'aksdjfpuxncp', 'ndpaudsfmp', 'ndspafusdnf akjsdf;ka u adjsfpu askdfjpua sdfpausdf pausdf ausdfjapusdf apus dfapus [auspdfa ', 'ranjan'),
-(27, 'fullsizeoutput_152.jpeg', 'ranjan', 'ranjan', 'ndspafusdnf akjsdf;ka u adjsfpu askdfjpua sdfpausdf pausdf ausdfjapusdf apus dfapus [auspdfa', 'ranjan'),
-(30, 'fullsizeoutput_152.jpeg', 'ranjan', 'ranjan', '                  ndspafusdnf akjsdf;ka u adjsfpu askdfjpua sdfpausdf pausdf ausdfjapusdf apus dfapus [auspdfa                  ', 'ram'),
-(31, 'wallpapersden.com_mountains-silhouette_3000x1688.jpg', 'Abs', 'Bishal Rai', '            Ranjan than hiaksdjfpa sn iansdph npasi son one of the fitnesses icon youth of the country                      ', 'ram');
+(32, 'aerial-photo-of-mountain-surrounded-by-fog-733174.jpg', 'jfkaj', 'ksjdkfj', '	ndspafusdnf akjsdf;ka u adjsfpu askdfjpua sdfpausdf pausdf ausdfjapusdf apus dfapus [auspdfa      ', 'Ranjan Thakur'),
+(33, 'wallpapersden.com_mountains-silhouette_3000x1688.jpg', 'sdflkj', 'kdjsf', '	ndspafusdnf akjsdf;ka u adjsfpu askdfjpua sdfpausdf pausdf ausdfjapusdf apus dfapus [auspdfa      ', 'Ranjan Thakur'),
+(34, 'abstract-art-blur-blurred-301664.jpg', 'kjdf', 'kjkd', '	ndspafusdnf akjsdf;ka u adjsfpu askdfjpua sdfpausdf pausdf ausdfjapusdf apus dfapus [auspdfa      ', 'Ranjan Thakur'),
+(35, 'fullsizeoutput_5.jpeg', 'adfj', 'kdjfks', 'adj	ndspafusdnf akjsdf;ka u adjsfpu askdfjpua sdfpausdf pausdf ausdfjapusdf apus dfapus [auspdfa      ', 'Ranjan Thakur'),
+(36, 'fullsizeoutput_9.jpeg', 'dfjklj', 'kjdsklj', '	ndspafusdnf akjsdf;ka u adjsfpu askdfjpua sdfpausdf pausdf ausdfjapusdf apus dfapus [auspdfa      ', 'Ranjan Thakur'),
+(37, 'fullsizeoutput_1c.jpeg', 'fdjgklkdjafj', 'kdjafkj', '	ndspafusdnf akjsdf;ka u adjsfpu askdfjpua sdfpausdf pausdf ausdfjapusdf apus dfapus [auspdfa      ', 'Ranjan Thakur');
 
 -- --------------------------------------------------------
 
@@ -188,10 +192,10 @@ CREATE TABLE `trainer` (
 --
 
 INSERT INTO `trainer` (`id`, `file`, `name`, `specialist`, `description`, `bywhom`) VALUES
-(20, '51608068_2354505994568285_8140387284319993856_n.jpg', 'Arush Joshi', 'Body Builder', 'Former Body Builder National Champion', 'ranjan'),
-(21, '83897081_781170779052704_8855224469786984448_n.jpg', 'Suresh Napit', 'Diet Specialist', 'Former Diet Specialist of President', 'ranjan'),
-(22, 'fullsizeoutput_17c.jpeg', 'Tejash Shrestha', 'Diet Specialist', 'Former Diet Specialist of National Player', 'ranjan'),
-(23, '95187246_704119477085242_4262559753412018176_n.jpg', 'Ranjan Thakur', 'Body Builder', 'Former Body Builder ', 'ranjan');
+(28, 'fullsizeoutput_6.jpeg', 'Ranjan Thakur', 'Body Builder', 'Former Body Builder Champion      ', 'Tejash Shrestha'),
+(29, 'fullsizeoutput_17c.jpeg', 'Tejash Shrestha', 'Diet Specialist', '    Former Diet Specialist of President', 'Tejash Shrestha'),
+(30, '83897081_781170779052704_8855224469786984448_n.jpg', 'Suresh Napit', 'Diet Specialist', 'Former Diet Specialist of National Player      ', 'Tejash Shrestha'),
+(31, '51608068_2354505994568285_8140387284319993856_n.jpg', 'Arush Joshi', 'Body Builder', 'Former Body Builder Champion      ', 'Tejash Shrestha');
 
 -- --------------------------------------------------------
 
@@ -213,8 +217,15 @@ CREATE TABLE `workout` (
 --
 
 INSERT INTO `workout` (`id`, `file`, `workout`, `name`, `howtodo`, `bywhom`) VALUES
-(2, 'gym-video.mp4', 'Biceps', 'Barbell Pull Up ', 'hold the bar and lift it slow and increase with the increase in reps', 'ranjan'),
-(3, 'video.mp4', 'Abs', 'kajsdf', 'ksdjflkajs', 'ranjan');
+(5, 'video.mp4', 'Back', 'Incline Dumbell', '      Mat kar maya ko ahankar Mat kar maya ko ahankar Mat kar maya ko ahankar      \r\n      ', 'Ranjan Thakur'),
+(7, 'Masked Wolf - Astronaut In The Ocean (Official Lyric Video).mp4', 'kajsdk', 'kajsdkfj', 'Mat kar maya ko ahankar Mat kar maya ko ahankar Mat kar maya ko ahankar', 'Ranjan Thakur'),
+(9, 'pexels-tima-miroshnichenko-5319088.mp4', 'dsfjlk', 'kdjsfjkj', 'Mat kar maya ko ahankar Mat kar maya ko ahankar Mat kar maya ko ahankar      ', 'Arush Joshi'),
+(10, 'pexels-tima-miroshnichenko-5319429.mp4', 'kjdfg', 'kjdsfklj', 'Mat kar maya ko ahankar Mat kar maya ko ahankar Mat kar maya ko ahankar      ', 'Arush Joshi'),
+(11, 'pexels-tima-miroshnichenko-5319433.mp4', 'jkasdjk', 'ksdjfkj', 'aksdjflkajdskjsdjfaksjdkj     fasdjfas djkljasdkfa sd n askd asdnfashdf a\r\najsdhkfja;sd\r\n      ', 'Arush Joshi'),
+(12, 'pexels-tima-miroshnichenko-5319439.mp4', 'djflkjaks', 'kjdsfkljl', 'jaksdjflkajdskjsdjfaksjdkj      aksdjflkajdskjsdjfaksjdkj      aksdjflkasurenas a;ue \r\na ;sdkua\r\ne  ', 'Arush Joshi'),
+(13, 'pexels-tima-miroshnichenko-5319756.mp4', 'sdkjfkl', 'jkdjsfklj', 'kdsajfklasjdfnasdfna sdfhas\r\na;sdkufya[ \r\nna;skdufa\r\naksdfa\r\n      ', 'Arush Joshi'),
+(14, 'pexels-tima-miroshnichenko-5319856.mp4', 'kdsjf', 'kjdsfklj', 'kdsajfklasjdfnasdfna sdfhas a;sdkufya[ na;skdufa aksdfa      ', 'Arush Joshi'),
+(15, 'pexels-tima-miroshnichenko-5319761.mp4', 'dfkjkl', 'djflj', 'kdsajfklasjdfnasdfna sdfhas a;sdkufya[ na;skdufa aksdfa', 'Arush Joshi');
 
 --
 -- Indexes for dumped tables
@@ -277,19 +288,19 @@ ALTER TABLE `workout`
 -- AUTO_INCREMENT for table `blog`
 --
 ALTER TABLE `blog`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
 
 --
 -- AUTO_INCREMENT for table `contact`
 --
 ALTER TABLE `contact`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- AUTO_INCREMENT for table `gallery`
 --
 ALTER TABLE `gallery`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
 
 --
 -- AUTO_INCREMENT for table `login`
@@ -313,13 +324,13 @@ ALTER TABLE `registration`
 -- AUTO_INCREMENT for table `trainer`
 --
 ALTER TABLE `trainer`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
 -- AUTO_INCREMENT for table `workout`
 --
 ALTER TABLE `workout`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- Constraints for dumped tables

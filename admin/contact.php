@@ -36,6 +36,7 @@ if(!isset($_SESSION['uname'])){
         <a class="mr-5 hover:text-red-600 smoothScroll"href="member.php">Member</a>
         <a class="mr-5 hover:text-red-600 smoothScroll" href="payment.php">Payment</a>
         <a class="mr-5 hover:text-red-600 smoothScroll" href="client.php">Client</a>
+        <a class="mr-5 hover:text-red-600 smoothScroll" href="workout.php">Workout</a>
         <a class="mr-5 hover:text-red-600 smoothScroll" href="logout.php"><i class="fas fa-sign-out-alt"></i></a>
         </nav>
     </div>

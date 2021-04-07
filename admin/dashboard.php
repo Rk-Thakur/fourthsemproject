@@ -14,7 +14,7 @@ if(!isset($_SESSION['uname'])){
     <title>Dashboard</title>
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   <style>
     body{background:white!important;}
     #image {
@@ -55,6 +55,7 @@ if(!isset($_SESSION['uname'])){
         <a class="mr-5 hover:text-red-600 smoothScroll"href="member.php">Member</a>
         <a class="mr-5 hover:text-red-600 smoothScroll" href="payment.php">Payment</a>
         <a class="mr-5 hover:text-red-600 smoothScroll" href="client.php">Client</a>
+        <a class="mr-5 hover:text-red-600 smoothScroll" href="workout.php">Workout</a>
         <a class="mr-5 hover:text-red-600 smoothScroll" href="logout.php"><i class="fas fa-sign-out-alt"></i></a>
         </nav>
     </div>
@@ -65,7 +66,7 @@ if(!isset($_SESSION['uname'])){
 
     
 <!-- welcome -->
-    <div class="info">  
+    <div class="info animate__animated animate__bounceInUp animate_delay-1s" >  
       <p class=" px-10 py-10 text-center font-bold m-5 text-2xl">Welcome, <?php  echo $_SESSION['uname'] ?> </p>
       <section class="w-20 h-20 mx-auto flex">
 
@@ -85,9 +86,8 @@ if(!isset($_SESSION['uname'])){
                 ?> 
         </section>  
     </div>
-
 <!-- contact -->
-    <div class="info " >
+    <div class="info animate__animated animate__bounceInUp animate_delay-1s " >
 
             <p class=" text-center font-bold m-5">Contact</p>
 
@@ -131,7 +131,7 @@ if(!isset($_SESSION['uname'])){
     </div>
 
         <!-- member -->
-    <div class="info " >
+    <div class="info animate__animated animate__bounceInUp animate_delay-2s" >
             <p class=" text-center font-bold m-5">Members</p>
 
         <table class="rounded-lg m-5 w-5/6 mx-auto bg-gray-200 text-gray-800">

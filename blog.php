@@ -8,7 +8,7 @@
 
         <?php
     include('admin/config.php');
-    $query="SELECT * FROM blog ORDER BY id desc LIMIT 3";
+    $query="SELECT * FROM blog ORDER BY id desc LIMIT 6";
     $result=mysqli_query($conn,$query);
     if(mysqli_num_rows($result)>0)
     {

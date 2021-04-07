@@ -59,15 +59,23 @@ $conn =  mysqli_connect("localhost","root","","fourthproject");
 //         Due int (20) NOT NULL,
 //         FOREIGN KEY (member_name) REFERENCES registration(name)
 // )";
-$sql = " CREATE TABLE `payments` (
-    `payment_id` int NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    `paymentDate` date,
-    `amount` int NOT NULL,
-    `due` int NOT NULL,
-    `id` int,
-    FOREIGN KEY (id) REFERENCES registration(id)
-)";
+// $sql = " CREATE TABLE `payments` (
+//     `payment_id` int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+//     `paymentDate` date,
+//     `amount` int NOT NULL,
+//     `due` int NOT NULL,
+//     `id` int,
+//     FOREIGN KEY (id) REFERENCES registration(id)
+// )";
 
+$sql = "CREATE table workout(
+    id int NOT NULL AUTO_INCREMENT  PRIMARY KEY,
+    file varchar(1000) NOT NULL,
+    workout varchar(30) NOT NULL,
+    name varchar(30) NOT NULL,
+    howtodo varchar(100) NOT NULL,
+    bywhom varchar(100) NOT NULL
+)";
 
 
 

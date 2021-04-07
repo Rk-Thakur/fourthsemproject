@@ -51,25 +51,30 @@ if(!isset($_SESSION['uname'])){
               <img src="images/logo.JPG" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-12 h-12 text-white p-2  rounded-full" viewBox="0 0 24 24">
         <span class="ml-3 text-xl text-3xl text-bold text-white">A.S.T GYM KHANA </span>
       </a>
-      <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center text-2xl text-white ">
+      <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center text-xl text-white ">
         <a class="mr-5 hover:text-red-600 smoothScroll" href="#home">Home</a>
         <a class="mr-5 hover:text-red-600 smoothScroll" href="#gallery">Gallery</a>
         <a class="mr-5 hover:text-red-600 smoothScroll" href="#team">Trainee</a>
         <a class="mr-5 hover:text-red-600 smoothScroll" href="#price">Pricing</a>
         <a class="mr-5 hover:text-red-600 smoothScroll"href="#blog">Blog</a>
         <a class="mr-5 hover:text-red-600 smoothScroll" href="#contact">Contact</a>
+        <a class="mr-5 hover:text-red-600 smoothScroll" href="workout.php">Workout</a>
       </nav>
-      <a href="register.php" class="inline-flex text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded text-lg  ">Member!</a>
+      <a href="register.php" class=" text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded text-lg  ">Member!</a>
     </div>
 </header>
 
 <!-- hero -->
 
   <div class="relative pt-16 pb-32 flex content-center items-center justify-center " style="min-height: 95vh">
+    <!-- <div class="absolute top-0 w-full h-full bg-top bg-cover" >
+      <video   autoplay controls loop>
+  <source src="images/video.mp4" type="video/mp4">
+</video>
+    </div> -->
     <div
       class="absolute top-0 w-full h-full bg-top bg-cover"
-      style="background-image: url('images/1.jpg');
-      ">
+      style="background-image: url('images/video.mp4');">
       <span
         id="blackOverlay"
         class="w-full h-full absolute opacity-75 bg-black"
@@ -324,7 +329,7 @@ include("sucess.php");
 
   <!-- adverstise -->
 <section class="text-gray-600 body-font bg-black">
-    <div class="container mx-auto flex px-5 py-24 items-center justify-center flex-col bg-black bg-gray-400 opacity-75" 
+    <div class="container mx-auto flex px-5 py-24 items-center justify-center flex-col bg-black  opacity-75" 
     >
       <div class="text-center lg:w-2/3 w-full">
         <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-white-900 text-white">DON’T THINK, BEGIN TODAY!

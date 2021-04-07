@@ -77,7 +77,7 @@ if(!isset($_SESSION['uname'])){
         <a class="mr-5 hover:text-red-600 " href="index.php#price">Pricing</a>
         <a class="mr-5 hover:text-red-600 "href="index.php#blog">Blog</a>
         <a class="mr-5 hover:text-red-600 " href="index.php#contact">Contact</a>
-        <a class="mr-5 hover:text-red-600 " href="workout.php">Workout</a>
+        <a class="mr-5 hover:text-red-600 " href="#workout">Workout</a>
 
       </nav>
       
@@ -87,7 +87,7 @@ if(!isset($_SESSION['uname'])){
 </header>
 
  
-<section class="text-gray-600 body-font">
+<section class="text-gray-600 body-font" id="workout">
   <div class="container px-5 py-24 mx-auto">
     <div class="flex flex-col text-center w-full mb-20">
       <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Workout Details</h1>

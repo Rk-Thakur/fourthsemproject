@@ -66,7 +66,7 @@ if(!isset($_SESSION['uname'])){
 
 <!-- hero -->
 
-  <div class="relative pt-16 pb-32 flex content-center items-center justify-center " style="min-height: 95vh">
+<div class="relative pt-16 pb-32 flex content-center items-center justify-center " style="min-height: 95vh">
     <!-- <div class="absolute top-0 w-full h-full bg-top bg-cover" >
       <video   autoplay controls loop>
   <source src="images/video.mp4" type="video/mp4">
@@ -105,7 +105,7 @@ if(!isset($_SESSION['uname'])){
       </div>
     </div>
     </div>
-  </div>
+</div>
 
 
 

@@ -99,7 +99,7 @@ if(!isset($_SESSION['uname'])){
                     <td  class="px-4 py-3 text-center"><?php echo $row["contact"]; ?></td>
 
                     <td  class="px-4 py-3 text-center">
-                    <a href="customer.php?id=<?php echo $row['id'];?>">
+                    <a href="https://mail.google.com/mail/u/0/#inbox?compose=new">
                     <?php echo $row["email"]; ?></a></td>
                     <td  class="px-4 py-3 text-center"><?php echo $row["trainer"]; ?></td>
                     <td  class="px-4 py-3 text-center"><?php echo $row["package"]; ?></td>

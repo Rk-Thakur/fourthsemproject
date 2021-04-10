@@ -126,7 +126,7 @@ if(!isset($_SESSION['uname'])){
 
           <?php
                   include_once("config.php");
-                  $sql="SELECT * FROM todo WHERE bywhom ='{$_SESSION['uname']}' ";
+                  $sql="SELECT * FROM todo  WHERE bywhom ='{$_SESSION['uname']}' ORDER BY id desc ";
                   $result=mysqli_query($conn,$sql);
                   if($result){                 
                   while($row=mysqli_fetch_assoc($result)){?>

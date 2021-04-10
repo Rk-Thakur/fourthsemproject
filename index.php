@@ -14,6 +14,8 @@ if(!isset($_SESSION['uname'])){
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AST GYM KHANA </title>
   <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+
   <link
   rel="stylesheet"
   href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
@@ -60,21 +62,21 @@ if(!isset($_SESSION['uname'])){
         <a class="mr-5 hover:text-red-600 smoothScroll" href="#contact">Contact</a>
         <a class="mr-5 hover:text-red-600 smoothScroll" href="workout.php">Workout</a>
       </nav>
-      <a href="register.php" class=" text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded text-lg  ">Member!</a>
+      <a href="register.php" class=" text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-400 rounded text-lg  "><i class="fas fa-user-plus"></i></a>
     </div>
 </header>
 
 <!-- hero -->
 
-<div class="relative pt-16 pb-32 flex content-center items-center justify-center " style="min-height: 95vh">
+  <div class="relative pt-16 pb-32 flex content-center items-center justify-center " style="min-height: 95vh">
     <!-- <div class="absolute top-0 w-full h-full bg-top bg-cover" >
       <video   autoplay controls loop>
-  <source src="images/video.mp4" type="video/mp4">
-</video>
+    <source src="images/video.mp4" type="video/mp4">
+    </video>
     </div> -->
     <div
       class="absolute top-0 w-full h-full bg-top bg-cover"
-      style="background-image: url('images/video.mp4');">
+      style="background-image: url('images/1.jpg');">
       <span
         id="blackOverlay"
         class="w-full h-full absolute opacity-75 bg-black"
@@ -105,7 +107,7 @@ if(!isset($_SESSION['uname'])){
       </div>
     </div>
     </div>
-</div>
+  </div>
 
 
 

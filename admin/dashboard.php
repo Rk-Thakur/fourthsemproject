@@ -4,7 +4,31 @@ if(!isset($_SESSION['uname'])){
     header('location:login.php');
 }
 ?>
-
+<!-- to do  list -->
+<?php
+  include_once('config.php');
+  if(isset($_POST['submit']))
+  {
+  
+  if(empty($_POST['list']) ||  empty($_SESSION['uname']) ){ 
+    header("Location: dashboard.php");
+    }else{
+      $list=$_POST['list'];
+      $whom = $_SESSION['uname'];
+    
+  $sql="INSERT into todo(list,bywhom) values('$list','$whom')";
+  $result=mysqli_query($conn,$sql);
+  if($result)
+  {
+    // echo"Data inserted";
+    header("Location: dashboard.php");
+  }
+  else{
+    echo"Data not inserted".mysqli_error($conn);
+  }
+  }
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,6 +57,7 @@ if(!isset($_SESSION['uname'])){
             transform: scale(1.5);
         }
 </style>
+
 </head>
 
 <body>
@@ -63,33 +88,63 @@ if(!isset($_SESSION['uname'])){
 
 
 
+<!-- pop up -->
+
 
     
 <!-- welcome -->
-    <div class="info animate__animated animate__bounceInUp animate_delay-1s" >  
-      <p class=" px-10 py-10 text-center font-bold m-5 text-2xl">Welcome, <?php  echo $_SESSION['uname'] ?> </p>
-      <section class="w-20 h-20 mx-auto flex">
-
-      <?php
+<section class="text-gray-600 body-font animate__animated animate__bounceInUp animate_delay-1s">
+  <div class="container px-5 py-24 mx-auto">
+    <div class="flex flex-wrap -mx-4 -mb-10 text-center">
+      <div class="sm:w-3/4 mb-10 px-4">
+        <div class="rounded-lg h-64 overflow-hidden">
+        <?php
                   include_once("config.php");
                   $sql="SELECT file FROM trainer WHERE name ='{$_SESSION['uname']}'";
                   $result=mysqli_query($conn,$sql);
-                    $count=1;
                   if($result){                 
                   while($row=mysqli_fetch_assoc($result)){?>
-              <?php echo '<img src="uploads/'. $row["file"].'"height= "150" class="rounded-full" width="150" alt=" ">'; ?>
+              <?php echo '<img src="uploads/'. $row["file"].'" class="mx-auto rounded-full "  width="100" height="100" alt=" ">'; ?>
 
                     <?php
 
                   }
                 }
                 ?> 
-        </section>  
-    </div>
-<!-- contact -->
-    <div class="info animate__animated animate__bounceInUp animate_delay-1s " >
+                <h2 class=" text-3xl font-medium text-gray-900  mb-3">Welcome, <?php  echo $_SESSION['uname'] ?></h2>
 
-            <p class=" text-center font-bold m-5">Contact</p>
+        </div>
+
+      </div>
+      <div class="sm:w-1/4 mb-5 px-4 border border-gray-600 bg-gray-100" >
+        <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="POST">
+          <h2 class="text-white text-2xl font-medium  mt-6 mb-3  bg-red-500 rounded-lg" >Todo List</h2>
+          <div class="relative mb-4">
+            <input type="text"  name="list" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+          </div>        
+          <button class="flex mx-auto  text-white bg-red-500 border-0 py-2 px-3  hover:bg-red-600 rounded" name="submit">Add</button>
+
+          <?php
+                  include_once("config.php");
+                  $sql="SELECT * FROM todo WHERE bywhom ='{$_SESSION['uname']}' ";
+                  $result=mysqli_query($conn,$sql);
+                  if($result){                 
+                  while($row=mysqli_fetch_assoc($result)){?>
+                  <h4 class="  font-medium text-gray-900 mt-6 mb-3  bg-white rounded "><?php echo $row['list']?> 
+                  <a href="deletetodo.php?id=<?php echo $row["id"]; ?>" class="mx-right"><i class="fas fa-trash"></i></a></h4>
+                  <?php
+                  }
+                }
+                ?>
+            </form>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- contact -->
+    <div class=" info animate__animated animate__bounceInUp animate_delay-1s " >
+
+            <p class="  text-center font-bold m-5">Contact</p>
 
         <table class="rounded-lg m-5 w-5/6 mx-auto bg-gray-200 text-gray-800">
             <thead>

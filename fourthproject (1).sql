@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Apr 07, 2021 at 10:18 PM
+-- Generation Time: Apr 10, 2021 at 10:43 PM
 -- Server version: 10.4.13-MariaDB
 -- PHP Version: 7.4.8
 
@@ -121,7 +121,8 @@ INSERT INTO `login` (`id`, `username`, `password`) VALUES
 (15, 'Ranjan Thakur', 'Ranjan'),
 (16, 'Arush Joshi', 'Arush'),
 (17, 'Tejash Shrestha', 'Tejash'),
-(19, 'Suresh Napit', 'Suresh');
+(19, 'Suresh Napit', 'Suresh'),
+(22, 'ram', 'ram');
 
 -- --------------------------------------------------------
 
@@ -143,7 +144,9 @@ CREATE TABLE `payments` (
 
 INSERT INTO `payments` (`payment_id`, `paymentDate`, `amount`, `due`, `id`) VALUES
 (25, '2021-03-31', 123, 23, 44),
-(26, '2021-04-14', 123, 23, 42);
+(26, '2021-04-14', 123, 23, 42),
+(29, '2021-02-23', 12, 2, 41),
+(30, '2021-02-23', 23, 12, 47);
 
 -- --------------------------------------------------------
 
@@ -170,7 +173,32 @@ CREATE TABLE `registration` (
 INSERT INTO `registration` (`id`, `file`, `name`, `address`, `contact`, `email`, `trainer`, `package`, `payment`) VALUES
 (41, 'fullsizeoutput_172.jpeg', 'Kabita Thapa', 'Kathmandu', 9810209050, 'kabita123@gmail.com', 'Tejash Shrestha', 'Starter', 'Cash on Hand'),
 (42, 'fullsizeoutput_151.jpeg', 'Ranjan Thakur', 'Bhaktapur', 9810209060, 'ranjant401@gmail.com', 'Ranjan Thakur', 'Starter', 'Cash on Hand'),
-(44, '22885835_1963559547195178_1990525828235341618_n.jpg', 'Bimala  Thakur', 'Kathmandu,Milijuli Chowk', 9861043599, 'bimala@gmail.com', 'Suresh Napit', 'Pro', 'Cash on Hand');
+(44, '22885835_1963559547195178_1990525828235341618_n.jpg', 'Bimala  Thakur', 'Kathmandu,Milijuli Chowk', 9861043599, 'bimala@gmail.com', 'Suresh Napit', 'Pro', 'Cash on Hand'),
+(47, '81589287_489421458383853_971106618320093184_n.jpg', 'Ram Khatri', 'Kathmandu,Koteshwor', 9810209060, 'ram@gmai.com', 'Arush Joshi', 'Basic', 'Cash on Hand');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `todo`
+--
+
+CREATE TABLE `todo` (
+  `id` int(11) NOT NULL,
+  `list` varchar(100) NOT NULL,
+  `bywhom` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `todo`
+--
+
+INSERT INTO `todo` (`id`, `list`, `bywhom`) VALUES
+(5, 'Ranjan send the text to kathmandu', 'Tejash Shrestha'),
+(7, 'Call the new person', 'Ranjan Thakur'),
+(8, 'Arush', 'Arush Joshi'),
+(9, 'Suresh', 'Suresh Napit'),
+(10, 'Ranjan Thakur', 'Ranjan Thakur'),
+(23, 'ram', 'Ranjan Thakur');
 
 -- --------------------------------------------------------
 
@@ -192,10 +220,10 @@ CREATE TABLE `trainer` (
 --
 
 INSERT INTO `trainer` (`id`, `file`, `name`, `specialist`, `description`, `bywhom`) VALUES
-(28, 'fullsizeoutput_6.jpeg', 'Ranjan Thakur', 'Body Builder', 'Former Body Builder Champion      ', 'Tejash Shrestha'),
-(29, 'fullsizeoutput_17c.jpeg', 'Tejash Shrestha', 'Diet Specialist', '    Former Diet Specialist of President', 'Tejash Shrestha'),
-(30, '83897081_781170779052704_8855224469786984448_n.jpg', 'Suresh Napit', 'Diet Specialist', 'Former Diet Specialist of National Player      ', 'Tejash Shrestha'),
-(31, '51608068_2354505994568285_8140387284319993856_n.jpg', 'Arush Joshi', 'Body Builder', 'Former Body Builder Champion      ', 'Tejash Shrestha');
+(3, '83897081_781170779052704_8855224469786984448_n.jpg', 'Suresh Napit ', 'Diet Specialist', 'Former Diet specialist of National Player      ', 'Arush Joshi'),
+(4, 'fullsizeoutput_17c.jpeg', 'Tejash Shrestha', 'Diet Specialist', 'Former Diet specialist of President      ', 'Arush Joshi'),
+(5, '95187246_704119477085242_4262559753412018176_n.jpg', 'Ranjan Thakur', 'Body Builder', 'Former Body Builder      ', 'Arush Joshi'),
+(6, '51608068_2354505994568285_8140387284319993856_n.jpg', 'Arush Joshi', 'Body Builder', 'Former Body Builder Champion      ', 'Arush Joshi');
 
 -- --------------------------------------------------------
 
@@ -269,6 +297,12 @@ ALTER TABLE `registration`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `todo`
+--
+ALTER TABLE `todo`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `trainer`
 --
 ALTER TABLE `trainer`
@@ -288,7 +322,7 @@ ALTER TABLE `workout`
 -- AUTO_INCREMENT for table `blog`
 --
 ALTER TABLE `blog`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
 
 --
 -- AUTO_INCREMENT for table `contact`
@@ -306,25 +340,31 @@ ALTER TABLE `gallery`
 -- AUTO_INCREMENT for table `login`
 --
 ALTER TABLE `login`
-  MODIFY `id` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT for table `payments`
 --
 ALTER TABLE `payments`
-  MODIFY `payment_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `payment_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- AUTO_INCREMENT for table `registration`
 --
 ALTER TABLE `registration`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
+
+--
+-- AUTO_INCREMENT for table `todo`
+--
+ALTER TABLE `todo`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- AUTO_INCREMENT for table `trainer`
 --
 ALTER TABLE `trainer`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `workout`

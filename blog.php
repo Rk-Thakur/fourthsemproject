@@ -8,7 +8,7 @@
 
         <?php
     include('admin/config.php');
-    $query="SELECT * FROM blog ORDER BY id desc LIMIT 6";
+    $query="SELECT * FROM blog ORDER BY id desc LIMIT 3";
     $result=mysqli_query($conn,$query);
     if(mysqli_num_rows($result)>0)
     {
@@ -32,8 +32,21 @@
     }
     }               
     ?>
+<div class="p-2 w-full">
+    
+          <button class="flex mx-auto text-black  border-0 py-2 px-2 focus:outline-none  rounded text-lg" href="allblog.php">
+            <a href="allblog.php">
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-6 h-8 ml-2" viewBox="0 0 24 24">
+            <path d="M5 12h14M12 5l7 7-7 7"></path>
+          </svg>
+            </a>
+          </button>
+
 
         </div>
+
+        </div>
+        
 </div>
 </section>
 

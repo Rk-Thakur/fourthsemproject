@@ -96,9 +96,8 @@ if(!isset($_SESSION['uname'])){
                     <td  class="px-4 py-3 text-center"><?php echo $row["name"]; ?></td>
                     <td  class="px-4 py-3 text-center"><?php echo $row["address"]; ?></td>
                     <td  class="px-4 py-3 text-center"><?php echo $row["contact"]; ?></td>
-                    <td  class="px-4 py-3 text-center">
-                    <?php echo $row["email"]; ?>
-                    </td>
+                    <td  class="px-4 py-3 text-center"><a href="https://mail.google.com/mail/u/0/#inbox?compose=new" target="_blank">
+                    <?php echo $row["email"]; ?></a></td>
                     <td  class="px-4 py-3 text-center"><?php echo $row["trainer"]; ?></td>
                     <td  class="px-4 py-3 text-center"><?php echo $row["package"]; ?></td>
                     <td  class="px-4 py-3 text-center"><?php echo $row["payment"]; ?></td>

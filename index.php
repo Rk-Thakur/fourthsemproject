@@ -69,19 +69,30 @@ if(!isset($_SESSION['uname'])){
 <!-- hero -->
 
   <div class="relative pt-16 pb-32 flex content-center items-center justify-center " style="min-height: 95vh">
-    <!-- <div class="absolute top-0 w-full h-full bg-top bg-cover" >
+    <!--  for both browser
+      <div class="absolute top-0 w-full h-full bg-top bg-cover opacity-55 object-cover" >
       <video   autoplay controls loop>
     <source src="images/video.mp4" type="video/mp4">
     </video>
     </div> -->
-    <div
+    <!-- for safari 
+      <div
+      class="absolute top-0 w-full h-full bg-top bg-cover"
+      style="background-image: url('images/video.mp4');">
+      <span
+        id="blackOverlay"
+        class="w-full h-full absolute opacity-75 bg-black"
+      ></span>
+    </div> -->
+    
+      <div
       class="absolute top-0 w-full h-full bg-top bg-cover"
       style="background-image: url('images/1.jpg');">
       <span
         id="blackOverlay"
         class="w-full h-full absolute opacity-75 bg-black"
       ></span>
-    </div>
+    </div> 
     <div class="container relative mx-auto" >
       <div class="items-center flex flex-wrap">
         <div class="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">

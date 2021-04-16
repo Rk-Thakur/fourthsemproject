@@ -97,7 +97,7 @@ if(isset($_POST['submit'])){
     <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="POST" enctype="multipart/form-data">
     <div class="container px-5 py-24 mx-auto">
       <div class="flex flex-col text-center w-full mb-12">
-        <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Thanks For Choosing Us!!!!</h1>
+        <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Congratulation! 👏 Your are going to get your Dream Body very soon!!!</h1>
       </div>
       <div class="lg:w-1/2 md:w-2/3 mx-auto">
         <div class="flex flex-wrap -m-2">

@@ -93,11 +93,11 @@ if(!isset($_SESSION['uname'])){
 
     
 <!-- welcome -->
-<section class="text-gray-600 body-font animate__animated animate__bounceInUp animate_delay-1s">
+<section class="text-gray-600 body-font animate__animated animate__bounceInUp animate_delay-1s ">
   <div class="container px-5 py-24 mx-auto">
     <div class="flex flex-wrap -mx-4 -mb-10 text-center">
       <div class="sm:w-3/4 mb-10 px-4">
-        <div class="rounded-lg h-64 overflow-hidden">
+        <div class=" rounded-lg   p-10 h-64 overflow-hidden  ">
         <?php
                   include_once("config.php");
                   $sql="SELECT file FROM trainer WHERE name ='{$_SESSION['uname']}'";
@@ -111,18 +111,18 @@ if(!isset($_SESSION['uname'])){
                   }
                 }
                 ?> 
-                <h2 class=" text-3xl font-medium text-gray-900  mb-3">Welcome, <?php  echo $_SESSION['uname'] ?></h2>
+                <h2 class=" text-3xl font-medium   mb-3">Welcome, <?php  echo $_SESSION['uname'] ?></h2>
 
         </div>
 
       </div>
       <div class="sm:w-1/4 mb-5 px-4 border border-gray-600 bg-gray-100" >
         <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="POST">
-          <h2 class="text-white text-2xl font-medium  mt-6 mb-3  bg-red-500 rounded-lg" >Todo List</h2>
+          <h2 class="text-white text-2xl font-medium hover:bg-red-600 mt-6 mb-3  bg-gray-500 rounded-lg" >Todo List</h2>
           <div class="relative mb-4">
             <input type="text"  name="list" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
           </div>        
-          <button class="flex mx-auto  text-white bg-red-500 border-0 py-2 px-3  hover:bg-red-600 rounded" name="submit">Add</button>
+          <button class="flex mx-auto  text-white bg-gray-500 border-0 py-2 px-3  hover:bg-red-600 rounded" name="submit">Add</button>
 
           <?php
                   include_once("config.php");

@@ -33,9 +33,9 @@ if(!isset($_SESSION['uname'])){
         <a class="mr-5 hover:text-red-600 smoothScroll text-2xl" href="contact.php" title ="Contact"><i class="fas fa-address-book"></i></a>
         <a class="mr-5 hover:text-red-600 smoothScroll text-2xl" href="member.php" title="Member"><i class="fas fa-user-plus"></i></a>
         <a class="mr-5 hover:text-red-600 smoothScroll text-2xl" href="payment.php" title="Payments"><i class="fas fa-rupee-sign"></i></a>
-        <a class="mr-5 hover:text-red-600 smoothScroll text-2xl" href="client.php" title="Users"><i class="fas fa-users"></i></a>
+        <a class="mr-5 hover:text-red-600 smoothScroll text-2xl" href="client.php" title="Clients"><i class="fas fa-users"></i></a>
         <a class="mr-5 hover:text-red-600 smoothScroll text-2xl" href="workout.php"  title="Workout"><i class="fas fa-running"></i></a>
-        <!-- <a class="mr-5 hover:text-red-600 smoothScroll text-4xl" href="message.php" title="Message"><i class="fas fa-sms"></i></a> -->
+        <a class="mr-5 hover:text-red-600 smoothScroll text-2xl" href="message.php" title="Message"><i class="fas fa-sms"></i></a>
         <a class="mr-5 hover:text-red-600 smoothScroll text-2xl" href="logout.php" title="Logout"><i class="fas fa-sign-out-alt"></i></a>
         </nav>
     </div>
@@ -120,6 +120,56 @@ if(!isset($_SESSION['uname'])){
         
     </div>
     
+</div>
+
+
+<!-- Member details -->
+
+<div class="info " >
+          <p class="text-5xl text-center font-bold m-5">Members</p>
+          <table class="rounded-lg  w-5/6 mx-auto bg-gray-200 text-gray-800">
+            <thead>
+            <tr class="text-left border-b-4 border-gray-900">
+            <th class="px-4 py-3 text-center">S.N</th>
+            <th class="px-4 py-3 text-center">Member_Id</th>
+            <th class="px-4 py-3 text-center">Image</th>
+            <th class="px-4 py-3 text-center">Name</th>
+            <th class="px-4 py-3 text-center">Contact</th>
+            
+
+              </tr>
+            </thead>  
+            <tbody>
+              <tr>
+            <?php
+                  include_once("config.php");
+                  // create a query
+                  //$sql="SELECT first,last,email,course,level,status FROM record";
+                  $sql="SELECT * FROM registration ORDER BY id desc";
+                  //execute query
+                  $result=mysqli_query($conn,$sql);
+                    $count=1;
+                  if($result){                 
+                  while($row=mysqli_fetch_assoc($result)){?>
+                  <tr class=" hover:bg-gray-300 ">
+                  <td  class=" text-center"><?php echo $count; ?></td>
+                  <td  class=" text-center"><?php echo $row['id']; ?></td>
+                    <td  class=" text-center" id="image"><?php echo '<img src="uploads/'. $row["file"].'"height= "200" width="200" alt=" ">'; ?></td>
+                    <td  class=" text-center"><?php echo $row["name"]; ?></td>
+                    <td  class="px-4 py-3 text-center"><?php echo $row["contact"]; ?></td>
+
+                    
+                </tr>
+                <?php $count++;?>
+                    <?php
+                    }
+                  }
+                  ?>
+                  </tr>
+            </tbody>
+          </table>
+        </div>
+    </div>
 </div>
 
 

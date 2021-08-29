@@ -12,7 +12,7 @@
                         }
                         
                         $to = $row['email'];
-                        $subject = "Contact Form";
+                        $subject = "Appreciation!🙂";
                         $message = "Thank you for Contacting us, We will get to u very soon " ;
                         $header = 'From: astgym89@gmail.com';
                         if(mail($to,$subject,$message, $header)){

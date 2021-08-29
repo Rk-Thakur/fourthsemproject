@@ -37,23 +37,23 @@ if(!isset($_SESSION['uname'])){
 
 <body>
 
-<header class="text-black-600 body-font-black  bg-black   " id="header">
-    <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center text-bold bg-black ">
+<header class="text-black-600  " id="header">
+    <div class=" rounded-lg  bg-gray-900  container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center text-bold bg-black ">
         <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0" href="dashboard.php">
-                <img src="images/logo.JPG" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-12 h-12 text-white p-2  rounded-full" viewBox="0 0 24 24">
-        <span class="ml-3   text-white">A.S.T GYM KHANA </span>
+                <img src="images/logo.JPG" fill="none" title="AST GYM KHANA"   class="w-12 h-12    rounded-full" >
         </a>
         <nav class="md:ml-auto flex flex-wrap items-center  justify-center  text-white ">
-        <a class="mr-5 hover:text-red-600 smoothScroll" href="dashboard.php"> Home</a>
-        <a class="mr-5 hover:text-red-600 smoothScroll" href="trainer.php">Trainer</a>
-        <a class="mr-5 hover:text-red-600 smoothScroll" href="gallery.php">Gallery</a>
-        <a class="mr-5 hover:text-red-600 smoothScroll" href="blog.php">Blogs</a>
-        <a class="mr-5 hover:text-red-600 smoothScroll"href="contact.php">Contact</a>
-        <a class="mr-5 hover:text-red-600 smoothScroll"href="member.php">Member</a>
-        <a class="mr-5 hover:text-red-600 smoothScroll" href="payment.php">Payment</a>
-        <a class="mr-5 hover:text-red-600 smoothScroll" href="client.php">Client</a>
-        <a class="mr-5 hover:text-red-600 smoothScroll" href="workout.php">Workout</a>
-        <a class="mr-5 hover:text-red-600 smoothScroll" href="logout.php"><i class="fas fa-sign-out-alt"></i></a>
+        <a class="mr-5 hover:text-red-600  smoothScroll text-2xl" href="dashboard.php" title="Home"> <i class="fas fa-house-user"></i></a>
+        <a class="mr-5 hover:text-red-600 smoothScroll text-2xl" href="trainer.php" title="Trainer"><i class="fas fa-child"></i></a>
+        <a class="mr-5 hover:text-red-600 smoothScroll text-2xl" href="gallery.php" title="Gallery"><i class="far fa-images"></i></a>
+        <a class="mr-5 hover:text-red-600 smoothScroll text-2xl" href="blog.php" title="Blogs"><i class="fas fa-blog"></i></a>
+        <a class="mr-5 hover:text-red-600 smoothScroll text-2xl" href="contact.php" title ="Contact"><i class="fas fa-address-book"></i></a>
+        <a class="mr-5 hover:text-red-600 smoothScroll text-2xl" href="member.php" title="Member"><i class="fas fa-user-plus"></i></a>
+        <a class="mr-5 hover:text-red-600 smoothScroll text-2xl" href="payment.php" title="Payments"><i class="fas fa-rupee-sign"></i></a>
+        <a class="mr-5 hover:text-red-600 smoothScroll text-2xl" href="client.php" title="Users"><i class="fas fa-users"></i></a>
+        <a class="mr-5 hover:text-red-600 smoothScroll text-2xl" href="workout.php"  title="Workout"><i class="fas fa-running"></i></a>
+        <!-- <a class="mr-5 hover:text-red-600 smoothScroll text-4xl" href="message.php" title="Message"><i class="fas fa-sms"></i></a> -->
+        <a class="mr-5 hover:text-red-600 smoothScroll text-2xl" href="logout.php" title="Logout"><i class="fas fa-sign-out-alt"></i></a>
         </nav>
     </div>
 </header>
@@ -86,7 +86,7 @@ if(!isset($_SESSION['uname'])){
                     $count=1;
                   if($result){                 
                   while($row=mysqli_fetch_assoc($result)){?>
-                  <tr>
+                  <tr class="hover:bg-gray-300">
                   <td  class="px-4 py-3 text-center" ><?php echo $count; ?></td>
                     <td class="px-4 py-3 text-center" id="image"><?php echo '<img src="uploads/'. $row["file"].'"height= "170" width="170" alt=" ">'; ?></td>
                     <td class="px-4 py-3 text-center"><?php echo $row["topic"]; ?></td>

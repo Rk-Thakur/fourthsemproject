@@ -48,7 +48,7 @@ if(!isset($_SESSION['uname'])){
   </div>
   <!-- header -->
 <header class="text-black-600 body-font-black  bg-black   " id="header">
-    <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center text-bold bg-black ">
+    <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center text-bold  ">
       <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0" href="index.php">
               <img src="images/logo.JPG" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-12 h-12 text-white p-2  rounded-full" viewBox="0 0 24 24">
         <span class="ml-3 text-xl text-3xl text-bold text-white">A.S.T GYM KHANA </span>
@@ -62,7 +62,7 @@ if(!isset($_SESSION['uname'])){
         <a class="mr-5 hover:text-red-600 smoothScroll" href="#contact">Contact</a>
         <a class="mr-5 hover:text-red-600 smoothScroll" href="workout.php">Workout</a>
       </nav>
-      <a href="register.php" class=" text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-400 rounded text-lg  "><i class="fas fa-user-plus"></i></a>
+      <a href="register.php" class="text-white bg-red-500 border-0 py-2 px-4 focus:outline-none hover:bg-red-400 rounded"><i class="fas fa-user-plus"></i></a>
     </div>
 </header>
 

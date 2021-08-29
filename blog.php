@@ -9,7 +9,9 @@
         <?php
     include('admin/config.php');
     $query="SELECT * FROM blog ORDER BY id desc LIMIT 3";
+    
     $result=mysqli_query($conn,$query);
+
     if(mysqli_num_rows($result)>0)
     {
         while($row=mysqli_fetch_array($result))

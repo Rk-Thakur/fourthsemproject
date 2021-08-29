@@ -56,19 +56,19 @@ else{
     <form class="" action="<?php echo $_SERVER['PHP_SELF']?>" method="POST" enctype="multipart/form-data">
       <div class="flex flex-col mb-4 md:w-full">
         <label class="mb-2 uppercase  font-bold text-lg text-grey-darkest" >Select Video to Upload</label>
-        <input class="border py-2 px-3 text-grey-darkest md:mr-2" type="file" name="file" >
+        <input class="border py-2 px-3 text-grey-darkest md:mr-2" type="file" name="file"  required>
       </div>
       <div class="flex flex-col mb-4 md:w-full">
         <label class="mb-2 uppercase font-bold text-lg text-grey-darkest md:ml-2" for="Workout">For which workout?</label>
-        <input class="border py-2 px-3 text-grey-darkest md:ml-2" type="text" name="workout" >
+        <input class="border py-2 px-3 text-grey-darkest md:ml-2" type="text" name="workout" required >
       </div>
       <div class="flex flex-col mb-4 md:w-full">
         <label class="mb-2 uppercase font-bold text-lg text-grey-darkest" >Workout Name:</label>
-        <input class="border py-2 px-3 text-grey-darkest" type="text" name="name" >
+        <input class="border py-2 px-3 text-grey-darkest" type="text" name="name" required>
       </div>
       <label class="mb-2 uppercase font-bold text-lg text-grey-darkest" >Description</label>
 
-      <textarea class="border py-2 px-3 text-grey-darkest" name="howtodo"  type="text" id="description" cols="30" rows="5">
+      <textarea class="border py-2 px-3 text-grey-darkest" name="howtodo"  type="text" id="description" cols="30" rows="5" required>
       </textarea>
       
       <button class="block   text-white bg-gray-900   uppercase  mx-auto p-4 rounded" type="submit" name="submit">

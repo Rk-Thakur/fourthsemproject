@@ -29,7 +29,7 @@ $conn =  mysqli_connect("localhost","root","","fourthproject");
 //trainer table
 // $sql = "CREATE table trainer(
 //     id int NOT NULL AUTO_INCREMENT  PRIMARY KEY,
-//     file varchar(1000) NOT NULL,
+//     file varchar(1000) NOT NULL UNIQUE,
 //     name varchar(30) NOT NULL,
 //     specialist varchar(30) NOT NULL,
 //     description varchar(100) NOT NULL,
@@ -68,20 +68,39 @@ $conn =  mysqli_connect("localhost","root","","fourthproject");
 //     FOREIGN KEY (id) REFERENCES registration(id)
 // )";
 
-$sql = "CREATE table workout(
-    id int NOT NULL AUTO_INCREMENT  PRIMARY KEY,
-    file varchar(1000) NOT NULL,
-    workout varchar(30) NOT NULL,
-    name varchar(30) NOT NULL,
-    howtodo varchar(100) NOT NULL,
-    bywhom varchar(100) NOT NULL
-)";
+// $sql = "CREATE table workout(
+//     id int NOT NULL AUTO_INCREMENT  PRIMARY KEY,
+//     file varchar(1000) NOT NULL,
+//     workout varchar(30) NOT NULL,
+//     name varchar(30) NOT NULL,
+//     howtodo varchar(100) NOT NULL,
+//     bywhom varchar(100) NOT NULL
+// )";
+
+// $sql = "CREATE table message(
+//     id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+//     message varchar(1000) NOT NULL,
+//     date timestamp 
+//     )";
+
+
+$sql = "CREATE TABLE message (
+    id INT(6) AUTO_INCREMENT PRIMARY KEY, 
+    message VARCHAR(1000) NOT NULL,
+    date timestamp,
+    image VARCHAR(255) NOT NULL,
+    CONSTRAINT fk_image 
+        FOREIGN KEY(image) 
+        REFERENCES trainer(file) ON DELETE CASCADE
+    )";
 
 
 
 
 
-$result =mysqli_query($conn,$sql);
+
+
+    $result = mysqli_query($conn,$sql);
 if($result){
     echo "Table created";
 }else{

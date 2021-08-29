@@ -54,19 +54,22 @@ else{
     <form class="" action="<?php echo $_SERVER['PHP_SELF']?>" method="POST" >
       <div class="flex flex-col mb-4 md:w-full">
         <label class="mb-2 uppercase  font-bold text-lg text-grey-darkest" >Member_Id:</label>
-        <input class="border py-2 px-3 text-grey-darkest md:mr-2" type="number" name="id" >
+        <input class="border py-2 px-3 text-grey-darkest md:mr-2" type="number" name="id" required>
       </div>
       <div class="flex flex-col mb-4 md:w-full">
         <label class="mb-2 uppercase font-bold text-lg text-grey-darkest md:ml-2" >Date:</label>
-        <input class="border py-2 px-3 text-grey-darkest md:ml-2" type="date" name="date" >
+        <input class="border py-2 px-3 text-grey-darkest md:ml-2" type="date" name="date" required >
       </div>
       <div class="flex flex-col mb-4 md:w-full">
         <label class="mb-2 uppercase font-bold text-lg text-grey-darkest">Total</label>
-        <input class="border py-2 px-3 text-grey-darkest" type="number" name="amt" >
+        <input class="border py-2 px-3 text-grey-darkest" type="number" name="amt"
+        required>
       </div>
       <div class="flex flex-col mb-4 md:w-full">
         <label class="mb-2 uppercase font-bold text-lg text-grey-darkest">Due</label>
-        <input class="border py-2 px-3 text-grey-darkest" type="number" name="due" >
+        <input class="border py-2 px-3 text-grey-darkest" type="number" name="due"
+        required
+        >
       </div>
 
       <button class="block   text-white bg-gray-900   uppercase  mx-auto p-4 rounded" type="submit" name="submit">

@@ -59,8 +59,9 @@ if(!isset($_SESSION['uname'])){
 </header>
 
         <div class="info " >
-        <p class="  text-5xl  text-center font-bold m-5">Gallery  <a href="insertgallery.php"><i class="far fa-images bg-red hover:bg-indigo-200"></i>(Add Gallery)</a></p>
-
+        <div class="rounded-lg  p-1  m-1 w-5/6 mx-auto bg-gray-200 text-gray-800">
+        <p class="  text-4xl  text-left font-bold m-3">Gallery  <a href="insertgallery.php" class="text-right"><i class="far fa-images bg-red hover:bg-indigo-200"></i></a></p>
+      </div>
         <table class="rounded-lg m-5 w-5/6 mx-auto bg-gray-200 text-gray-800">
             <thead>
             <tr class="text-left border-b-4 border-gray-900">

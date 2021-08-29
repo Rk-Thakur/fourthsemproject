@@ -60,40 +60,43 @@ else{
     </div>
 </header>
 
-
+        <div class="rounded-lg  p-1  m-1 w-5/6 mx-auto bg-gray-200 text-gray-800">
+            <p class="  text-3xl  text-left font-bold m-3">CHiTChAt📱  </p>
+        </div>
 <section class="text-gray-600 body-font    p-20 m-20 rounded-lg  absolute inset-0 ">
     <div class="container   mx-auto rounded-lg overflow-y-auto h-4/5">
     <?php
-                  include("config.php");
+                include("config.php");
                   $sql="SELECT * FROM chat ORDER BY id desc";
-                  $result=mysqli_query($conn,$sql);
-                  if($result){                 
-                  while($row=mysqli_fetch_assoc($result)){?>
-      <div class="flex items-center bg-gray-300  rounded-lg  lg:w-3/5 mx-auto border-b p-5 m-5 border-gray-200 sm:flex-row flex-col">
+                $result=mysqli_query($conn,$sql);
+                if($result){                 
+                while($row=mysqli_fetch_assoc($result)){?>
+        <div class="flex items-center bg-gray-300  rounded-lg  lg:w-3/5 mx-auto border-b p-5 m-5 border-gray-200 sm:flex-row flex-col">
         
-        <div class="sm:w-20 sm:h-20 h-10 w-10 sm:mr-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 flex-shrink-0">
-          
+        
+        <div class="sm:w-20 sm:h-20 h-13 w-13 sm:mr-10 inline-flex items-center justify-center rounded-lg bg-gray-900 text-indigo-500 flex-shrink-0">
+        <img src="images/logo.JPG" fill="none" title="AST GYM KHANA"   class="w-13 h-13    rounded-full" >
         </div>
         
         <div class="flex-grow sm:text-left text-center mt-6 sm:mt-0">
-        <a href="deletemessage.php?id=<?php echo $row["id"]; ?>"><p class="leading-relaxed text-base"><?php echo $row['message'] ?></p></i></a>
-          <p class="mt-3 text-indigo-600 inline-flex items-center "><?php echo $row['bywhom'] ?>
-          </p>
+        <a href="deletemessage.php?id=<?php echo $row["id"]; ?>"><p class=" text-2xl leading-relaxed text-base"><?php echo $row['message'] ?></p></i></a>
+            <p class="mt-3 text-indigo-600 inline-flex items-center "><?php echo $row['bywhom'] ?>
+            </p>
         </div>
-      </div>
-      <?php 
-                  }
+        </div>
+        <?php 
+                }
                 }
         ?>
     </div>
     
 
 </section>
-              </div>
-              <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="POST">
+            </div>
+            <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="POST">
     <div class=" absolute inset-x-0 bottom-0 flex items-center lg:w-3/5 mx-auto border-b p-10 m-10 border-gray-200 sm:flex-row flex-col">
-      <input class="flex mx-auto mt-20 text-gray-600  border-0 py-2 px-8 hover:bg-indigo-200 bg-indigo-100 rounded text-lg" type="text" name="message" required>
-      <button name="submit" class="flex mx-auto mt-20 text-white bg-indigo-500 border-0 py-2 px-4 focus:outline-none hover:bg-indigo-600 rounded text-lg"><i class="fas fa-sms"></i></button>
+        <input class="flex mx-auto m-10 text-gray-600  border-0 py-2 px-8 hover:bg-indigo-200 bg-indigo-100 rounded text-lg" type="text" name="message" required>
+        <button name="submit" class="flex mx-auto m-10 text-white bg-indigo-500 border-0 py-2 px-4  hover:bg-indigo-600 rounded text-lg"><i class="fas fa-sms"></i></button>
     </div>
     </form>
 </body>

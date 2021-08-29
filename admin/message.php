@@ -80,7 +80,7 @@ else{
         
         <div class="flex-grow sm:text-left text-center mt-6 sm:mt-0">
         <a href="deletemessage.php?id=<?php echo $row["id"]; ?>"><p class=" text-2xl leading-relaxed text-base"><?php echo $row['message'] ?></p></i></a>
-            <p class="mt-3 text-indigo-600 inline-flex items-center "><?php echo $row['bywhom'] ?>
+            <p class="mt-3 text-indigo-600 inline-flex items-center "><?php echo $row['bywhom'].'💪🙂👊 '   ?>
             </p>
         </div>
         </div>
@@ -93,7 +93,7 @@ else{
 
 </section>
             </div>
-            <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="POST">
+            <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="POST"> 
     <div class=" absolute inset-x-0 bottom-0 flex items-center lg:w-3/5 mx-auto border-b p-10 m-10 border-gray-200 sm:flex-row flex-col">
         <input class="flex mx-auto m-10 text-gray-600  border-0 py-2 px-8 hover:bg-indigo-200 bg-indigo-100 rounded text-lg" type="text" name="message" required>
         <button name="submit" class="flex mx-auto m-10 text-white bg-indigo-500 border-0 py-2 px-4  hover:bg-indigo-600 rounded text-lg"><i class="fas fa-sms"></i></button>

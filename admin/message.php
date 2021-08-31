@@ -75,7 +75,7 @@ else{
         
         
         <div class="sm:w-20 sm:h-20 h-13 w-13 sm:mr-10 inline-flex items-center justify-center rounded-lg bg-gray-900 text-indigo-500 flex-shrink-0">
-        <img src="images/logo.JPG" fill="none" title="AST GYM KHANA"   class="w-13 h-13    rounded-full" >
+        <img src="images/user.png" fill="none" title="AST GYM KHANA"   class="w-13 h-13    rounded-full" >
         </div>
         
         <div class="flex-grow sm:text-left text-center mt-6 sm:mt-0">

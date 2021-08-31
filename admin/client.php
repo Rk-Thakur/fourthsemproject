@@ -75,7 +75,6 @@ if(!isset($_SESSION['uname'])){
             <th class="px-4 py-3 text-center">Trainer</th>
             <th class="px-4 py-3 text-center">Package</th>
             <th class="px-4 py-3 text-center">Payment</th>
-            <th class="px-4 py-3 text-center">Action</th>
 
               </tr>
             </thead>  
@@ -107,7 +106,6 @@ if(!isset($_SESSION['uname'])){
                     <td  class="px-4 py-3 text-center"><?php echo $row["package"]; ?></td>
                     <td  class="px-4 py-3 text-center"><?php echo $row["payment"]; ?></td>
 
-                <td  class="px-4 py-3 text-center"><a href="deletemember.php?id=<?php echo $row["id"]; ?>"><i class="fas fa-trash"></i></a></td>
                     
                 </tr>
                 <?php $count++;?>

@@ -12,19 +12,19 @@
                         <?php
                         if(isset($_POST['new']))
                         {
-                       $id=$_REQUEST['id'];
-                         $image=$_FILES["file"]["name"];
+                        $id=$_REQUEST['id'];
+                        $image=$_FILES["file"]["name"];
                         $topic=$_REQUEST['topic'];
                         $summary= $_REQUEST['summary'];
                         $description=$_REQUEST['description'];
                         $update="UPDATE blog set file='$image' ,topic='$topic',summary= '$summary',description='$description' where id='$id' ";
                         $result=mysqli_query($conn,$update);
-                       if($result){
+                        if($result){
                         header("Location: blog.php");//redirect to view.php after successfully updated record
-                         }
+                        }
                         else{
-                           echo"Record not Updated".mysqli_error($conn);
-                          }
+                          echo"Record not Updated".mysqli_error($conn);
+                        }
                           }else{
                         ?>
 <!DOCTYPE html>

@@ -49,7 +49,7 @@ else{
 
 <div class="flex items-center h-screen w-full bg-gray-400">
   <div class="w-full bg-white rounded  p-8 m-4 md:max-w-sm md:mx-auto">
-    <h1 class=" w-full text-center text-grey-darkest mb-6">Trainer</h1>
+    <h1 class=" w-full text-center   text-2xl font-bold  text-grey-darkest mb-6">Trainer 💪😎👊</h1>
 
     <form class="" action="<?php echo $_SERVER['PHP_SELF']?>" method="POST" enctype="multipart/form-data">
       <div class="flex flex-col mb-4 md:w-full">

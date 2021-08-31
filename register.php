@@ -93,9 +93,10 @@ if(isset($_POST['submit'])){
     </div>
 </header>
 <!-- Registration Form -->
-<section class="text-gray-600 body-font relative">
+<section class="text-gray-600   body-font relative  ">
     <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="POST" enctype="multipart/form-data">
-    <div class="container px-5 py-24 mx-auto">
+      
+    <div class="container px-5 py-24 mx-auto ">
       <div class="flex flex-col text-center w-full mb-12">
         <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Congratulation! 👏 Your are going to get your Dream Body very soon!!!</h1>
       </div>
@@ -140,10 +141,10 @@ if(isset($_POST['submit'])){
             <div class="p-2 w-1/2">
               <div class="relative">
                 <label for="package" class="leading-7 text-sm text-gray-600">Package</label> <br>
-                <input type="radio" name="package" value="Starter" id=""> Starter ($9)   <br>
-                <input type="radio" name="package" value="Basic" id=""> Basic ($27)  <br>
-                <input type="radio" name="package" value="Pro" id=""> Pro ($74)  <br>
-                <input type="radio" name="package" value="Unlimited" id=""> Unlimited ($140)  <br>
+                <input type="radio" name="package" value="Starter - $9" id=""> Starter ($9)   <br>
+                <input type="radio" name="package" value="Basic - $27" id=""> Basic ($27)  <br>
+                <input type="radio" name="package" value="Pro - $74" id=""> Pro ($74)  <br>
+                <input type="radio" name="package" value="Unlimited - $120" id=""> Unlimited ($140)  <br>
                 
               </div> 
             </div>
